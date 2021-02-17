@@ -59,9 +59,8 @@
             if (window.Worker) {
 	            const myWorker = new Worker(workerRand());
 
-                setInterval(() => {
-                    myWorker.postMessage('hey');
-                }, 1000);
+                myWorker.postMessage('hey');
+                
 
 	            myWorker.onmessage = function(e) {
 		            result.textContent = e.data;
