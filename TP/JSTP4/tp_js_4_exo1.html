@@ -35,10 +35,6 @@
             return Math.floor(Math.random() * Math.floor(max));
         }
 
-        function workerRand(){
-            
-        }
-
 
         function rec_cord(){
             if (window.Worker) {
@@ -48,8 +44,8 @@
                 
 
 	            myWorker.onmessage = function(e) {
-		            //result.textContent = e.data;
-		            console.log('Message received from worker ');
+		            result.textContent = e.data;
+		            console.log('Message received from worker = ' + result);
 	            }
 
             } else {
