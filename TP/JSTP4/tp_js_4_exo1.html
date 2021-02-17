@@ -42,7 +42,7 @@
 
         function rec_cord(){
             if (window.Worker) {
-	            const myWorker = new Worker("./worker.js");
+	            const myWorker = new Worker("worker.js");
 
                 myWorker.postMessage('hey');
                 
