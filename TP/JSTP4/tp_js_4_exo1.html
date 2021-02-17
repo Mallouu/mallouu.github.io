@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+        <style>
+            #gameField{
+                background-color: rgb(206, 206, 206);
+            }
+        </style>
+	
+        <title>Web Workers/title>
+         <!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		-->
+	</head>
+   
+    <body>
+
+        <canvas id="gameField" width="600" height="600"></canvas>
+    
+    </body>
+
+    <script>
+
+        const animFrame = window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            window.oRequestAnimationFrame      ||
+            window.msRequestAnimationFrame     ||
+            null ;
+
+        const canvas = document.getElementById("gameField");
+        canvas.width = 600;
+        canvas.height = 600;
+        const context = canvas.getContext("2d");
+        let i = 0;
+
+        const xcord;
+        const ycord;
+
+        const result = document.querySelector('.result'); 
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        function workerRand(){
+            onmessage = function(e) {
+                console.log('Worker: Message received from main script');
+                const rand_x = parseInt(getRandomInt(600));
+                const rand_y = parseInt(getRandomInt(600));
+        
+                const workerResult = 'Result x : ' + rand_x + 'Result y : ' + rand_y;
+                console.log('Worker: Posting message back to main script');
+                postMessage(workerResult);
+                
+            }
+        }
+
+
+        function rec_cord(){
+            if (window.Worker) {
+	            const myWorker = new Worker(workerRand());
+
+                setInterval(() => {
+                    myWorker.postMessage();
+                }, 1000);
+
+	            myWorker.onmessage = function(e) {
+		            result.textContent = e.data;
+		            console.log('Message received from worker = ' + result);
+	            }
+
+            } else {
+	            console.log('Your browser doesn\'t support web workers.')
+            }
+        }
+
+
+        function mainloop(){
+            rec_cord();
+        };
+        
+        mainloop();
+        //setInterval(mainloop,1000);
+
+
+    </script>
+   
+
+</html>
+

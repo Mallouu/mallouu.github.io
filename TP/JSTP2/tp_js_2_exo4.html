@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<title>Scare</title>
+<style>
+    #gameField{
+        background-color: rgb(255, 255, 255);
+    }
+</style>
+</head>
+<body>
+    <canvas id="gameField" width="600" height="600"></canvas>
+
+</body>
+<script>
+	
+	//requestAnimationFrame method conveniently replace Setinterval for all animation purpose. It is optimized for 30frame per seconds rendering.
+    const animFrame = window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            window.oRequestAnimationFrame      ||
+            window.msRequestAnimationFrame     ||
+            null ;
+
+
+
+
+	
+	const canvas = document.getElementById("gameField");
+	canvas.width = 600;
+	canvas.height = 600;
+	const context = canvas.getContext("2d");
+
+	let wallClock = 0;
+		
+	// 
+	const squareWidth= 50;
+	const squareHeight= 50;	
+
+
+
+
+	class Square {
+		constructor(context,width, height,x,y,speed, delay){
+			this.context=context;
+			this.width=width;
+			this.height=height;
+			this.x=x;
+			this.y=y;
+			this.speed=speed;
+			this.delay=delay;
+			this.hasStarted=false;
+		}
+
+		clear(){
+			this.context.clearRect(this.x, this.y, this.width, this.height);
+		}
+
+		update(){
+			if((this.hasStarted == false) && (this.delay<wallClock)){
+				console.log("starting");
+				this.hasStarted=true;
+			}
+
+
+			if( (this.hasStarted == true) && (wallClock%this.speed == 0)){
+				if (this.x < 550) {	
+
+					this.x = this.x +this.speed;
+				}
+        	}
+		}
+
+		draw(){
+            context.beginPath();
+            context.rect(this.x, this.y , this.height, this.width);
+			//context.clearRect(0, 0, canvas.width, canvas.height);
+            context.clearRect(this.x, this.y , this.height, this.width);
+            context.fillStyle = "#FF0000";
+            context.fill();
+            context.closePath(); 
+		}
+
+
+	}
+
+
+
+	const objectsInGame = new Array();
+
+    const square1 = new Square(context,squareWidth, squareHeight,0,0,10,0);
+   	const square2 = new Square(context,squareWidth, squareHeight,0,70,10,100);
+   	const square3 = new Square(context,squareWidth, squareHeight,0,140,10,200);
+   	objectsInGame.push(square1);
+   	objectsInGame.push(square2);
+   	objectsInGame.push(square3);
+
+
+
+
+	function clearGame(){
+			objectsInGame.forEach(element => element.clear());
+	}
+
+
+	function updateGame(){
+		wallClock += 1;
+		objectsInGame.forEach(element => element.update());
+	}
+	
+
+	function drawGame(){
+		objectsInGame.forEach(element => element.draw());
+	}
+	
+	
+	function mainloop(){
+	 	clearGame();
+        updateGame();
+        drawGame();
+        
+        animFrame( mainloop );
+    };
+    
+   
+
+    // start the mainloop
+
+    animFrame( mainloop );
+</script>
+</html>

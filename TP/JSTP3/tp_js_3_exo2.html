@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+
+        <style>
+            #gameField{
+                background-color: rgb(206, 206, 206);
+            }
+        </style>
+	
+        <title>FETCH API</title>
+         <!--
+		<link rel="stylesheet" type="text/css" href="style.css">
+		-->
+	</head>
+   
+    <body>
+
+        <canvas id="gameField" width="600" height="600"></canvas>
+    
+    </body>
+
+    <script>
+
+        const animFrame = window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame    ||
+            window.oRequestAnimationFrame      ||
+            window.msRequestAnimationFrame     ||
+            null ;
+
+        const canvas = document.getElementById("gameField");
+        canvas.width = 600;
+        canvas.height = 600;
+        const context = canvas.getContext("2d");
+        let i = 0;
+
+           
+        function rec_cord(){
+            fetch("https://stwom.herokuapp.com/600")
+            .then (res => res.json())
+            .then (res => {
+                console.log(res);
+                context.beginPath()
+                context.arc(res.x, res.y , 10, 0, 2 * Math.PI)
+                if( i % 3 == 0){
+                    context.fillStyle = "#4169E1";
+                }
+                if( i % 3 == 1){
+                    context.fillStyle = "#800080";
+                }
+                if( i % 3 == 2){
+                    context.fillStyle = "#FF1493";
+                }
+                context.fill();
+            });
+        }
+
+
+        function mainloop(){
+            i++;
+            rec_cord();
+            
+
+        };
+    
+        setInterval(mainloop,1000);
+
+
+    </script>
+   
+
+</html>
+
