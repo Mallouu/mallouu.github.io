@@ -26,13 +26,6 @@
 
     <script>
 
-        const animFrame = window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            window.oRequestAnimationFrame      ||
-            window.msRequestAnimationFrame     ||
-            null ;
-
         const canvas = document.getElementById("gameField");
         canvas.width = 600;
         canvas.height = 600;
@@ -42,7 +35,7 @@
         const xcord;
         const ycord;
 
-        const result = document.querySelector('.result'); 
+        //const result = document.querySelector('.result'); 
 
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
@@ -85,8 +78,8 @@
             rec_cord();
         };
         
-        mainloop();
-        //setInterval(mainloop,1000);
+        //mainloop();
+        setInterval(mainloop,1000);
 
 
     </script>
