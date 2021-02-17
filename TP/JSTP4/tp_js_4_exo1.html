@@ -60,7 +60,7 @@
 	            const myWorker = new Worker(workerRand());
 
                 setInterval(() => {
-                    myWorker.postMessage();
+                    myWorker.postMessage('hey');
                 }, 1000);
 
 	            myWorker.onmessage = function(e) {
