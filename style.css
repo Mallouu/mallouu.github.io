@@ -15,6 +15,10 @@ body {
   margin: 0 auto;
 }
 
+#gameField{
+  background-color: rgb(206, 206, 206);
+}
+
 /* || typography */
 
 h1, h2, h3 {
