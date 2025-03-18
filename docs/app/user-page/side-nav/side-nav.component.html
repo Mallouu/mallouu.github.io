@@ -1,0 +1,8 @@
+<aside class="sidebar">
+    <!-- Intégration du calendrier -->
+    <app-calendar (dateSelected)="onDateSelect($event)"></app-calendar>
+    <app-filter
+        (filterSelected)="onFilterSelected($event)"
+        [filterBoatType]="filterBoatType"
+    ></app-filter>
+</aside>

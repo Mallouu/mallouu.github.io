@@ -1,0 +1,124 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use 'index' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.elevation-classes();
+@include mat.app-background();
+
+// Define the theme object.
+$reservations-snv-theme: mat.define-theme(
+        (
+            color: (
+                theme-type: light,
+                primary: mat.$azure-palette,
+                tertiary: mat.$blue-palette,
+            ),
+            density: (
+                scale: 0,
+            ),
+        )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+:root {
+    @include mat.all-component-themes($reservations-snv-theme);
+}
+
+// Comment out the line below if you want to use the pre-defined typography utility classes.
+// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
+// @include mat.typography-hierarchy($reservations-snv-theme);
+
+// Comment out the line below if you want to use the deprecated `color` inputs.
+// @include mat.color-variants-backwards-compatibility($reservations-snv-theme);
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+    background-color: #f6faff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+}
+
+button,
+input {
+    width: 100%;
+    max-width: 300px;
+}
+
+app-header {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    app-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+app-calendar {
+    overflow-x: auto; // Permet un scroll horizontal sur mobile si besoin
+}
+
+@media (max-width: 768px) {
+    app-calendar {
+        display: block;
+        width: 100%;
+    }
+}

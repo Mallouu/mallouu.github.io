@@ -1,0 +1,44 @@
+.courses-card {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px; /* Ajuste la hauteur de l'image selon le besoin */
+    overflow: hidden; /* Évite le débordement */
+    border-radius: 15px 15px 0 0;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+mat-icon {
+    font-size: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chip-container {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+mat-chip {
+    font-size: 14px;
+    font-weight: bold;
+}
