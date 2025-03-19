@@ -1,0 +1,1 @@
+import{Gb as i,_a as t,rb as a,sb as o}from"./chunk-SHVIJN6X.js";var m=class n{static \u0275fac=function(e){return new(e||n)};static \u0275cmp=t({type:n,selectors:[["app-admin-page"]],decls:2,vars:0,template:function(e,s){e&1&&(a(0,"p"),i(1,"admin-page works!"),o())},encapsulation:2})};export{m as AdminPageComponent};

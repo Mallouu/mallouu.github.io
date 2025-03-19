@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use 'index' as mat;
+@use '@angular/material' as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -121,4 +121,110 @@ app-calendar {
         display: block;
         width: 100%;
     }
+}
+
+/* Styles généraux */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* Header */
+.header,
+.footer {
+    width: 100%;
+    color: white;
+    flex-shrink: 0;
+}
+
+/* Conteneur principal centré */
+.body-site {
+    display: flex;
+    flex: 1;
+    justify-content: center; /* Centre le contenu horizontalement */
+}
+
+/* Contenu centré avec une largeur max */
+.container {
+    display: flex;
+    flex: 1;
+    max-width: 1400px; /* Largeur max du site */
+    width: 100%; /* Prend toute la largeur jusqu'à max-width */
+}
+
+/* Sidebar */
+.side-nav {
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+    margin: 1rem;
+}
+
+/* Contenu principal */
+.content {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Main card (zone principale) */
+.main {
+    flex: 1; // Prend tout l'espace dispo après la side-nav
+    overflow-y: auto;
+    margin: 1rem;
+}
+
+@media (max-width: 768px) {
+    .body-site {
+        display: flex;
+        flex: 1;
+        flex-direction: column; /* Force un affichage en colonne */
+        align-items: center; /* Centre les éléments en mode colonne */
+    }
+
+    .container {
+        flex-direction: column; /* Force l'affichage en colonne */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .content {
+        width: 100%;;
+    }
+
+    .side-nav {
+        top: unset;
+        width: 100%;
+        order: 1;
+        flex: 1;
+    }
+
+    .main {
+        order: 2;
+        flex: 1;
+        min-height: 300px;
+        overflow-y: hidden;
+    }
+}
+
+.background-app {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent; /* Make the background transparent */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Border radius of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
 }

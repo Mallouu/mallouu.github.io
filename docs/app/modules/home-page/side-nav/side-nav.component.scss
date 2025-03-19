@@ -1,0 +1,13 @@
+.sidebar {
+    width: 100%;
+    min-height: 400px;
+    padding: 1rem;
+    position: sticky;
+    top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: unset;
+    }
+}

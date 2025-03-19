@@ -1,6 +1,13 @@
-<mat-card appearance="outlined" class="courses-card ">
+<mat-card appearance="outlined" class="courses-card">
     <div class="image-container">
-        <img alt="Photo of J70" height="200" mat-card-image ngSrc="/src/assets/J70.jpg" width="400" />
+        <img
+            alt="Photo of J70"
+            height=300
+            mat-card-image
+            ngSrc="/assets/J70.jpg"
+            priority
+            width=400
+        />
         <div class="chip-container">
             <mat-chip color="primary">{{ course.level }}</mat-chip>
         </div>
@@ -13,8 +20,7 @@
         </p>
         <p class="icon-text">
             <mat-icon svgIcon="time"></mat-icon>
-            {{ course.hour }} -
-            {{ course.duration }}h
+            {{ course.hour }} - {{ course.duration }}h
         </p>
         <p class="icon-text">
             <mat-icon svgIcon="boatType"></mat-icon>
@@ -22,7 +28,7 @@
         </p>
         <p class="icon-text">
             <mat-icon svgIcon="people"></mat-icon>
-            Max. {{ course.maxParticipants }} participants
+            {{ course.placeRestante }} places restantes sur {{ course.maxParticipants }}.
         </p>
         <p class="icon-text">
             <mat-icon svgIcon="capitain"></mat-icon>
@@ -31,6 +37,8 @@
     </mat-card-content>
 
     <mat-card-actions>
-        <button (click)="onReserve()" color="primary" mat-button>Réserver</button>
+        <button (click)="onReserve()" class="button-reservation" color="primary" mat-button>
+            Réserver
+        </button>
     </mat-card-actions>
 </mat-card>

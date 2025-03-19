@@ -1,0 +1,27 @@
+<!-- Filtre par type de bateau -->
+<div class="filter-container">
+    <h3 class="filter-title">Type de bateau</h3>
+    <div class="filter-buttons">
+        <button
+            (click)="setFilter('')"
+            [ngClass]="{ active: filterBoatType === '' }"
+            class="filter-button"
+        >
+            Tous les bateaux
+        </button>
+        <button
+            (click)="setFilter('J70')"
+            [ngClass]="{ active: filterBoatType === 'J70' }"
+            class="filter-button"
+        >
+            J70
+        </button>
+        <button
+            (click)="setFilter('J80')"
+            [ngClass]="{ active: filterBoatType === 'J80' }"
+            class="filter-button"
+        >
+            J80
+        </button>
+    </div>
+</div>

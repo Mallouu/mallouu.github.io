@@ -1,0 +1,42 @@
+.filter-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow:
+        0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1px 16px 16px;
+    margin-top: 16px;
+
+    .filter-title {
+        font-weight: 600;
+        color: #1a3b5d;
+        margin-bottom: 12px;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .filter-button {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            border-radius: 4px;
+            background: #f1f5f9;
+            color: #1a3b5d;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+
+            &:hover {
+                background: #e2e8f0;
+            }
+
+            &.active {
+                background: #1a3b5d;
+                color: white;
+            }
+        }
+    }
+}

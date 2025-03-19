@@ -3,12 +3,14 @@ import {
     ChangeDetectorRef,
     Component,
     EventEmitter,
+    OnInit,
     Output,
 } from '@angular/core';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
 import { DateRange, MatCalendar, MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { getCoursesDate } from '../../core/services/dataMock.services';
 
 @Component({
     selector: 'app-calendar',
@@ -17,15 +19,19 @@ import { CommonModule } from '@angular/common';
     styleUrls: ['./calendar.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CalendarComponent {
+export class CalendarComponent implements OnInit {
     selectedDate: DateRange<Date> | Date | null = null;
-    dateCourses: Date[] = [new Date(2025, 2, 3), new Date(2025, 2, 15), new Date(2025, 2, 30)];
+    dateCourses: Date[] = [];
     selectedDates: Date[] = [];
     refreshCalendar = new Subject<boolean>();
     @Output() dateSelected = new EventEmitter<unknown>();
 
     constructor(private cdr: ChangeDetectorRef) {
         this.refreshCalendar.next(true);
+    }
+
+    ngOnInit() {
+        this.dateCourses = getCoursesDate();
     }
 
     dateClass: MatCalendarCellClassFunction<Date> = (cellDate, view) => {
