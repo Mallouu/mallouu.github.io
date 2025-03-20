@@ -37,18 +37,18 @@
             Toutes les sorties
         </button>
         <button
-            (click)="setFilterLevel(LevelType.Debutant)"
-            [ngClass]="{ active: filterLevelType === LevelType.Debutant }"
+            (click)="setFilterLevel(LevelType.Initiation)"
+            [ngClass]="{ active: filterLevelType === LevelType.Initiation }"
             class="filter-button"
         >
-            {{ LevelType.Debutant }}
+            {{ LevelType.Initiation }}
         </button>
         <button
-            (click)="setFilterLevel(LevelType.Avance)"
-            [ngClass]="{ active: filterLevelType === LevelType.Avance }"
+            (click)="setFilterLevel(LevelType.Entrainement)"
+            [ngClass]="{ active: filterLevelType === LevelType.Entrainement }"
             class="filter-button"
         >
-            {{ LevelType.Avance }}
+            {{ LevelType.Entrainement }}
         </button>
         <button
             (click)="setFilterLevel(LevelType.Regate)"
@@ -56,6 +56,13 @@
             class="filter-button"
         >
             {{ LevelType.Regate }}
+        </button>
+        <button
+            (click)="setFilterLevel(LevelType.Sortie)"
+            [ngClass]="{ active: filterLevelType === LevelType.Sortie }"
+            class="filter-button"
+        >
+            {{ LevelType.Sortie }}
         </button>
     </div>
 </div>

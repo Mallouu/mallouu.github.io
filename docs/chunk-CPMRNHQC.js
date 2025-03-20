@@ -1,0 +1,1 @@
+import{W as e}from"./chunk-UBH5ZYKM.js";var a=class t{constructor(){}login(o){localStorage.setItem("authToken",o)}logout(){localStorage.removeItem("authToken")}isAuthenticated(){return!!localStorage.getItem("authToken")}static \u0275fac=function(r){return new(r||t)};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})};export{a};

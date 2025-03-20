@@ -54,3 +54,32 @@ mat-chip {
         color: white;
     }
 }
+
+
+.chip-initiation {
+    background-color: rgba(76, 175, 80, 0.10) !important; // Vert pour Initiation
+    &:disabled {
+        background-color: rgba(76, 175, 80, 0.10) !important;
+    }
+}
+
+.chip-sortie {
+    background-color: rgba(255, 152, 0, 0.10) !important; // Orange pour Sortie
+    &:disabled {
+        background-color: rgba(255, 152, 0, 0.10) !important;
+    }
+}
+
+.chip-entrainement {
+    background-color: rgba(63, 81, 181, 0.10) !important; // Bleu pour Entraînement
+    &:disabled {
+        background-color: rgba(63, 81, 181, 0.10) !important;
+    }
+}
+
+.chip-regate {
+    background-color: rgba(244, 67, 54, 0.10) !important; // Rouge pour Régate
+    &:disabled {
+        background-color: rgba(244, 67, 54, 0.10) !important;
+    }
+}

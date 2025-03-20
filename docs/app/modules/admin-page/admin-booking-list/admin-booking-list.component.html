@@ -1,0 +1,40 @@
+<mat-table [dataSource]="bookings" class="mat-elevation-z8">
+    <!-- Colonne Cours -->
+    <ng-container matColumnDef="courseTitle">
+        <mat-header-cell *matHeaderCellDef> Cours</mat-header-cell>
+        <mat-cell *matCellDef="let booking"> {{ booking.courseTitle }}</mat-cell>
+    </ng-container>
+
+    <!-- Colonne Nom du client -->
+    <ng-container matColumnDef="customerName">
+        <mat-header-cell *matHeaderCellDef> Client</mat-header-cell>
+        <mat-cell *matCellDef="let booking"> {{ booking.customerName }}</mat-cell>
+    </ng-container>
+
+    <!-- Colonne Email -->
+    <ng-container matColumnDef="customerEmail">
+        <mat-header-cell *matHeaderCellDef> Email</mat-header-cell>
+        <mat-cell *matCellDef="let booking"> {{ booking.customerEmail }}</mat-cell>
+    </ng-container>
+
+    <!-- Colonne Téléphone -->
+    <ng-container matColumnDef="customerPhone">
+        <mat-header-cell *matHeaderCellDef> Téléphone</mat-header-cell>
+        <mat-cell *matCellDef="let booking"> {{ booking.customerPhone }}</mat-cell>
+    </ng-container>
+
+    <!-- Colonne Date de réservation -->
+    <ng-container matColumnDef="bookingDate">
+        <mat-header-cell *matHeaderCellDef> Date de réservation</mat-header-cell>
+        <mat-cell *matCellDef="let booking"> {{ booking.bookingDate | date:'short' }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<!-- Affichage si aucune réservation -->
+<div *ngIf="bookings.length === 0" class="empty-state">
+    Aucune réservation enregistrée.
+</div>
+

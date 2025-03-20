@@ -1,1 +1,30 @@
+<div class="layout">
+    <!-- <app-admin-header (logout)="handleLogout()"></app-admin-header> -->
+
+    <main class="admin-content">
+        <div class="stats-container">
+            <app-admin-card [count]="courses.length" icon="event" title="Cours actifs"></app-admin-card>
+            <app-admin-card [count]="bookings.length" icon="list" title="Réservations"></app-admin-card>
+            <app-admin-card [count]="totalParticipants" icon="people" title="Participants"></app-admin-card>
+        </div>
+
+        <div class="admin-actions">
+            <h2>Gestion des cours</h2>
+            <button (click)="openCourseDialog()" color="primary" mat-raised-button>
+                <mat-icon svgIcon="add"></mat-icon>
+                Ajouter un cours
+            </button>
+        </div>
+
+        <mat-tab-group>
+            <mat-tab label="Liste des cours">
+                <app-admin-course-list (deleteCourse)="handleDeleteCourse($event)"
+                                       [courses]="courses"></app-admin-course-list>
+            </mat-tab>
+            <mat-tab label="Réservations">
+                <app-admin-booking-list [bookings]="bookings"></app-admin-booking-list>
+            </mat-tab>
+        </mat-tab-group>
+    </main>
+</div>
 

@@ -19,11 +19,9 @@ export enum BoatType {
 }
 
 export enum LevelType {
-    Debutant = 'Débutant',
-    Intermediaire = 'Intermédiaire',
-    Avance = 'Avancé',
-    Regate = 'Régate',
-    ToutNiveaux = 'Tous les niveaux',
+    Initiation = 'Initiation',
     Sortie = 'Sortie',
+    Entrainement = 'Entraînement',
+    Regate = 'Régate',
     Unset = '',
 }

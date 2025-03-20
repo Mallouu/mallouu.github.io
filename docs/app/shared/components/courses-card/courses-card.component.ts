@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { MatCard, MatCardActions, MatCardContent, MatCardImage } from '@angular/material/card';
 import { MatButton } from '@angular/material/button';
-import { Course } from '../../models/course';
-import { DatePipe, NgIf, NgOptimizedImage } from '@angular/common';
+import { Course, LevelType } from '../../models/course';
+import { DatePipe, NgClass, NgIf, NgOptimizedImage } from '@angular/common';
 import { MatIcon, MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatChip } from '@angular/material/chips';
@@ -20,6 +20,7 @@ import { MatChip } from '@angular/material/chips';
         NgOptimizedImage,
         MatIcon,
         MatChip,
+        NgClass,
     ],
     templateUrl: './courses-card.component.html',
     styleUrl: './courses-card.component.scss',
@@ -52,5 +53,20 @@ export class CoursesCardComponent {
 
     onReserve() {
         console.log('Réserve');
+    }
+
+    getChipClass(level: LevelType): string {
+        switch (level) {
+            case LevelType.Initiation:
+                return 'chip-initiation';
+            case LevelType.Sortie:
+                return 'chip-sortie';
+            case LevelType.Entrainement:
+                return 'chip-entrainement';
+            case LevelType.Regate:
+                return 'chip-regate';
+            default:
+                return '';
+        }
     }
 }

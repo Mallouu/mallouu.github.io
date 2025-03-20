@@ -9,7 +9,8 @@
             width=400
         />
         <div class="chip-container">
-            <mat-chip color="primary">{{ course.level }}</mat-chip>
+            <mat-chip [disabled]="true" [ngClass]="getChipClass(course.level)" color="primary">{{ course.level }}
+            </mat-chip>
         </div>
     </div>
     <mat-card-content *ngIf="course">
