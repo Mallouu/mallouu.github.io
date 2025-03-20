@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CalendarComponent } from '../../../shared/calendar/calendar.component';
+import { CalendarComponent } from '../../../shared/components/calendar/calendar.component';
 import { FilterComponent } from './filter/filter.component';
 
 @Component({

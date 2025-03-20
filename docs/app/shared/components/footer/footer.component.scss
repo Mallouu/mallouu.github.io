@@ -1,0 +1,53 @@
+// $navy-900: #1d283a;
+$navy-900: #1a3b5d;
+$maritime-400: #64ffda;
+$gray-400: #a8b2d1;
+
+.container {
+    flex: 1;
+}
+
+.footer {
+    background-color: $navy-900;
+    color: white;
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+    margin: 0 auto;
+
+    .container {
+        max-width: 1400px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .footer-text {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .footer-rights {
+        color: $gray-400;
+        font-size: 0.875rem;
+
+        a {
+            color: white;
+            margin: 0 0.5rem;
+        }
+
+
+    }
+}

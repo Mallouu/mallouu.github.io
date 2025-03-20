@@ -1,0 +1,64 @@
+.header {
+    // background-color: #1d283a;
+    background-color: #1a3b5d;
+    color: white;
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+    margin: 0 auto;
+
+    .mat-icon {
+        margin-right: 10px;
+        color: #ffffff !important;
+    }
+}
+
+.container-header {
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+}
+
+.container-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start; /* Bouton à gauche */
+    flex: 1;
+    margin-left: 2rem;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Titre à droite */
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.button-admin {
+    height: 2.5rem;
+    background-color: rgba(241, 245, 249, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #f6faff;
+}
+
+.button-accueil {
+    height: 2.5rem;
+    width: unset;
+    margin-right: 2rem;
+    background-color: transparent;
+    color: #f6faff !important;
+}
+
+.icon-admin {
+    height: 60%;
+    width: 60%;
+}

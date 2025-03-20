@@ -1,0 +1,25 @@
+header {
+    margin-bottom: 2.5rem; /* mb-10 */
+    text-align: center; /* text-center */
+}
+
+header h1 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold; /* font-bold */
+    color: #1e3a8a; /* text-navy-900 (équivalent à blue-900 dans Tailwind) */
+    margin-bottom: 0.75rem; /* mb-3 */
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    header h1 {
+        font-size: 2.25rem; /* text-4xl */
+    }
+}
+
+header p {
+    font-size: 1.125rem; /* text-lg */
+    color: #4b5563; /* text-gray-600 */
+    max-width: 42rem; /* max-w-2xl */
+    margin-left: auto; /* mx-auto */
+    margin-right: auto;
+}

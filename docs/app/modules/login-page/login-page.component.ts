@@ -1,21 +1,27 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
+import { MatCard } from '@angular/material/card';
+import { AdminLoginFormComponent } from './admin-login-form/admin-login-form.component';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-login-page',
-    imports: [],
+    imports: [MatCard, AdminLoginFormComponent],
     templateUrl: './login-page.component.html',
     styleUrl: './login-page.component.scss',
 })
 export class LoginPageComponent {
     constructor(
+        iconRegistry: MatIconRegistry,
+        sanitizer: DomSanitizer,
         private authService: AuthService,
         private router: Router,
-    ) {}
-
-    login() {
-        this.authService.login('fakeToken123'); // Ici, un vrai token JWT devrait être utilisé
-        this.router.navigate(['/administration']);
+    ) {
+        iconRegistry.addSvgIcon(
+            'private',
+            sanitizer.bypassSecurityTrustResourceUrl('./assets/icons/lock.svg'),
+        );
     }
 }

@@ -1,0 +1,27 @@
+<div class="login-header">
+    <div class="icon-container">
+        <mat-icon class="lock-icon" svgIcon="private"></mat-icon>
+    </div>
+    <h1 class="title">Administration</h1>
+    <p class="description">Connectez-vous pour accéder au tableau de bord d'administration</p>
+</div>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nom d'utilisateur</mat-label>
+        <input formControlName="username" matInput placeholder="admin">
+        <mat-error *ngIf="loginForm.get('username')?.invalid">Ce champ est requis</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Mot de passe</mat-label>
+        <input formControlName="password" matInput placeholder="••••••" type="password">
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Ce champ est requis</mat-error>
+    </mat-form-field>
+
+    <mat-card-actions>
+        <button [disabled]="isLoading" class="button-admin" mat-raised-button>
+            {{ isLoading ? 'Connexion...' : 'Se connecter' }}
+        </button>
+    </mat-card-actions>
+</form>

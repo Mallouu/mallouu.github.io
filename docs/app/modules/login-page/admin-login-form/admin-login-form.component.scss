@@ -1,0 +1,57 @@
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .icon-container {
+        background-color: #e1e9f4;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+    }
+
+    .lock-icon {
+        color: #1a3b5d !important;
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #1a3b5d;
+    }
+
+    .description {
+        color: #6b7280;
+        text-align: center !important;
+    }
+
+}
+
+.full-width {
+    width: 100%;
+}
+
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button-admin {
+        background-color: #1a3b5d !important;
+        color: #ffffff !important;
+        border-radius: 15px;
+    }
+}
+

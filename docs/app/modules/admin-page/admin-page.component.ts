@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../core/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-admin-page',
@@ -6,4 +8,15 @@ import { Component } from '@angular/core';
     templateUrl: './admin-page.component.html',
     styleUrl: './admin-page.component.scss',
 })
-export class AdminPageComponent {}
+export class AdminPageComponent implements OnInit {
+    constructor(
+        private authService: AuthService,
+        private router: Router,
+    ) {}
+
+    ngOnInit() {
+        if (!this.authService.isAuthenticated()) {
+            this.router.navigate(['/login']);
+        }
+    }
+}

@@ -20,6 +20,13 @@ export const routes: Routes = [
             import('./modules/admin-page/admin-page.component').then((m) => m.AdminPageComponent),
         //canActivate: [AuthGuard],
     },
+    {
+        path: 'building',
+        loadComponent: () =>
+            import('./modules/construction-page/construction-page.component').then(
+                (m) => m.ConstructionPageComponent,
+            ),
+    },
     { path: '**', redirectTo: '/reservation' }, // Rediriger vers la page d'accueil si route inconnue
 ];
 

@@ -1,0 +1,19 @@
+<mat-toolbar class="header">
+    <div class="container-header">
+        <div class="container-header-content">
+            <div class="title">
+                <mat-icon svgIcon="boat"></mat-icon>
+                <span>SNV - École de voile</span>
+            </div>
+            <div class="button-container">
+                <button (click)="goToHome()" class="button-accueil" mat-button>
+                    Accueil
+                </button>
+                <button (click)="goToAdmin()" class="button-admin" extended mat-fab>
+                    <mat-icon class="icon-admin" svgIcon="private"></mat-icon>
+                    Menu administration
+                </button>
+            </div>
+        </div>
+    </div>
+</mat-toolbar>

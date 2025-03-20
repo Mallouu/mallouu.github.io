@@ -1,0 +1,44 @@
+<mat-card appearance="outlined" class="courses-card">
+    <div class="image-container">
+        <img
+            alt="Photo of J70"
+            height=300
+            mat-card-image
+            ngSrc="assets/J70.jpg"
+            priority
+            width=400
+        />
+        <div class="chip-container">
+            <mat-chip color="primary">{{ course.level }}</mat-chip>
+        </div>
+    </div>
+    <mat-card-content *ngIf="course">
+        <h2>{{ course.title }}</h2>
+        <p class="icon-text">
+            <mat-icon svgIcon="date"></mat-icon>
+            {{ course.date | date: 'dd/MM/yyyy' }}
+        </p>
+        <p class="icon-text">
+            <mat-icon svgIcon="time"></mat-icon>
+            {{ course.hour }} • {{ course.duration }}h
+        </p>
+        <p class="icon-text">
+            <mat-icon svgIcon="boatType"></mat-icon>
+            {{ course.boatType }}
+        </p>
+        <p class="icon-text">
+            <mat-icon svgIcon="people"></mat-icon>
+            {{ course.placeRestante }} places restantes sur {{ course.maxParticipants }}
+        </p>
+        <p class="icon-text">
+            <mat-icon svgIcon="capitain"></mat-icon>
+            {{ course.instructor }}
+        </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <button (click)="onReserve()" class="button-reservation" color="primary" mat-button>
+            Réserver
+        </button>
+    </mat-card-actions>
+</mat-card>
