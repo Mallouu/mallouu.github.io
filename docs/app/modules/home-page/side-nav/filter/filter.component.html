@@ -3,25 +3,59 @@
     <h3 class="filter-title">Type de bateau</h3>
     <div class="filter-buttons">
         <button
-            (click)="setFilter('')"
-            [ngClass]="{ active: filterBoatType === '' }"
+            (click)="setFilterBoat(BoatType.Unset)"
+            [ngClass]="{ active: filterBoatType === BoatType.Unset }"
             class="filter-button"
         >
             Tous les bateaux
         </button>
         <button
-            (click)="setFilter('J70')"
-            [ngClass]="{ active: filterBoatType === 'J70' }"
+            (click)="setFilterBoat(BoatType.J70)"
+            [ngClass]="{ active: filterBoatType === BoatType.J70 }"
             class="filter-button"
         >
-            J70
+            {{ BoatType.J70 }}
         </button>
         <button
-            (click)="setFilter('J80')"
-            [ngClass]="{ active: filterBoatType === 'J80' }"
+            (click)="setFilterBoat(BoatType.J80)"
+            [ngClass]="{ active: filterBoatType === BoatType.J80 }"
             class="filter-button"
         >
-            J80
+            {{ BoatType.J80 }}
+        </button>
+    </div>
+</div>
+<!-- Filtre par niveau -->
+<div class="filter-container">
+    <h3 class="filter-title">Type de sortie</h3>
+    <div class="filter-buttons">
+        <button
+            (click)="setFilterLevel(LevelType.Unset)"
+            [ngClass]="{ active: filterLevelType === LevelType.Unset }"
+            class="filter-button"
+        >
+            Toutes les sorties
+        </button>
+        <button
+            (click)="setFilterLevel(LevelType.Debutant)"
+            [ngClass]="{ active: filterLevelType === LevelType.Debutant }"
+            class="filter-button"
+        >
+            {{ LevelType.Debutant }}
+        </button>
+        <button
+            (click)="setFilterLevel(LevelType.Avance)"
+            [ngClass]="{ active: filterLevelType === LevelType.Avance }"
+            class="filter-button"
+        >
+            {{ LevelType.Avance }}
+        </button>
+        <button
+            (click)="setFilterLevel(LevelType.Regate)"
+            [ngClass]="{ active: filterLevelType === LevelType.Regate }"
+            class="filter-button"
+        >
+            {{ LevelType.Regate }}
         </button>
     </div>
 </div>

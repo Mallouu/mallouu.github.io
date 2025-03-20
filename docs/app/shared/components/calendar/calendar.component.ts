@@ -1,13 +1,6 @@
-import {
-    ChangeDetectionStrategy,
-    ChangeDetectorRef,
-    Component,
-    EventEmitter,
-    OnInit,
-    Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatCard, MatCardContent, MatCardModule } from '@angular/material/card';
-import { DateRange, MatCalendar, MatCalendarCellClassFunction } from '@angular/material/datepicker';
+import { MatCalendar, MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { getCoursesDate } from '../../../core/services/dataMock.services';
@@ -20,13 +13,13 @@ import { getCoursesDate } from '../../../core/services/dataMock.services';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CalendarComponent implements OnInit {
-    selectedDate: DateRange<Date> | Date | null = null;
+    selectedDate: Date | null = null;
     dateCourses: Date[] = [];
     selectedDates: Date[] = [];
     refreshCalendar = new Subject<boolean>();
-    @Output() dateSelected = new EventEmitter<unknown>();
+    @Output() dateSelected = new EventEmitter<Date | null>();
 
-    constructor(private cdr: ChangeDetectorRef) {
+    constructor() {
         this.refreshCalendar.next(true);
     }
 
@@ -58,7 +51,12 @@ export class CalendarComponent implements OnInit {
         return '';
     };
 
-    protected format(date: Date | null | DateRange<Date>) {
+    onSelectedDate(selectedDate: Date | null) {
+        this.selectedDate = selectedDate;
+        this.dateSelected.emit(selectedDate);
+    }
+
+    protected format(date: Date | null) {
         if (date instanceof Date) {
             return date ? date.toLocaleDateString() : '';
         }

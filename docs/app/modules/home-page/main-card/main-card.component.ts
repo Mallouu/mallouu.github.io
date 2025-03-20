@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForOf } from '@angular/common';
 import { CoursesCardComponent } from '../../../shared/components/courses-card/courses-card.component';
 import { Course } from '../../../shared/models/course';
@@ -11,7 +11,7 @@ import { getCourses } from '../../../core/services/dataMock.services';
     styleUrl: './main-card.component.scss',
 })
 export class MainCardComponent implements OnInit {
-    courses: Course[] | undefined;
+    @Input() courses: Course[] | undefined;
 
     ngOnInit() {
         this.courses = getCourses();

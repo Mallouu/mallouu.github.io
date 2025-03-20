@@ -4,10 +4,26 @@ export interface Course {
     date: Date;
     hour: string;
     duration: number; // in hours
-    boatType: 'J70' | 'J80';
+    boatType: BoatType;
     maxParticipants: number;
     placeRestante: number;
     imageUrl?: string;
     instructor: string;
-    level: 'Débutant' | 'Intermédiaire' | 'Avancé' | 'Régate';
+    level: LevelType;
+}
+
+export enum BoatType {
+    J70 = 'J70',
+    J80 = 'J80',
+    Unset = '',
+}
+
+export enum LevelType {
+    Debutant = 'Débutant',
+    Intermediaire = 'Intermédiaire',
+    Avance = 'Avancé',
+    Regate = 'Régate',
+    ToutNiveaux = 'Tous les niveaux',
+    Sortie = 'Sortie',
+    Unset = '',
 }

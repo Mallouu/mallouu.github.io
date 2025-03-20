@@ -17,6 +17,8 @@ export class AdminPageComponent implements OnInit {
     ngOnInit() {
         if (!this.authService.isAuthenticated()) {
             this.router.navigate(['/login']);
+        } else {
+            this.router.navigate(['/building']);
         }
     }
 }

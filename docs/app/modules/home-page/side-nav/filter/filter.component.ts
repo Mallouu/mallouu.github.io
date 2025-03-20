@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NgClass } from '@angular/common';
+import { BoatType, LevelType } from '../../../../shared/models/course';
 
 @Component({
     selector: 'app-filter',
@@ -8,12 +9,22 @@ import { NgClass } from '@angular/common';
     styleUrl: './filter.component.scss',
 })
 export class FilterComponent {
-    filterBoatType: string | null | undefined;
-    @Output() filterSelected = new EventEmitter<string | null>();
+    filterBoatType: BoatType | null | undefined = BoatType.Unset;
+    filterLevelType: LevelType | null | undefined = LevelType.Unset;
+    @Output() filterSelected = new EventEmitter<BoatType | null>();
+    @Output() filterLevelSelected = new EventEmitter<LevelType | null>();
+    protected readonly BoatType = BoatType;
+    protected readonly LevelType = LevelType;
 
-    setFilter(type: string | null) {
+    setFilterBoat(type: BoatType | null) {
         this.filterBoatType = type;
         this.filterSelected.emit(this.filterBoatType);
+        console.log('Filtre appliqué:', type);
+    }
+
+    setFilterLevel(type: LevelType | null) {
+        this.filterLevelType = type;
+        this.filterLevelSelected.emit(this.filterLevelType);
         console.log('Filtre appliqué:', type);
     }
 }

@@ -1,24 +1,27 @@
 <div class="layout">
 
+    <header>
+        <h1>Cours de voile</h1>
+        <p>
+            Découvrez nos cours de voile sur J70 et J80, parfaits pour tous les niveaux,
+            du débutant au navigateur expérimenté.
+        </p>
+    </header>
+
     <!-- CONTENEUR CENTRÉ -->
     <div class="body-site">
         <div class="container">
             <!-- NAVIGATION LATÉRALE -->
             <aside class="side-nav">
-                <app-side-nav></app-side-nav>
+                <app-side-nav (onDateChange)="selectDate($event)"
+                              (onFilterChange)="selectFilter($event)"
+                              (onFilterLevelChange)="selectLevelFilter($event)"></app-side-nav>
             </aside>
 
             <!-- CONTENU PRINCIPAL -->
             <div class="content">
                 <main class="main">
-                    <header>
-                        <h1>Cours de voile</h1>
-                        <p>
-                            Découvrez nos cours de voile sur J70 et J80, parfaits pour tous les niveaux,
-                            du débutant au navigateur expérimenté.
-                        </p>
-                    </header>
-                    <app-main-card></app-main-card>
+                    <app-main-card [courses]="listeCours"></app-main-card>
                 </main>
             </div>
         </div>

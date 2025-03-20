@@ -5,6 +5,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+    --mat-datepicker-calendar-date-selected-state-background-color: #1a3b5d !important;
+    --mat-datepicker-calendar-date-today-outline-color: #1a3b5d !important;
     //--mat-datepicker-calendar-date-text-color: #1a3b5d !important;
     //--mat-datepicker-calendar-header-text-color: #1a3b5d !important;
     //--mdc-text-body-label-text-color: #1a3b5d !important;
@@ -17,6 +19,6 @@
 }
 
 ::ng-deep .selected {
-    background-color: #1a3b5d !important;
+
     border-radius: 50%;
 }

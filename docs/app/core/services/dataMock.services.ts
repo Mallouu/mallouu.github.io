@@ -1,5 +1,5 @@
 // Mock data storage (would be replaced with real API)
-import { Course } from '../../shared/models/course';
+import { BoatType, Course, LevelType } from '../../shared/models/course';
 import { Booking } from '../../shared/models/booking';
 
 let coursesList: Course[] = [
@@ -9,11 +9,11 @@ let coursesList: Course[] = [
         date: new Date(Date.now() + 86400000),
         duration: 3,
         hour: '19:46',
-        boatType: 'J70',
+        boatType: BoatType.J70,
         maxParticipants: 5,
         placeRestante: 3,
         instructor: 'Christophe LESUEUR',
-        level: 'Débutant',
+        level: LevelType.Debutant,
     },
     {
         id: '2',
@@ -21,11 +21,11 @@ let coursesList: Course[] = [
         date: new Date(Date.now() + 172800000), // day after tomorrow
         duration: 4,
         hour: '16:30',
-        boatType: 'J80',
+        boatType: BoatType.J80,
         maxParticipants: 4,
         placeRestante: 4,
         instructor: 'Christophe LESUEUR',
-        level: 'Intermédiaire',
+        level: LevelType.Avance,
     },
     {
         id: '3',
@@ -33,11 +33,11 @@ let coursesList: Course[] = [
         date: new Date(Date.now() + 259200000), // 3 days from now
         duration: 5,
         hour: '18:30',
-        boatType: 'J70',
+        boatType: BoatType.J70,
         maxParticipants: 4,
         placeRestante: 1,
         instructor: 'Christophe LESUEUR',
-        level: 'Régate',
+        level: LevelType.Regate,
     },
     {
         id: '4',
@@ -45,11 +45,11 @@ let coursesList: Course[] = [
         date: new Date(Date.now() + 345600000), // 4 days from now
         hour: '14:30',
         duration: 3,
-        boatType: 'J80',
+        boatType: BoatType.J80,
         maxParticipants: 5,
         placeRestante: 3,
         instructor: 'Christophe LESUEUR',
-        level: 'Débutant',
+        level: LevelType.Debutant,
     },
 ];
 
@@ -67,6 +67,14 @@ export const getCoursesByDate = (date: Date): Course[] => {
             course.date.getMonth() === date.getMonth() &&
             course.date.getFullYear() === date.getFullYear(),
     );
+};
+
+export const getCoursesByBoatType = (boatType: BoatType): Course[] => {
+    return coursesList.filter((course) => course.boatType === boatType);
+};
+
+export const getCoursesByLevelType = (levelType: LevelType): Course[] => {
+    return coursesList.filter((course) => course.level === levelType);
 };
 
 export const getCoursesDate = (): Date[] => {

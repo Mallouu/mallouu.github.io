@@ -1,25 +1,24 @@
 header {
-    margin-bottom: 2.5rem; /* mb-10 */
-    text-align: center; /* text-center */
+    margin-top: 2.5rem;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 1.875rem; /* text-3xl */
-    font-weight: bold; /* font-bold */
-    color: #1e3a8a; /* text-navy-900 (équivalent à blue-900 dans Tailwind) */
-    margin-bottom: 0.75rem; /* mb-3 */
+    font-size: 1.875rem;
+    font-weight: bold;
+    color: black;
 }
 
-@media (min-width: 768px) { /* md breakpoint */
+@media (min-width: 768px) {
     header h1 {
-        font-size: 2.25rem; /* text-4xl */
+        font-size: 2.25rem;
     }
 }
 
 header p {
-    font-size: 1.125rem; /* text-lg */
-    color: #4b5563; /* text-gray-600 */
-    max-width: 42rem; /* max-w-2xl */
-    margin-left: auto; /* mx-auto */
+    font-size: 1.125rem;
+    color: #4b5563;
+    max-width: 42rem;
+    margin-left: auto;
     margin-right: auto;
 }
