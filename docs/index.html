@@ -1,13 +1,1874 @@
 <!doctype html>
-<html lang="en" data-beasties-container>
-    <head>
-        <meta charset="utf-8">
-        <title>SNV - Réservations cours</title>
-        <base href="/mallou.github.io">
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <link href="/assets/icons/boat.svg" rel="icon" type="image/x-icon">
-    <style>html{--mat-sys-on-surface:initial}:root{--mat-app-background-color:#faf9fd;--mat-app-text-color:#1a1b1f;--mat-app-elevation-shadow-level-0:0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-1:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-2:0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-3:0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-4:0px 2px 4px -1px rgba(0, 0, 0, .2), 0px 4px 5px 0px rgba(0, 0, 0, .14), 0px 1px 10px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-5:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 5px 8px 0px rgba(0, 0, 0, .14), 0px 1px 14px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-6:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-7:0px 4px 5px -2px rgba(0, 0, 0, .2), 0px 7px 10px 1px rgba(0, 0, 0, .14), 0px 2px 16px 1px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-8:0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-9:0px 5px 6px -3px rgba(0, 0, 0, .2), 0px 9px 12px 1px rgba(0, 0, 0, .14), 0px 3px 16px 2px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-10:0px 6px 6px -3px rgba(0, 0, 0, .2), 0px 10px 14px 1px rgba(0, 0, 0, .14), 0px 4px 18px 3px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-11:0px 6px 7px -4px rgba(0, 0, 0, .2), 0px 11px 15px 1px rgba(0, 0, 0, .14), 0px 4px 20px 3px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-12:0px 7px 8px -4px rgba(0, 0, 0, .2), 0px 12px 17px 2px rgba(0, 0, 0, .14), 0px 5px 22px 4px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-13:0px 7px 8px -4px rgba(0, 0, 0, .2), 0px 13px 19px 2px rgba(0, 0, 0, .14), 0px 5px 24px 4px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-14:0px 7px 9px -4px rgba(0, 0, 0, .2), 0px 14px 21px 2px rgba(0, 0, 0, .14), 0px 5px 26px 4px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-15:0px 8px 9px -5px rgba(0, 0, 0, .2), 0px 15px 22px 2px rgba(0, 0, 0, .14), 0px 6px 28px 5px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-16:0px 8px 10px -5px rgba(0, 0, 0, .2), 0px 16px 24px 2px rgba(0, 0, 0, .14), 0px 6px 30px 5px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-17:0px 8px 11px -5px rgba(0, 0, 0, .2), 0px 17px 26px 2px rgba(0, 0, 0, .14), 0px 6px 32px 5px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-18:0px 9px 11px -5px rgba(0, 0, 0, .2), 0px 18px 28px 2px rgba(0, 0, 0, .14), 0px 7px 34px 6px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-19:0px 9px 12px -6px rgba(0, 0, 0, .2), 0px 19px 29px 2px rgba(0, 0, 0, .14), 0px 7px 36px 6px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-20:0px 10px 13px -6px rgba(0, 0, 0, .2), 0px 20px 31px 3px rgba(0, 0, 0, .14), 0px 8px 38px 7px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-21:0px 10px 13px -6px rgba(0, 0, 0, .2), 0px 21px 33px 3px rgba(0, 0, 0, .14), 0px 8px 40px 7px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-22:0px 10px 14px -6px rgba(0, 0, 0, .2), 0px 22px 35px 3px rgba(0, 0, 0, .14), 0px 8px 42px 7px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-23:0px 11px 14px -7px rgba(0, 0, 0, .2), 0px 23px 36px 3px rgba(0, 0, 0, .14), 0px 9px 44px 8px rgba(0, 0, 0, .12);--mat-app-elevation-shadow-level-24:0px 11px 15px -7px rgba(0, 0, 0, .2), 0px 24px 38px 3px rgba(0, 0, 0, .14), 0px 9px 46px 8px rgba(0, 0, 0, .12)}:root{--mat-ripple-color:rgba(26, 27, 31, .1)}:root{--mat-option-selected-state-label-text-color:#3e4759;--mat-option-label-text-color:#1a1b1f;--mat-option-hover-state-layer-color:rgba(26, 27, 31, .08);--mat-option-focus-state-layer-color:rgba(26, 27, 31, .12);--mat-option-selected-state-layer-color:#dae2f9;--mat-option-label-text-font:Roboto, sans-serif;--mat-option-label-text-line-height:1.25rem;--mat-option-label-text-size:1rem;--mat-option-label-text-tracking:.006rem;--mat-option-label-text-weight:400}:root{--mat-optgroup-label-text-color:#44474e;--mat-optgroup-label-text-font:Roboto, sans-serif;--mat-optgroup-label-text-line-height:1.25rem;--mat-optgroup-label-text-size:.875rem;--mat-optgroup-label-text-tracking:.006rem;--mat-optgroup-label-text-weight:500}:root{--mat-full-pseudo-checkbox-selected-icon-color:#005cbb;--mat-full-pseudo-checkbox-selected-checkmark-color:#ffffff;--mat-full-pseudo-checkbox-unselected-icon-color:#44474e;--mat-full-pseudo-checkbox-disabled-selected-checkmark-color:#faf9fd;--mat-full-pseudo-checkbox-disabled-unselected-icon-color:rgba(26, 27, 31, .38);--mat-full-pseudo-checkbox-disabled-selected-icon-color:rgba(26, 27, 31, .38)}:root{--mat-minimal-pseudo-checkbox-selected-checkmark-color:#005cbb;--mat-minimal-pseudo-checkbox-disabled-selected-checkmark-color:rgba(26, 27, 31, .38)}:root{--mdc-elevated-card-container-color:#f4f3f6;--mdc-elevated-card-container-elevation:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mdc-elevated-card-container-shape:12px}:root{--mdc-outlined-card-container-color:#faf9fd;--mdc-outlined-card-outline-color:#c4c6d0;--mdc-outlined-card-container-elevation:0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);--mdc-outlined-card-container-shape:12px;--mdc-outlined-card-outline-width:1px}:root{--mat-card-subtitle-text-color:#1a1b1f;--mat-card-title-text-font:Roboto, sans-serif;--mat-card-title-text-line-height:1.75rem;--mat-card-title-text-size:1.375rem;--mat-card-title-text-tracking:0;--mat-card-title-text-weight:400;--mat-card-subtitle-text-font:Roboto, sans-serif;--mat-card-subtitle-text-line-height:1.5rem;--mat-card-subtitle-text-size:1rem;--mat-card-subtitle-text-tracking:.009rem;--mat-card-subtitle-text-weight:500}:root{--mdc-linear-progress-active-indicator-color:#005cbb;--mdc-linear-progress-track-color:#e0e2ec;--mdc-linear-progress-active-indicator-height:4px;--mdc-linear-progress-track-height:4px;--mdc-linear-progress-track-shape:0}:root{--mdc-plain-tooltip-container-color:#2f3033;--mdc-plain-tooltip-supporting-text-color:#f2f0f4;--mdc-plain-tooltip-supporting-text-line-height:1rem;--mdc-plain-tooltip-supporting-text-font:Roboto, sans-serif;--mdc-plain-tooltip-supporting-text-size:.75rem;--mdc-plain-tooltip-supporting-text-weight:400;--mdc-plain-tooltip-supporting-text-tracking:.025rem;--mdc-plain-tooltip-container-shape:4px}:root{--mdc-filled-text-field-caret-color:#005cbb;--mdc-filled-text-field-focus-active-indicator-color:#005cbb;--mdc-filled-text-field-focus-label-text-color:#005cbb;--mdc-filled-text-field-container-color:#e0e2ec;--mdc-filled-text-field-disabled-container-color:rgba(26, 27, 31, .04);--mdc-filled-text-field-label-text-color:#44474e;--mdc-filled-text-field-hover-label-text-color:#44474e;--mdc-filled-text-field-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-filled-text-field-input-text-color:#1a1b1f;--mdc-filled-text-field-disabled-input-text-color:rgba(26, 27, 31, .38);--mdc-filled-text-field-input-text-placeholder-color:#44474e;--mdc-filled-text-field-error-hover-label-text-color:#93000a;--mdc-filled-text-field-error-focus-label-text-color:#ba1a1a;--mdc-filled-text-field-error-label-text-color:#ba1a1a;--mdc-filled-text-field-active-indicator-color:#44474e;--mdc-filled-text-field-disabled-active-indicator-color:rgba(26, 27, 31, .38);--mdc-filled-text-field-hover-active-indicator-color:#1a1b1f;--mdc-filled-text-field-error-active-indicator-color:#ba1a1a;--mdc-filled-text-field-error-focus-active-indicator-color:#ba1a1a;--mdc-filled-text-field-error-hover-active-indicator-color:#93000a;--mdc-filled-text-field-label-text-font:Roboto, sans-serif;--mdc-filled-text-field-label-text-size:1rem;--mdc-filled-text-field-label-text-tracking:.031rem;--mdc-filled-text-field-label-text-weight:400;--mdc-filled-text-field-active-indicator-height:1px;--mdc-filled-text-field-focus-active-indicator-height:2px;--mdc-filled-text-field-container-shape:4px}:root{--mdc-outlined-text-field-caret-color:#005cbb;--mdc-outlined-text-field-focus-outline-color:#005cbb;--mdc-outlined-text-field-focus-label-text-color:#005cbb;--mdc-outlined-text-field-label-text-color:#44474e;--mdc-outlined-text-field-hover-label-text-color:#1a1b1f;--mdc-outlined-text-field-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-outlined-text-field-input-text-color:#1a1b1f;--mdc-outlined-text-field-disabled-input-text-color:rgba(26, 27, 31, .38);--mdc-outlined-text-field-input-text-placeholder-color:#44474e;--mdc-outlined-text-field-error-focus-label-text-color:#ba1a1a;--mdc-outlined-text-field-error-label-text-color:#ba1a1a;--mdc-outlined-text-field-error-hover-label-text-color:#93000a;--mdc-outlined-text-field-outline-color:#74777f;--mdc-outlined-text-field-disabled-outline-color:rgba(26, 27, 31, .12);--mdc-outlined-text-field-hover-outline-color:#1a1b1f;--mdc-outlined-text-field-error-focus-outline-color:#ba1a1a;--mdc-outlined-text-field-error-hover-outline-color:#93000a;--mdc-outlined-text-field-error-outline-color:#ba1a1a;--mdc-outlined-text-field-label-text-font:Roboto, sans-serif;--mdc-outlined-text-field-label-text-size:1rem;--mdc-outlined-text-field-label-text-tracking:.031rem;--mdc-outlined-text-field-label-text-weight:400;--mdc-outlined-text-field-outline-width:1px;--mdc-outlined-text-field-focus-outline-width:2px;--mdc-outlined-text-field-container-shape:4px}:root{--mat-form-field-focus-select-arrow-color:#005cbb;--mat-form-field-disabled-input-text-placeholder-color:rgba(26, 27, 31, .38);--mat-form-field-state-layer-color:#1a1b1f;--mat-form-field-error-text-color:#ba1a1a;--mat-form-field-select-option-text-color:#1a1b1f;--mat-form-field-select-disabled-option-text-color:rgba(26, 27, 31, .38);--mat-form-field-leading-icon-color:#44474e;--mat-form-field-disabled-leading-icon-color:rgba(26, 27, 31, .38);--mat-form-field-trailing-icon-color:#44474e;--mat-form-field-disabled-trailing-icon-color:rgba(26, 27, 31, .38);--mat-form-field-error-focus-trailing-icon-color:#ba1a1a;--mat-form-field-error-hover-trailing-icon-color:#93000a;--mat-form-field-error-trailing-icon-color:#ba1a1a;--mat-form-field-enabled-select-arrow-color:#44474e;--mat-form-field-disabled-select-arrow-color:rgba(26, 27, 31, .38);--mat-form-field-hover-state-layer-opacity:.08;--mat-form-field-container-text-font:Roboto, sans-serif;--mat-form-field-container-text-line-height:1.5rem;--mat-form-field-container-text-size:1rem;--mat-form-field-container-text-tracking:.031rem;--mat-form-field-container-text-weight:400;--mat-form-field-subscript-text-font:Roboto, sans-serif;--mat-form-field-subscript-text-line-height:1rem;--mat-form-field-subscript-text-size:.75rem;--mat-form-field-subscript-text-tracking:.025rem;--mat-form-field-subscript-text-weight:400;--mat-form-field-container-height:56px;--mat-form-field-filled-label-display:block;--mat-form-field-container-vertical-padding:16px;--mat-form-field-filled-with-label-container-padding-top:24px;--mat-form-field-filled-with-label-container-padding-bottom:8px;--mat-form-field-focus-state-layer-opacity:0}:root{--mat-select-panel-background-color:#efedf0;--mat-select-enabled-trigger-text-color:#1a1b1f;--mat-select-disabled-trigger-text-color:rgba(26, 27, 31, .38);--mat-select-placeholder-text-color:#44474e;--mat-select-enabled-arrow-color:#44474e;--mat-select-disabled-arrow-color:rgba(26, 27, 31, .38);--mat-select-focused-arrow-color:#005cbb;--mat-select-invalid-arrow-color:#ba1a1a;--mat-select-trigger-text-font:Roboto, sans-serif;--mat-select-trigger-text-line-height:1.5rem;--mat-select-trigger-text-size:1rem;--mat-select-trigger-text-tracking:.031rem;--mat-select-trigger-text-weight:400;--mat-select-arrow-transform:translateY(-8px);--mat-select-container-elevation-shadow:0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12)}:root{--mat-autocomplete-background-color:#efedf0;--mat-autocomplete-container-shape:4px;--mat-autocomplete-container-elevation-shadow:0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12)}:root{--mdc-dialog-container-color:#faf9fd;--mdc-dialog-subhead-color:#1a1b1f;--mdc-dialog-supporting-text-color:#44474e;--mdc-dialog-subhead-font:Roboto, sans-serif;--mdc-dialog-subhead-line-height:2rem;--mdc-dialog-subhead-size:1.5rem;--mdc-dialog-subhead-weight:400;--mdc-dialog-subhead-tracking:0;--mdc-dialog-supporting-text-font:Roboto, sans-serif;--mdc-dialog-supporting-text-line-height:1.25rem;--mdc-dialog-supporting-text-size:.875rem;--mdc-dialog-supporting-text-weight:400;--mdc-dialog-supporting-text-tracking:.016rem;--mdc-dialog-container-shape:28px}:root{--mat-dialog-container-elevation-shadow:none;--mat-dialog-container-max-width:560px;--mat-dialog-container-small-max-width:calc(100vw - 32px) ;--mat-dialog-container-min-width:280px;--mat-dialog-actions-alignment:flex-end;--mat-dialog-actions-padding:16px 24px;--mat-dialog-content-padding:20px 24px;--mat-dialog-with-actions-content-padding:20px 24px 0;--mat-dialog-headline-padding:6px 24px 13px}:root{--mdc-chip-outline-color:#74777f;--mdc-chip-disabled-outline-color:rgba(26, 27, 31, .12);--mdc-chip-focus-outline-color:#44474e;--mdc-chip-hover-state-layer-opacity:.08;--mdc-chip-selected-hover-state-layer-opacity:.08;--mdc-chip-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-chip-elevated-selected-container-color:#dae2f9;--mdc-chip-flat-disabled-selected-container-color:rgba(26, 27, 31, .12);--mdc-chip-focus-state-layer-color:#44474e;--mdc-chip-hover-state-layer-color:#44474e;--mdc-chip-selected-hover-state-layer-color:#3e4759;--mdc-chip-focus-state-layer-opacity:.12;--mdc-chip-selected-focus-state-layer-color:#3e4759;--mdc-chip-selected-focus-state-layer-opacity:.12;--mdc-chip-label-text-color:#44474e;--mdc-chip-selected-label-text-color:#3e4759;--mdc-chip-with-icon-icon-color:#44474e;--mdc-chip-with-icon-disabled-icon-color:#1a1b1f;--mdc-chip-with-icon-selected-icon-color:#3e4759;--mdc-chip-with-trailing-icon-disabled-trailing-icon-color:#1a1b1f;--mdc-chip-with-trailing-icon-trailing-icon-color:#44474e;--mdc-chip-label-text-font:Roboto, sans-serif;--mdc-chip-label-text-line-height:1.25rem;--mdc-chip-label-text-size:.875rem;--mdc-chip-label-text-tracking:.006rem;--mdc-chip-label-text-weight:500;--mdc-chip-container-height:32px;--mdc-chip-container-shape-radius:8px;--mdc-chip-with-avatar-avatar-shape-radius:24px;--mdc-chip-with-avatar-avatar-size:24px;--mdc-chip-with-icon-icon-size:18px;--mdc-chip-outline-width:1px;--mdc-chip-with-avatar-disabled-avatar-opacity:.38;--mdc-chip-flat-selected-outline-width:0;--mdc-chip-with-trailing-icon-disabled-trailing-icon-opacity:.38;--mdc-chip-with-icon-disabled-icon-opacity:.38;--mdc-chip-elevated-container-color:transparent}:root{--mat-chip-trailing-action-state-layer-color:#44474e;--mat-chip-selected-trailing-action-state-layer-color:#3e4759;--mat-chip-trailing-action-hover-state-layer-opacity:.08;--mat-chip-trailing-action-focus-state-layer-opacity:.12;--mat-chip-selected-disabled-trailing-icon-color:#1a1b1f;--mat-chip-selected-trailing-icon-color:#3e4759;--mat-chip-disabled-container-opacity:1;--mat-chip-trailing-action-opacity:1;--mat-chip-trailing-action-focus-opacity:1}:root{--mdc-switch-selected-focus-state-layer-opacity:.12;--mdc-switch-selected-hover-state-layer-opacity:.08;--mdc-switch-selected-pressed-state-layer-opacity:.12;--mdc-switch-unselected-focus-state-layer-opacity:.12;--mdc-switch-unselected-hover-state-layer-opacity:.08;--mdc-switch-unselected-pressed-state-layer-opacity:.12;--mdc-switch-selected-focus-state-layer-color:#005cbb;--mdc-switch-selected-handle-color:#ffffff;--mdc-switch-selected-hover-state-layer-color:#005cbb;--mdc-switch-selected-pressed-state-layer-color:#005cbb;--mdc-switch-selected-focus-handle-color:#d7e3ff;--mdc-switch-selected-hover-handle-color:#d7e3ff;--mdc-switch-selected-pressed-handle-color:#d7e3ff;--mdc-switch-selected-focus-track-color:#005cbb;--mdc-switch-selected-hover-track-color:#005cbb;--mdc-switch-selected-pressed-track-color:#005cbb;--mdc-switch-selected-track-color:#005cbb;--mdc-switch-disabled-selected-handle-color:#faf9fd;--mdc-switch-disabled-selected-icon-color:#1a1b1f;--mdc-switch-disabled-selected-track-color:#1a1b1f;--mdc-switch-disabled-unselected-handle-color:#1a1b1f;--mdc-switch-disabled-unselected-icon-color:#e0e2ec;--mdc-switch-disabled-unselected-track-color:#e0e2ec;--mdc-switch-selected-icon-color:#00458f;--mdc-switch-unselected-focus-handle-color:#44474e;--mdc-switch-unselected-focus-state-layer-color:#1a1b1f;--mdc-switch-unselected-focus-track-color:#e0e2ec;--mdc-switch-unselected-handle-color:#74777f;--mdc-switch-unselected-hover-handle-color:#44474e;--mdc-switch-unselected-hover-state-layer-color:#1a1b1f;--mdc-switch-unselected-hover-track-color:#e0e2ec;--mdc-switch-unselected-icon-color:#e0e2ec;--mdc-switch-unselected-pressed-handle-color:#44474e;--mdc-switch-unselected-pressed-state-layer-color:#1a1b1f;--mdc-switch-unselected-pressed-track-color:#e0e2ec;--mdc-switch-unselected-track-color:#e0e2ec;--mdc-switch-disabled-selected-icon-opacity:.38;--mdc-switch-disabled-track-opacity:.12;--mdc-switch-disabled-unselected-icon-opacity:.38;--mdc-switch-handle-shape:9999px;--mdc-switch-selected-icon-size:16px;--mdc-switch-track-height:32px;--mdc-switch-track-shape:9999px;--mdc-switch-track-width:52px;--mdc-switch-unselected-icon-size:16px;--mdc-switch-state-layer-size:40px}:root{--mat-switch-track-outline-color:#74777f;--mat-switch-disabled-unselected-track-outline-color:#1a1b1f;--mat-switch-label-text-color:#1a1b1f;--mat-switch-label-text-font:Roboto, sans-serif;--mat-switch-label-text-line-height:1.25rem;--mat-switch-label-text-size:.875rem;--mat-switch-label-text-tracking:.016rem;--mat-switch-label-text-weight:400;--mat-switch-disabled-selected-handle-opacity:1;--mat-switch-disabled-unselected-handle-opacity:.38;--mat-switch-unselected-handle-size:16px;--mat-switch-selected-handle-size:24px;--mat-switch-pressed-handle-size:28px;--mat-switch-with-icon-handle-size:24px;--mat-switch-selected-handle-horizontal-margin:0 24px;--mat-switch-selected-with-icon-handle-horizontal-margin:0 24px;--mat-switch-selected-pressed-handle-horizontal-margin:0 22px;--mat-switch-unselected-handle-horizontal-margin:0 8px;--mat-switch-unselected-with-icon-handle-horizontal-margin:0 4px;--mat-switch-unselected-pressed-handle-horizontal-margin:0 2px;--mat-switch-visible-track-opacity:1;--mat-switch-hidden-track-opacity:0;--mat-switch-visible-track-transition:opacity 75ms;--mat-switch-hidden-track-transition:opacity 75ms;--mat-switch-track-outline-width:2px;--mat-switch-selected-track-outline-width:2px;--mat-switch-selected-track-outline-color:transparent;--mat-switch-disabled-unselected-track-outline-width:2px}:root{--mdc-radio-disabled-selected-icon-color:#1a1b1f;--mdc-radio-disabled-unselected-icon-color:#1a1b1f;--mdc-radio-unselected-hover-icon-color:#1a1b1f;--mdc-radio-unselected-focus-icon-color:#1a1b1f;--mdc-radio-unselected-icon-color:#44474e;--mdc-radio-unselected-pressed-icon-color:#1a1b1f;--mdc-radio-selected-focus-icon-color:#005cbb;--mdc-radio-selected-hover-icon-color:#005cbb;--mdc-radio-selected-icon-color:#005cbb;--mdc-radio-selected-pressed-icon-color:#005cbb;--mdc-radio-state-layer-size:40px;--mdc-radio-disabled-selected-icon-opacity:.38;--mdc-radio-disabled-unselected-icon-opacity:.38}:root{--mat-radio-ripple-color:#1a1b1f;--mat-radio-checked-ripple-color:#005cbb;--mat-radio-disabled-label-color:rgba(26, 27, 31, .38);--mat-radio-label-text-color:#1a1b1f;--mat-radio-label-text-font:Roboto, sans-serif;--mat-radio-label-text-line-height:1.25rem;--mat-radio-label-text-size:.875rem;--mat-radio-label-text-tracking:.016rem;--mat-radio-label-text-weight:400;--mat-radio-touch-target-display:block}:root{--mdc-slider-handle-elevation:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mdc-slider-handle-color:#005cbb;--mdc-slider-focus-handle-color:#005cbb;--mdc-slider-hover-handle-color:#005cbb;--mdc-slider-active-track-color:#005cbb;--mdc-slider-inactive-track-color:#e0e2ec;--mdc-slider-with-tick-marks-inactive-container-color:#44474e;--mdc-slider-with-tick-marks-active-container-color:#ffffff;--mdc-slider-disabled-active-track-color:#1a1b1f;--mdc-slider-disabled-handle-color:#1a1b1f;--mdc-slider-disabled-inactive-track-color:#1a1b1f;--mdc-slider-label-container-color:#005cbb;--mdc-slider-label-label-text-color:#ffffff;--mdc-slider-with-overlap-handle-outline-color:#ffffff;--mdc-slider-with-tick-marks-disabled-container-color:#1a1b1f;--mdc-slider-label-label-text-font:Roboto, sans-serif;--mdc-slider-label-label-text-size:.75rem;--mdc-slider-label-label-text-line-height:1rem;--mdc-slider-label-label-text-tracking:.031rem;--mdc-slider-label-label-text-weight:500;--mdc-slider-active-track-height:4px;--mdc-slider-active-track-shape:9999px;--mdc-slider-handle-height:20px;--mdc-slider-handle-shape:9999px;--mdc-slider-handle-width:20px;--mdc-slider-inactive-track-height:4px;--mdc-slider-inactive-track-shape:9999px;--mdc-slider-with-overlap-handle-outline-width:1px;--mdc-slider-with-tick-marks-active-container-opacity:.38;--mdc-slider-with-tick-marks-container-shape:9999px;--mdc-slider-with-tick-marks-container-size:2px;--mdc-slider-with-tick-marks-inactive-container-opacity:.38}:root{--mat-slider-ripple-color:#005cbb;--mat-slider-hover-state-layer-color:rgba(0, 92, 187, .05);--mat-slider-focus-state-layer-color:rgba(0, 92, 187, .2);--mat-slider-value-indicator-width:28px;--mat-slider-value-indicator-height:28px;--mat-slider-value-indicator-caret-display:none;--mat-slider-value-indicator-border-radius:50% 50% 50% 0;--mat-slider-value-indicator-padding:0;--mat-slider-value-indicator-text-transform:rotate(45deg);--mat-slider-value-indicator-container-transform:translateX(-50%) rotate(-45deg);--mat-slider-value-indicator-opacity:1}:root{--mat-menu-item-label-text-color:#1a1b1f;--mat-menu-item-icon-color:#44474e;--mat-menu-item-hover-state-layer-color:rgba(26, 27, 31, .08);--mat-menu-item-focus-state-layer-color:rgba(26, 27, 31, .12);--mat-menu-container-color:#efedf0;--mat-menu-divider-color:#e0e2ec;--mat-menu-item-label-text-font:Roboto, sans-serif;--mat-menu-item-label-text-size:.875rem;--mat-menu-item-label-text-tracking:.006rem;--mat-menu-item-label-text-line-height:1.25rem;--mat-menu-item-label-text-weight:500;--mat-menu-container-shape:4px;--mat-menu-divider-bottom-spacing:8px;--mat-menu-divider-top-spacing:8px;--mat-menu-item-spacing:12px;--mat-menu-item-icon-size:24px;--mat-menu-item-leading-spacing:12px;--mat-menu-item-trailing-spacing:12px;--mat-menu-item-with-icon-leading-spacing:12px;--mat-menu-item-with-icon-trailing-spacing:12px;--mat-menu-container-elevation-shadow:0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12)}:root{--mdc-list-list-item-container-color:transparent;--mdc-list-list-item-leading-avatar-color:#d7e3ff;--mdc-list-list-item-disabled-state-layer-color:#1a1b1f;--mdc-list-list-item-disabled-state-layer-opacity:.12;--mdc-list-list-item-label-text-color:#1a1b1f;--mdc-list-list-item-supporting-text-color:#44474e;--mdc-list-list-item-leading-icon-color:#44474e;--mdc-list-list-item-trailing-supporting-text-color:#44474e;--mdc-list-list-item-trailing-icon-color:#44474e;--mdc-list-list-item-selected-trailing-icon-color:#005cbb;--mdc-list-list-item-disabled-label-text-color:#1a1b1f;--mdc-list-list-item-disabled-leading-icon-color:#1a1b1f;--mdc-list-list-item-disabled-trailing-icon-color:#1a1b1f;--mdc-list-list-item-hover-label-text-color:#1a1b1f;--mdc-list-list-item-focus-label-text-color:#1a1b1f;--mdc-list-list-item-hover-state-layer-color:#1a1b1f;--mdc-list-list-item-hover-state-layer-opacity:.08;--mdc-list-list-item-focus-state-layer-color:#1a1b1f;--mdc-list-list-item-focus-state-layer-opacity:.12;--mdc-list-list-item-label-text-font:Roboto, sans-serif;--mdc-list-list-item-label-text-line-height:1.5rem;--mdc-list-list-item-label-text-size:1rem;--mdc-list-list-item-label-text-tracking:.031rem;--mdc-list-list-item-label-text-weight:400;--mdc-list-list-item-supporting-text-font:Roboto, sans-serif;--mdc-list-list-item-supporting-text-line-height:1.25rem;--mdc-list-list-item-supporting-text-size:.875rem;--mdc-list-list-item-supporting-text-tracking:.016rem;--mdc-list-list-item-supporting-text-weight:400;--mdc-list-list-item-trailing-supporting-text-font:Roboto, sans-serif;--mdc-list-list-item-trailing-supporting-text-line-height:1rem;--mdc-list-list-item-trailing-supporting-text-size:.688rem;--mdc-list-list-item-trailing-supporting-text-tracking:.031rem;--mdc-list-list-item-trailing-supporting-text-weight:500;--mdc-list-list-item-one-line-container-height:48px;--mdc-list-list-item-two-line-container-height:64px;--mdc-list-list-item-three-line-container-height:88px;--mdc-list-list-item-container-shape:0;--mdc-list-list-item-leading-avatar-shape:9999px;--mdc-list-list-item-leading-icon-size:24px;--mdc-list-list-item-leading-avatar-size:40px;--mdc-list-list-item-trailing-icon-size:24px;--mdc-list-list-item-disabled-label-text-opacity:.3;--mdc-list-list-item-disabled-leading-icon-opacity:.38;--mdc-list-list-item-disabled-trailing-icon-opacity:.38}:root{--mat-list-active-indicator-color:#dae2f9;--mat-list-list-item-leading-icon-start-space:16px;--mat-list-list-item-leading-icon-end-space:16px;--mat-list-active-indicator-shape:9999px}:root{--mat-paginator-container-text-color:#1a1b1f;--mat-paginator-container-background-color:#faf9fd;--mat-paginator-enabled-icon-color:#44474e;--mat-paginator-disabled-icon-color:rgba(26, 27, 31, .38);--mat-paginator-container-text-font:Roboto, sans-serif;--mat-paginator-container-text-line-height:1rem;--mat-paginator-container-text-size:.75rem;--mat-paginator-container-text-tracking:.025rem;--mat-paginator-container-text-weight:400;--mat-paginator-select-trigger-text-size:.75rem;--mat-paginator-container-size:56px;--mat-paginator-form-field-container-height:40px;--mat-paginator-form-field-container-vertical-padding:8px;--mat-paginator-touch-target-display:block}:root{--mdc-secondary-navigation-tab-container-height:48px}:root{--mdc-tab-indicator-active-indicator-color:#005cbb;--mdc-tab-indicator-active-indicator-height:2px;--mdc-tab-indicator-active-indicator-shape:0}:root{--mat-tab-header-divider-color:#e0e2ec;--mat-tab-header-pagination-icon-color:#1a1b1f;--mat-tab-header-inactive-label-text-color:#1a1b1f;--mat-tab-header-active-label-text-color:#1a1b1f;--mat-tab-header-active-ripple-color:#1a1b1f;--mat-tab-header-inactive-ripple-color:#1a1b1f;--mat-tab-header-inactive-focus-label-text-color:#1a1b1f;--mat-tab-header-inactive-hover-label-text-color:#1a1b1f;--mat-tab-header-active-focus-label-text-color:#1a1b1f;--mat-tab-header-active-hover-label-text-color:#1a1b1f;--mat-tab-header-active-focus-indicator-color:#005cbb;--mat-tab-header-active-hover-indicator-color:#005cbb;--mat-tab-header-label-text-font:Roboto, sans-serif;--mat-tab-header-label-text-size:.875rem;--mat-tab-header-label-text-tracking:.006rem;--mat-tab-header-label-text-line-height:1.25rem;--mat-tab-header-label-text-weight:500;--mat-tab-header-divider-height:1px}:root{--mdc-checkbox-disabled-selected-checkmark-color:#faf9fd;--mdc-checkbox-selected-focus-state-layer-opacity:.12;--mdc-checkbox-selected-hover-state-layer-opacity:.08;--mdc-checkbox-selected-pressed-state-layer-opacity:.12;--mdc-checkbox-unselected-focus-state-layer-opacity:.12;--mdc-checkbox-unselected-hover-state-layer-opacity:.08;--mdc-checkbox-unselected-pressed-state-layer-opacity:.12;--mdc-checkbox-selected-pressed-icon-color:#005cbb;--mdc-checkbox-disabled-selected-icon-color:rgba(26, 27, 31, .38);--mdc-checkbox-disabled-unselected-icon-color:rgba(26, 27, 31, .38);--mdc-checkbox-selected-checkmark-color:#ffffff;--mdc-checkbox-selected-focus-icon-color:#005cbb;--mdc-checkbox-selected-hover-icon-color:#005cbb;--mdc-checkbox-selected-icon-color:#005cbb;--mdc-checkbox-unselected-focus-icon-color:#1a1b1f;--mdc-checkbox-unselected-hover-icon-color:#1a1b1f;--mdc-checkbox-unselected-icon-color:#44474e;--mdc-checkbox-selected-focus-state-layer-color:#005cbb;--mdc-checkbox-selected-hover-state-layer-color:#005cbb;--mdc-checkbox-selected-pressed-state-layer-color:#1a1b1f;--mdc-checkbox-unselected-focus-state-layer-color:#1a1b1f;--mdc-checkbox-unselected-hover-state-layer-color:#1a1b1f;--mdc-checkbox-unselected-pressed-state-layer-color:#005cbb;--mdc-checkbox-state-layer-size:40px}:root{--mat-checkbox-disabled-label-color:rgba(26, 27, 31, .38);--mat-checkbox-label-text-color:#1a1b1f;--mat-checkbox-label-text-font:Roboto, sans-serif;--mat-checkbox-label-text-line-height:1.25rem;--mat-checkbox-label-text-size:.875rem;--mat-checkbox-label-text-tracking:.016rem;--mat-checkbox-label-text-weight:400;--mat-checkbox-touch-target-display:block}:root{--mdc-text-button-label-text-color:#005cbb;--mdc-text-button-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-text-button-label-text-font:Roboto, sans-serif;--mdc-text-button-label-text-size:.875rem;--mdc-text-button-label-text-tracking:.006rem;--mdc-text-button-label-text-weight:500;--mdc-text-button-container-height:40px;--mdc-text-button-container-shape:9999px}:root{--mdc-protected-button-container-elevation-shadow:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mdc-protected-button-disabled-container-elevation-shadow:0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);--mdc-protected-button-focus-container-elevation-shadow:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mdc-protected-button-hover-container-elevation-shadow:0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);--mdc-protected-button-pressed-container-elevation-shadow:0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);--mdc-protected-button-container-color:#faf9fd;--mdc-protected-button-label-text-color:#005cbb;--mdc-protected-button-disabled-container-color:rgba(26, 27, 31, .12);--mdc-protected-button-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-protected-button-label-text-font:Roboto, sans-serif;--mdc-protected-button-label-text-size:.875rem;--mdc-protected-button-label-text-tracking:.006rem;--mdc-protected-button-label-text-weight:500;--mdc-protected-button-container-height:40px;--mdc-protected-button-container-shape:9999px}:root{--mdc-filled-button-container-color:#005cbb;--mdc-filled-button-label-text-color:#ffffff;--mdc-filled-button-disabled-container-color:rgba(26, 27, 31, .12);--mdc-filled-button-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-filled-button-label-text-font:Roboto, sans-serif;--mdc-filled-button-label-text-size:.875rem;--mdc-filled-button-label-text-tracking:.006rem;--mdc-filled-button-label-text-weight:500;--mdc-filled-button-container-height:40px;--mdc-filled-button-container-shape:9999px}:root{--mdc-outlined-button-disabled-outline-color:rgba(26, 27, 31, .12);--mdc-outlined-button-disabled-label-text-color:rgba(26, 27, 31, .38);--mdc-outlined-button-label-text-color:#005cbb;--mdc-outlined-button-outline-color:#74777f;--mdc-outlined-button-label-text-font:Roboto, sans-serif;--mdc-outlined-button-label-text-size:.875rem;--mdc-outlined-button-label-text-tracking:.006rem;--mdc-outlined-button-label-text-weight:500;--mdc-outlined-button-container-height:40px;--mdc-outlined-button-outline-width:1px;--mdc-outlined-button-container-shape:9999px}:root{--mat-text-button-state-layer-color:#005cbb;--mat-text-button-disabled-state-layer-color:#44474e;--mat-text-button-ripple-color:rgba(0, 92, 187, .12);--mat-text-button-hover-state-layer-opacity:.08;--mat-text-button-focus-state-layer-opacity:.12;--mat-text-button-pressed-state-layer-opacity:.12;--mat-text-button-touch-target-display:block;--mat-text-button-horizontal-padding:12px;--mat-text-button-with-icon-horizontal-padding:16px;--mat-text-button-icon-spacing:8px;--mat-text-button-icon-offset:-4px}:root{--mat-protected-button-state-layer-color:#005cbb;--mat-protected-button-disabled-state-layer-color:#44474e;--mat-protected-button-ripple-color:rgba(0, 92, 187, .12);--mat-protected-button-hover-state-layer-opacity:.08;--mat-protected-button-focus-state-layer-opacity:.12;--mat-protected-button-pressed-state-layer-opacity:.12;--mat-protected-button-touch-target-display:block;--mat-protected-button-horizontal-padding:24px;--mat-protected-button-icon-spacing:8px;--mat-protected-button-icon-offset:-8px}:root{--mat-filled-button-state-layer-color:#ffffff;--mat-filled-button-disabled-state-layer-color:#44474e;--mat-filled-button-ripple-color:rgba(255, 255, 255, .12);--mat-filled-button-hover-state-layer-opacity:.08;--mat-filled-button-focus-state-layer-opacity:.12;--mat-filled-button-pressed-state-layer-opacity:.12;--mat-filled-button-touch-target-display:block;--mat-filled-button-horizontal-padding:24px;--mat-filled-button-icon-spacing:8px;--mat-filled-button-icon-offset:-8px}:root{--mat-outlined-button-state-layer-color:#005cbb;--mat-outlined-button-disabled-state-layer-color:#44474e;--mat-outlined-button-ripple-color:rgba(0, 92, 187, .12);--mat-outlined-button-hover-state-layer-opacity:.08;--mat-outlined-button-focus-state-layer-opacity:.12;--mat-outlined-button-pressed-state-layer-opacity:.12;--mat-outlined-button-touch-target-display:block;--mat-outlined-button-horizontal-padding:24px;--mat-outlined-button-icon-spacing:8px;--mat-outlined-button-icon-offset:-8px}:root{--mdc-icon-button-icon-color:#44474e;--mdc-icon-button-disabled-icon-color:rgba(26, 27, 31, .38);--mdc-icon-button-state-layer-size:40px;--mdc-icon-button-icon-size:24px}:root{--mat-icon-button-state-layer-color:#44474e;--mat-icon-button-disabled-state-layer-color:#44474e;--mat-icon-button-ripple-color:rgba(68, 71, 78, .12);--mat-icon-button-hover-state-layer-opacity:.08;--mat-icon-button-focus-state-layer-opacity:.12;--mat-icon-button-pressed-state-layer-opacity:.12;--mat-icon-button-touch-target-display:block}:root{--mdc-extended-fab-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-extended-fab-focus-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-extended-fab-hover-container-elevation-shadow:0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);--mdc-extended-fab-pressed-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-extended-fab-label-text-font:Roboto, sans-serif;--mdc-extended-fab-label-text-size:.875rem;--mdc-extended-fab-label-text-tracking:.006rem;--mdc-extended-fab-label-text-weight:500;--mdc-extended-fab-container-height:56px;--mdc-extended-fab-container-shape:16px}:root{--mdc-fab-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-focus-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-hover-container-elevation-shadow:0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);--mdc-fab-pressed-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-container-color:#d7e3ff;--mdc-fab-container-shape:16px}:root{--mdc-fab-small-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-small-focus-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-small-hover-container-elevation-shadow:0px 5px 5px -3px rgba(0, 0, 0, .2), 0px 8px 10px 1px rgba(0, 0, 0, .14), 0px 3px 14px 2px rgba(0, 0, 0, .12);--mdc-fab-small-pressed-container-elevation-shadow:0px 3px 5px -1px rgba(0, 0, 0, .2), 0px 6px 10px 0px rgba(0, 0, 0, .14), 0px 1px 18px 0px rgba(0, 0, 0, .12);--mdc-fab-small-container-color:#d7e3ff;--mdc-fab-small-container-shape:12px}:root{--mat-fab-foreground-color:#00458f;--mat-fab-state-layer-color:#00458f;--mat-fab-ripple-color:rgba(0, 69, 143, .12);--mat-fab-hover-state-layer-opacity:.08;--mat-fab-focus-state-layer-opacity:.12;--mat-fab-pressed-state-layer-opacity:.12;--mat-fab-disabled-state-container-color:rgba(26, 27, 31, .12);--mat-fab-disabled-state-foreground-color:rgba(26, 27, 31, .38);--mat-fab-touch-target-display:block}:root{--mat-fab-small-foreground-color:#00458f;--mat-fab-small-state-layer-color:#00458f;--mat-fab-small-ripple-color:rgba(0, 69, 143, .12);--mat-fab-small-hover-state-layer-opacity:.08;--mat-fab-small-focus-state-layer-opacity:.12;--mat-fab-small-pressed-state-layer-opacity:.12;--mat-fab-small-disabled-state-container-color:rgba(26, 27, 31, .12);--mat-fab-small-disabled-state-foreground-color:rgba(26, 27, 31, .38)}:root{--mdc-snackbar-container-color:#2f3033;--mdc-snackbar-supporting-text-color:#f2f0f4;--mdc-snackbar-supporting-text-font:Roboto, sans-serif;--mdc-snackbar-supporting-text-line-height:1.25rem;--mdc-snackbar-supporting-text-size:.875rem;--mdc-snackbar-supporting-text-weight:400;--mdc-snackbar-container-shape:4px}:root{--mat-snack-bar-button-color:#abc7ff}:root{--mat-table-background-color:#faf9fd;--mat-table-header-headline-color:#1a1b1f;--mat-table-row-item-label-text-color:#1a1b1f;--mat-table-row-item-outline-color:#74777f;--mat-table-header-headline-font:Roboto, sans-serif;--mat-table-header-headline-line-height:1.25rem;--mat-table-header-headline-size:.875rem;--mat-table-header-headline-weight:500;--mat-table-header-headline-tracking:.006rem;--mat-table-row-item-label-text-font:Roboto, sans-serif;--mat-table-row-item-label-text-line-height:1.25rem;--mat-table-row-item-label-text-size:.875rem;--mat-table-row-item-label-text-weight:400;--mat-table-row-item-label-text-tracking:.016rem;--mat-table-footer-supporting-text-font:Roboto, sans-serif;--mat-table-footer-supporting-text-line-height:1.25rem;--mat-table-footer-supporting-text-size:.875rem;--mat-table-footer-supporting-text-weight:400;--mat-table-footer-supporting-text-tracking:.016rem;--mat-table-header-container-height:56px;--mat-table-footer-container-height:52px;--mat-table-row-item-container-height:52px;--mat-table-row-item-outline-width:1px}:root{--mdc-circular-progress-active-indicator-color:#005cbb;--mdc-circular-progress-active-indicator-width:4px;--mdc-circular-progress-size:48px}:root{--mat-badge-background-color:#ba1a1a;--mat-badge-text-color:#ffffff;--mat-badge-disabled-state-background-color:rgba(186, 26, 26, .38);--mat-badge-disabled-state-text-color:#ffffff;--mat-badge-text-font:Roboto, sans-serif;--mat-badge-text-size:.688rem;--mat-badge-text-weight:500;--mat-badge-large-size-text-size:.688rem;--mat-badge-container-shape:9999px;--mat-badge-container-size:16px;--mat-badge-small-size-container-size:6px;--mat-badge-large-size-container-size:16px;--mat-badge-legacy-container-size:unset;--mat-badge-legacy-small-size-container-size:unset;--mat-badge-legacy-large-size-container-size:unset;--mat-badge-container-offset:-12px 0;--mat-badge-small-size-container-offset:-6px 0;--mat-badge-large-size-container-offset:-12px 0;--mat-badge-container-overlap-offset:-12px;--mat-badge-small-size-container-overlap-offset:-6px;--mat-badge-large-size-container-overlap-offset:-12px;--mat-badge-container-padding:0 4px;--mat-badge-small-size-container-padding:0;--mat-badge-large-size-container-padding:0 4px;--mat-badge-line-height:16px;--mat-badge-small-size-text-size:0;--mat-badge-small-size-line-height:6px;--mat-badge-large-size-line-height:16px}:root{--mat-bottom-sheet-container-text-color:#1a1b1f;--mat-bottom-sheet-container-background-color:#f4f3f6;--mat-bottom-sheet-container-text-font:Roboto, sans-serif;--mat-bottom-sheet-container-text-line-height:1.5rem;--mat-bottom-sheet-container-text-size:1rem;--mat-bottom-sheet-container-text-tracking:.031rem;--mat-bottom-sheet-container-text-weight:400;--mat-bottom-sheet-container-shape:28px}:root{--mat-standard-button-toggle-hover-state-layer-opacity:.08;--mat-standard-button-toggle-focus-state-layer-opacity:.12;--mat-standard-button-toggle-text-color:#1a1b1f;--mat-standard-button-toggle-state-layer-color:#1a1b1f;--mat-standard-button-toggle-selected-state-background-color:#dae2f9;--mat-standard-button-toggle-selected-state-text-color:#3e4759;--mat-standard-button-toggle-disabled-state-text-color:rgba(26, 27, 31, .38);--mat-standard-button-toggle-disabled-selected-state-text-color:rgba(26, 27, 31, .38);--mat-standard-button-toggle-disabled-selected-state-background-color:rgba(26, 27, 31, .12);--mat-standard-button-toggle-divider-color:#74777f;--mat-standard-button-toggle-label-text-font:Roboto, sans-serif;--mat-standard-button-toggle-label-text-line-height:1.25rem;--mat-standard-button-toggle-label-text-size:.875rem;--mat-standard-button-toggle-label-text-tracking:.006rem;--mat-standard-button-toggle-label-text-weight:500;--mat-standard-button-toggle-height:40px;--mat-standard-button-toggle-shape:9999px;--mat-standard-button-toggle-background-color:transparent;--mat-standard-button-toggle-disabled-state-background-color:transparent}:root{--mat-datepicker-calendar-date-selected-state-text-color:#ffffff;--mat-datepicker-calendar-date-selected-state-background-color:#005cbb;--mat-datepicker-calendar-date-selected-disabled-state-background-color:rgba(26, 27, 31, .38);--mat-datepicker-calendar-date-today-selected-state-outline-color:#005cbb;--mat-datepicker-calendar-date-focus-state-background-color:rgba(26, 27, 31, .12);--mat-datepicker-calendar-date-hover-state-background-color:rgba(26, 27, 31, .08);--mat-datepicker-toggle-active-state-icon-color:#44474e;--mat-datepicker-calendar-date-in-range-state-background-color:#d7e3ff;--mat-datepicker-calendar-date-in-comparison-range-state-background-color:#e0e0ff;--mat-datepicker-calendar-date-in-overlap-range-state-background-color:#dae2f9;--mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color:#565e71;--mat-datepicker-toggle-icon-color:#44474e;--mat-datepicker-calendar-body-label-text-color:#1a1b1f;--mat-datepicker-calendar-period-button-text-color:#44474e;--mat-datepicker-calendar-period-button-icon-color:#44474e;--mat-datepicker-calendar-navigation-button-icon-color:#44474e;--mat-datepicker-calendar-header-text-color:#44474e;--mat-datepicker-calendar-date-today-outline-color:#005cbb;--mat-datepicker-calendar-date-today-disabled-state-outline-color:rgba(26, 27, 31, .38);--mat-datepicker-calendar-date-text-color:#1a1b1f;--mat-datepicker-calendar-date-disabled-state-text-color:rgba(26, 27, 31, .38);--mat-datepicker-calendar-date-preview-state-outline-color:#005cbb;--mat-datepicker-range-input-separator-color:#1a1b1f;--mat-datepicker-range-input-disabled-state-separator-color:rgba(26, 27, 31, .38);--mat-datepicker-range-input-disabled-state-text-color:rgba(26, 27, 31, .38);--mat-datepicker-calendar-container-background-color:#e9e7eb;--mat-datepicker-calendar-container-text-color:#1a1b1f;--mat-datepicker-calendar-text-font:Roboto, sans-serif;--mat-datepicker-calendar-text-size:.875rem;--mat-datepicker-calendar-body-label-text-size:.875rem;--mat-datepicker-calendar-body-label-text-weight:500;--mat-datepicker-calendar-period-button-text-size:.875rem;--mat-datepicker-calendar-period-button-text-weight:500;--mat-datepicker-calendar-header-text-size:.875rem;--mat-datepicker-calendar-header-text-weight:500;--mat-datepicker-calendar-container-shape:16px;--mat-datepicker-calendar-container-touch-shape:28px;--mat-datepicker-calendar-container-elevation-shadow:0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);--mat-datepicker-calendar-container-touch-elevation-shadow:0px 0px 0px 0px rgba(0, 0, 0, .2), 0px 0px 0px 0px rgba(0, 0, 0, .14), 0px 0px 0px 0px rgba(0, 0, 0, .12);--mat-datepicker-calendar-header-divider-color:transparent;--mat-datepicker-calendar-date-outline-color:transparent}:root{--mat-divider-color:#74777f;--mat-divider-width:1px}:root{--mat-expansion-container-background-color:#faf9fd;--mat-expansion-container-text-color:#1a1b1f;--mat-expansion-actions-divider-color:#74777f;--mat-expansion-header-hover-state-layer-color:rgba(26, 27, 31, .08);--mat-expansion-header-focus-state-layer-color:rgba(26, 27, 31, .12);--mat-expansion-header-disabled-state-text-color:rgba(26, 27, 31, .38);--mat-expansion-header-text-color:#1a1b1f;--mat-expansion-header-description-color:#44474e;--mat-expansion-header-indicator-color:#44474e;--mat-expansion-header-text-font:Roboto, sans-serif;--mat-expansion-header-text-size:1rem;--mat-expansion-header-text-weight:500;--mat-expansion-header-text-line-height:1.5rem;--mat-expansion-header-text-tracking:.009rem;--mat-expansion-container-text-font:Roboto, sans-serif;--mat-expansion-container-text-line-height:1.5rem;--mat-expansion-container-text-size:1rem;--mat-expansion-container-text-tracking:.031rem;--mat-expansion-container-text-weight:400;--mat-expansion-header-collapsed-state-height:48px;--mat-expansion-header-expanded-state-height:64px;--mat-expansion-container-shape:12px;--mat-expansion-legacy-header-indicator-display:none;--mat-expansion-header-indicator-display:inline-block}:root{--mat-grid-list-tile-header-primary-text-size:400 1rem / 1.5rem Roboto, sans-serif;--mat-grid-list-tile-header-secondary-text-size:400 .875rem / 1.25rem Roboto, sans-serif;--mat-grid-list-tile-footer-primary-text-size:400 1rem / 1.5rem Roboto, sans-serif;--mat-grid-list-tile-footer-secondary-text-size:400 .875rem / 1.25rem Roboto, sans-serif}:root{--mat-icon-color:inherit}:root{--mat-sidenav-container-background-color:#faf9fd;--mat-sidenav-container-text-color:#44474e;--mat-sidenav-content-background-color:#faf9fd;--mat-sidenav-content-text-color:#1a1b1f;--mat-sidenav-scrim-color:rgba(45, 48, 56, .4);--mat-sidenav-container-shape:16px;--mat-sidenav-container-elevation-shadow:none;--mat-sidenav-container-width:360px;--mat-sidenav-container-divider-color:transparent}:root{--mat-stepper-header-icon-foreground-color:#faf9fd;--mat-stepper-header-selected-state-icon-background-color:#005cbb;--mat-stepper-header-selected-state-icon-foreground-color:#ffffff;--mat-stepper-header-edit-state-icon-background-color:#005cbb;--mat-stepper-header-edit-state-icon-foreground-color:#ffffff;--mat-stepper-container-color:#faf9fd;--mat-stepper-line-color:#74777f;--mat-stepper-header-hover-state-layer-color:rgba(47, 48, 51, .08);--mat-stepper-header-focus-state-layer-color:rgba(47, 48, 51, .12);--mat-stepper-header-label-text-color:#44474e;--mat-stepper-header-optional-label-text-color:#44474e;--mat-stepper-header-selected-state-label-text-color:#44474e;--mat-stepper-header-error-state-label-text-color:#ba1a1a;--mat-stepper-header-icon-background-color:#44474e;--mat-stepper-header-error-state-icon-foreground-color:#ba1a1a;--mat-stepper-container-text-font:Roboto, sans-serif;--mat-stepper-header-label-text-font:Roboto, sans-serif;--mat-stepper-header-label-text-size:.875rem;--mat-stepper-header-label-text-weight:500;--mat-stepper-header-error-state-label-text-size:.875rem;--mat-stepper-header-selected-state-label-text-size:.875rem;--mat-stepper-header-selected-state-label-text-weight:500;--mat-stepper-header-height:72px;--mat-stepper-header-focus-state-layer-shape:12px;--mat-stepper-header-hover-state-layer-shape:12px;--mat-stepper-header-error-state-icon-background-color:transparent}:root{--mat-sort-arrow-color:#1a1b1f}:root{--mat-toolbar-container-background-color:#faf9fd;--mat-toolbar-container-text-color:#1a1b1f;--mat-toolbar-title-text-font:Roboto, sans-serif;--mat-toolbar-title-text-line-height:1.75rem;--mat-toolbar-title-text-size:1.375rem;--mat-toolbar-title-text-tracking:0;--mat-toolbar-title-text-weight:400;--mat-toolbar-standard-height:64px;--mat-toolbar-mobile-height:56px}:root{--mat-tree-container-background-color:#faf9fd;--mat-tree-node-text-color:#1a1b1f;--mat-tree-node-text-font:Roboto, sans-serif;--mat-tree-node-text-size:1rem;--mat-tree-node-text-weight:400;--mat-tree-node-min-height:48px}:root{--mat-timepicker-container-background-color:#efedf0;--mat-timepicker-container-shape:4px;--mat-timepicker-container-elevation-shadow:0px 3px 1px -2px rgba(0, 0, 0, .2), 0px 2px 2px 0px rgba(0, 0, 0, .14), 0px 1px 5px 0px rgba(0, 0, 0, .12)}html,body{height:100%;margin:0;display:flex;flex-direction:column}body{margin:0;font-family:ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";background-color:#f3f4f6}@media (max-width: 768px){body{font-size:14px}}@media (max-width: 480px){body{font-size:12px}}body::-webkit-scrollbar{width:10px}body::-webkit-scrollbar-track{background:transparent}body::-webkit-scrollbar-thumb{background:#888;border-radius:5px}body::-webkit-scrollbar-thumb:hover{background:#555}</style><link rel="stylesheet" href="styles-PGT5PW26.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-PGT5PW26.css"></noscript></head>
-    <body class="mat-typography">
-        <app-root></app-root>
-    <link rel="modulepreload" href="chunk-QIG2ALCL.js"><link rel="modulepreload" href="chunk-CU4BULFP.js"><link rel="modulepreload" href="chunk-QG6773CF.js"><link rel="modulepreload" href="chunk-UBH5ZYKM.js"><script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-X6O7IBOH.js" type="module"></script></body>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil – Sport Nautique Valéricain</title>
+<meta name="description" content="Sport Nautique Valéricain : école de voile, régates et sorties en Baie de Somme, au départ de Saint-Valery-sur-Somme.">
+<!-- Maquette de travail : ne pas indexer dans les moteurs de recherche -->
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{
+  --marine:#0b3550; --marine-2:#14507a; --mer:#1f7a8c; --mer-clair:#d9eef0;
+  --sable:#f6f1e7; --sable-2:#ece3d1; --corail:#b8432f; --corail-2:#97321f;
+  --texte:#1b2530; --texte-2:#4a5866; --blanc:#fff; --bord:#d6dbe0; --ok:#1d6b3a; --erreur:#a4161a;
+  --rayon:14px; --ombre:0 2px 10px rgba(11,53,80,.08);
+  --police:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px;scroll-padding-bottom:90px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--police);font-size:1.0625rem;line-height:1.6;color:var(--texte);background:var(--blanc)}
+img,svg{max-width:100%}
+a{color:var(--marine-2);text-underline-offset:.18em}
+a:hover{color:var(--marine)}
+:focus-visible{outline:3px solid #0b3550;outline-offset:2px;box-shadow:0 0 0 5px #fff;border-radius:4px}
+h2[id],h3[id]{scroll-margin-top:100px}
+/* Titres qui reçoivent le focus par script (changement de page) : pas de cadre, ce ne sont pas des éléments interactifs */
+h1[tabindex="-1"]:focus,h2[tabindex="-1"]:focus,h3[tabindex="-1"]:focus,main:focus,[id$="-message"]:focus{outline:none;box-shadow:none}
+/* Corrections d'alignement */
+.carte.membre{flex-direction:row;align-items:center;text-align:left}
+.carte.carte-photo{padding:0}
+/* Formulaires en grille : chaque champ colle au bas de sa cellule, les libellés longs (sur 2 lignes) ne décalent plus les champs */
+.deux-col,.form-evt .grille-form,form.grille,.grille-proposition,.filtres{align-items:end}
+form.grille>.champ,.grille-proposition>.champ,.grille-form>.champ,.deux-col>.champ{display:flex;flex-direction:column;justify-content:flex-end;height:100%}
+form.grille>.champ label,.grille-proposition>.champ label,.grille-form>.champ label,.deux-col>.champ label{margin-top:auto}
+/* Même hauteur pour tous les champs d'une ligne (saisie, date, heure, liste déroulante) */
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],input[type=time],select{height:3.1rem;padding-top:0;padding-bottom:0;line-height:1.2}
+.table-admin input:not([type=checkbox]),.table-admin select{height:2.5rem}
+.nav-mobile{display:none}
+@media (max-width:1150px){nav.principale .nav-mobile{display:list-item}}
+h1,h2,h3{line-height:1.2;color:var(--marine);margin:0 0 .6em}
+h1{font-size:clamp(2rem,4.5vw,3.1rem)}
+h2{font-size:clamp(1.5rem,3vw,2rem)}
+h3{font-size:1.2rem}
+p{margin:0 0 1em}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.conteneur{max-width:1140px;margin:0 auto;padding-inline:20px}
+.evitement{position:absolute;left:12px;top:-100px;background:var(--marine);color:#fff;padding:.7em 1.1em;border-radius:8px;z-index:100;font-weight:600}
+.evitement:focus{top:12px;color:#fff}
+
+/* Bandeau maquette */
+.bandeau-maquette{background:#fff4d6;color:#5a4300;font-size:.9rem;text-align:center;padding:.45em 20px;border-bottom:1px solid #ecd9a0}
+
+/* En-tête */
+header.entete{background:var(--blanc);border-bottom:1px solid var(--bord);position:sticky;top:0;z-index:50}
+.entete .conteneur{display:flex;align-items:center;gap:20px;min-height:76px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--marine);font-weight:800;line-height:1.1}
+.logo small{display:block;font-weight:500;color:var(--texte-2);font-size:.8rem}
+.logo img{width:52px;height:52px;flex:none}
+.heros-photo{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px;box-shadow:0 14px 34px rgba(11,53,80,.2);display:block}
+.carte-photo{padding:0;overflow:hidden}
+.carte-photo img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
+.carte-photo .corps{padding:24px}
+.baie{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:center}
+.baie img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:50% 50% 24px 24px;display:block}
+@media (max-width:760px){.baie{grid-template-columns:1fr}.baie img{max-width:340px;margin:0 auto}}
+.bandeau-photo{width:100%;height:auto;max-height:260px;object-fit:cover;border-radius:var(--rayon);display:block;margin-bottom:24px}
+.membre{display:flex;gap:14px;align-items:center}
+.avatar{width:52px;height:52px;border-radius:50%;background:var(--marine);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.membre h3{margin:0;font-size:1.05rem}
+.membre p{margin:0;color:var(--texte-2);font-size:.95rem}
+.galerie img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.partenaire-principal{background:var(--sable);border:2px solid var(--sable-2);border-radius:var(--rayon);padding:28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.partenaire-principal strong{font-size:1.6rem;color:var(--marine)}
+.partenaire-principal{justify-content:flex-start;gap:28px;background:#fff}
+.logo-partenaire-principal{width:200px;height:auto;border-radius:10px;flex:none}
+.logos-labels{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.logos-labels li{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;font-size:.92rem;color:var(--texte-2)}
+.logos-labels img{height:86px;width:auto;max-width:100%;object-fit:contain}
+.label-efv{height:46px;width:auto;vertical-align:middle;margin-right:10px;background:#fff;border-radius:6px;padding:3px 6px}
+/* Agenda */
+.agenda .contenu-evt{min-width:0}
+.agenda .meta{margin:0;color:var(--texte-2);font-size:.95rem}
+.agenda .etiquettes{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.agenda .actions-evt{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;margin-top:12px}
+.agenda li{grid-template-columns:84px 1fr}
+.cat-regate{background:#dbe7f2;color:var(--marine)}
+.cat-sortie{background:#d9eef0;color:#0d5260}
+.cat-croisiere{background:#fbe4de;color:var(--corail-2)}
+.cat-club{background:#efe6d2;color:#5b4a1f}
+.termine{background:#eceff2;color:var(--texte-2)}
+details.ajouter{position:relative}
+details.ajouter summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:.4em;padding:.6em 1.1em;border-radius:999px;border:2px solid var(--bord);font-weight:700;color:var(--marine);font-size:.95rem}
+details.ajouter summary::-webkit-details-marker{display:none}
+details.ajouter summary::before{content:"+";font-size:1.2em;line-height:1}
+details.ajouter[open] summary{border-color:var(--marine)}
+details.ajouter ul{list-style:none;margin:8px 0 0;padding:8px;background:#fff;border:1px solid var(--bord);border-radius:12px;box-shadow:var(--ombre);display:grid;gap:4px;min-width:250px}
+details.ajouter li{display:block;border:none;padding:0;background:none}
+details.ajouter a,details.ajouter button{display:block;width:100%;text-align:left;padding:.55em .8em;border-radius:8px;font:inherit;font-size:.95rem;background:none;border:none;color:var(--marine-2);text-decoration:underline;cursor:pointer}
+details.ajouter a:hover,details.ajouter button:hover{background:var(--sable)}
+.mois-titre{font-size:1.3rem;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--sable-2)}
+.mois-titre:first-child{margin-top:0}
+.filtres-agenda{background:var(--sable);border-radius:var(--rayon);padding:20px 22px;margin-bottom:28px}
+.filtres-agenda fieldset{margin:0 0 14px}
+.abonnement{display:grid;gap:12px}
+.abonnement details{background:#fff;border:1px solid var(--bord);border-radius:12px;padding:0 18px}
+.abonnement summary{cursor:pointer;font-weight:700;color:var(--marine);padding:14px 0}
+.abonnement details[open]{padding-bottom:14px}
+.abonnement ol{margin:0;padding-left:1.3em}
+.adresse-flux{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+.adresse-flux code{background:#fff;border:1px solid var(--bord);border-radius:8px;padding:.55em .8em;font-size:.92rem;overflow-wrap:anywhere}
+.menu-bouton{display:none;margin-left:auto;background:none;border:2px solid var(--marine);color:var(--marine);border-radius:10px;padding:.45em .9em;font:inherit;font-weight:700;cursor:pointer}
+nav.principale{margin-left:auto}
+nav.principale ul{list-style:none;margin:0;padding:0;display:flex;gap:4px;flex-wrap:wrap}
+nav.principale a{display:block;padding:.55em .6em;border-radius:8px;text-decoration:none;color:var(--texte);font-weight:600;font-size:.97rem}
+nav.principale a:hover{background:var(--sable)}
+nav.principale a[aria-current="page"]{color:var(--marine);background:var(--mer-clair)}
+.bouton{display:inline-flex;align-items:center;gap:.45em;padding:.75em 1.3em;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.2}
+.bouton-principal{background:var(--corail);color:#fff}
+.bouton-principal:hover{background:var(--corail-2);color:#fff}
+.bouton-secondaire{background:#fff;color:var(--marine);border-color:var(--marine)}
+.bouton-secondaire:hover{background:var(--marine);color:#fff}
+.bouton-clair{background:#fff;color:var(--marine)}
+.bouton-clair:hover{background:var(--sable);color:var(--marine)}
+.entete .bouton{padding:.6em 1.1em;font-size:.95rem}
+.externe::after{content:"↗";font-weight:700}
+
+@media (max-width:1150px){
+  .menu-bouton{display:inline-block}
+  nav.principale{flex-basis:100%;margin:0;display:none;padding-bottom:12px}
+  nav.principale.ouvert{display:block}
+  nav.principale ul{flex-direction:column}
+  nav.principale a{padding:.8em .75em}
+  .entete .adherer{display:none}
+}
+@media (max-width:480px){
+  .entete .conteneur{gap:10px}
+  .logo{font-size:.92rem;gap:8px;min-width:0}
+  .logo svg{width:36px;height:36px}
+  .menu-bouton{padding:.4em .7em}
+}
+
+/* Sections */
+main{display:block}
+.page[hidden]{display:none!important}
+section.bloc{padding-block:64px}
+.bloc-sable{background:var(--sable)}
+.bloc-marine{background:var(--marine);color:#e8f0f5}
+.bloc-marine h2,.bloc-marine h3{color:#fff}
+.chapeau{font-size:1.2rem;color:var(--texte-2);max-width:62ch}
+.surtitre{display:inline-block;font-size:.85rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--marine-2);margin-bottom:.5em}
+
+/* Héros */
+.heros{background:linear-gradient(180deg,#e6f3f5 0%,#f6f1e7 100%);position:relative;overflow:hidden}
+.heros .conteneur{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:64px 40px}
+.heros p.chapeau{font-size:1.25rem}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.heros-illu{width:100%;height:auto}
+@media (max-width:820px){.heros .conteneur{grid-template-columns:1fr}.heros-illu{max-width:420px;margin:0 auto}}
+
+/* En-tête de page interne */
+.entete-page{background:linear-gradient(180deg,#e6f3f5,#f6f1e7);padding-block:48px 36px}
+.fil{font-size:.9rem;margin-bottom:12px;color:var(--texte-2)}
+.fil ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4em}
+.fil li+li::before{content:"›";margin-right:.4em}
+
+/* Grilles et cartes */
+.grille{display:grid;gap:22px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.carte{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:24px;box-shadow:var(--ombre);display:flex;flex-direction:column}
+.carte h3{margin-bottom:.4em}
+.carte p:last-child{margin-bottom:0}
+.carte .pied{margin-top:auto;padding-top:14px}
+.carte-acces{position:relative}
+.carte-acces a.lien-carte{text-decoration:none;color:var(--marine)}
+.carte-acces a.lien-carte::after{content:"";position:absolute;inset:0;border-radius:var(--rayon)}
+.carte-acces:hover{border-color:var(--mer)}
+.carte-acces:focus-within{outline:3px solid #e8a33d;outline-offset:3px}
+.carte-acces a.lien-carte:focus-visible{outline:none}
+.icone{width:48px;height:48px;border-radius:12px;background:var(--mer-clair);display:grid;place-items:center;margin-bottom:14px}
+.icone svg{width:28px;height:28px}
+.badge{display:inline-block;font-size:.8rem;font-weight:700;padding:.2em .7em;border-radius:999px;background:var(--mer-clair);color:var(--marine)}
+.badge-corail{background:#fbe4de;color:var(--corail-2)}
+.badge-vert{background:#dcefe2;color:var(--ok)}
+.badge-gris{background:#eceff2;color:var(--texte-2)}
+.exemple{font-size:.78rem;color:var(--texte-2);font-style:italic}
+
+/* Agenda */
+.agenda{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.agenda li{display:grid;grid-template-columns:84px 1fr;gap:18px;align-items:start;background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:16px 20px}
+.date-pastille{background:var(--marine);color:#fff;border-radius:12px;text-align:center;padding:8px 4px;line-height:1.1}
+.date-pastille .j{display:block;font-size:1.6rem;font-weight:800}
+.date-pastille .m{font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}
+.agenda h3{margin:0 0 .2em;font-size:1.08rem}
+.agenda p{margin:0;color:var(--texte-2);font-size:.95rem}
+@media (max-width:640px){.agenda li{grid-template-columns:64px 1fr;gap:14px;padding:14px}}
+
+/* Tableaux */
+.tableau-conteneur{position:relative;overflow-x:auto;border:1px solid var(--bord);border-radius:var(--rayon)}
+table{border-collapse:collapse;width:100%;background:#fff;min-width:560px}
+caption{text-align:left;font-weight:700;padding:14px 16px;color:var(--marine)}
+th,td{text-align:left;padding:12px 16px;border-top:1px solid var(--bord);vertical-align:top}
+thead th{background:var(--sable);border-top:none}
+
+/* Formulaires */
+form .champ{margin-bottom:18px}
+label,legend{display:block;font-weight:700;margin-bottom:6px;color:var(--texte)}
+.aide{display:block;font-weight:400;font-size:.9rem;color:var(--texte-2);margin-top:2px}
+input[type=text],input[type=email],input[type=tel],input[type=number],input[type=date],input[type=time],select,textarea{width:100%;font:inherit;padding:.7em .85em;border:2px solid #8795a3;border-radius:10px;background:#fff;color:var(--texte)}
+input:focus,select:focus,textarea:focus{border-color:var(--marine-2)}
+textarea{min-height:110px;resize:vertical}
+input[type=file]{font:inherit;font-size:.92rem;max-width:100%;padding:.35em 0}
+input[type=file]::file-selector-button{font:inherit;font-weight:700;color:var(--marine);background:#fff;border:2px solid var(--marine);border-radius:999px;padding:.45em 1em;margin-right:.8em;cursor:pointer}
+input[type=file]::file-selector-button:hover{background:var(--marine);color:#fff}
+fieldset{border:none;padding:0;margin:0 0 18px}
+.choix{display:flex;flex-wrap:wrap;gap:10px}
+.choix label{font-weight:500;display:flex;align-items:center;gap:8px;border:2px solid var(--bord);border-radius:10px;padding:.5em .9em;cursor:pointer;margin:0}
+.choix input{width:20px;height:20px;accent-color:var(--marine-2)}
+.case{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.case input{width:22px;height:22px;margin-top:3px;flex:none;accent-color:var(--marine-2)}
+.erreur-champ{color:var(--erreur);font-weight:600;font-size:.92rem;margin-top:6px}
+[aria-invalid="true"]{border-color:var(--erreur)!important}
+.message{border-radius:12px;padding:14px 18px;margin-top:16px;font-weight:600}
+.message-ok{background:#e3f3e8;color:var(--ok);border:1px solid #a9d6b7}
+.message-info{background:var(--mer-clair);color:var(--marine);border:1px solid #9fcfd5}
+.message-erreur{background:#fbe5e5;color:var(--erreur);border:1px solid #e8b0b0}
+.obligatoire{color:var(--erreur)}
+.deux-col{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+@media (max-width:640px){.deux-col{grid-template-columns:1fr}}
+
+.filtres{display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;background:var(--sable);border-radius:var(--rayon);padding:18px 20px;margin-bottom:22px}
+.filtres .champ{margin:0;min-width:200px;flex:1}
+.resultat-compte{color:var(--texte-2);margin:0 0 14px}
+
+.annonce .entete-annonce{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px}
+.annonce .prix{font-size:1.3rem;font-weight:800;color:var(--marine)}
+.annonce dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0 0 12px;font-size:.95rem}
+.annonce dt{color:var(--texte-2)}
+.annonce dd{margin:0;font-weight:600}
+.places{display:flex;gap:6px;align-items:center;margin:4px 0 12px}
+.places span.siege{width:22px;height:22px;border-radius:6px;background:var(--mer);display:inline-block}
+.places span.siege.pris{background:#c8d0d8}
+
+.panneau-onglets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px;border-bottom:2px solid var(--bord)}
+.panneau-onglets button{background:none;border:none;border-bottom:4px solid transparent;margin-bottom:-2px;padding:.7em 1em;font:inherit;font-weight:700;color:var(--texte-2);cursor:pointer}
+.panneau-onglets button[aria-selected="true"]{color:var(--marine);border-bottom-color:var(--corail)}
+
+.encart{border-left:5px solid var(--mer);background:#fff;padding:18px 22px;border-radius:0 var(--rayon) var(--rayon) 0;box-shadow:var(--ombre)}
+.liste-coche{list-style:none;padding:0;margin:0 0 1em}
+.liste-coche li{padding-left:1.8em;position:relative;margin-bottom:.4em}
+.liste-coche li::before{content:"✓";position:absolute;left:0;color:var(--mer);font-weight:800}
+.etapes{counter-reset:e;list-style:none;padding:0;margin:0;display:grid;gap:16px}
+.etapes li{counter-increment:e;padding-left:56px;position:relative;min-height:42px}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--corail);color:#fff;display:grid;place-items:center;font-weight:800}
+
+.galerie{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;list-style:none;padding:0;margin:0}
+.galerie button{display:block;width:100%;padding:0;border:none;background:none;cursor:zoom-in;border-radius:12px;text-align:left;font:inherit;color:inherit}
+.galerie button:hover img{filter:brightness(1.06)}
+.galerie .album-nom{display:block;font-size:.8rem;color:var(--texte-2);margin-top:2px}
+.titre-avec-filtre{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;margin-bottom:12px}
+.titre-avec-filtre h2{margin:0}
+/* Visionneuse photo (boîte de dialogue modale native : focus piégé, Échap pour fermer) */
+#visionneuse{border:none;padding:0;background:#071d2c;color:#fff;width:min(1100px,96vw);max-height:94vh;border-radius:16px;overflow:hidden}
+#visionneuse :focus-visible{outline-color:#fff;box-shadow:0 0 0 5px #071d2c}
+#visionneuse::backdrop{background:rgba(4,15,24,.85)}
+#visionneuse[open]{display:flex;flex-direction:column}
+.visionneuse-entete,.visionneuse-nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px}
+.visionneuse-compteur{margin:0;font-weight:700}
+.visionneuse-figure{margin:0;display:flex;flex-direction:column;align-items:center;min-height:0;flex:1}
+.visionneuse-figure img{max-width:100%;max-height:calc(94vh - 180px);object-fit:contain;display:block}
+.visionneuse-figure figcaption{padding:10px 16px 0;text-align:center;color:#d7e3ec}
+/* Documents de course */
+.liste-docs{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.liste-docs>li{background:#fff;border:1px solid var(--bord);border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 18px;align-items:center}
+.liste-docs .regate-nom{font-weight:700;color:var(--marine);margin:0}
+.liste-docs .regate-date{font-size:.9rem;color:var(--texte-2);margin:0}
+.liens-docs{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.lien-doc{display:inline-flex;align-items:center;gap:6px;padding:.45em .85em;border-radius:999px;border:2px solid var(--marine);color:var(--marine);font-weight:700;font-size:.9rem;text-decoration:none;background:#fff}
+.lien-doc:hover{background:var(--marine);color:#fff}
+.lien-doc .format{font-weight:500;font-size:.8rem;opacity:.85}
+.doc-absent{display:inline-flex;padding:.45em .85em;border-radius:999px;border:2px dashed var(--bord);color:var(--texte-2);font-size:.88rem}
+.docs-pratiques{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+@media (max-width:700px){.liste-docs>li{grid-template-columns:1fr}.liens-docs{justify-content:flex-start}}
+/* Administration des documents et photos */
+.creneau-doc{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.photos-admin{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;list-style:none;margin:0;padding:0}
+.photos-admin li{background:#fff;border:1px solid var(--bord);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.photos-admin img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block}
+.photos-admin .corps{padding:14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.photos-admin .champ{margin-bottom:10px}
+.zone-depot{border:2px dashed var(--mer);border-radius:var(--rayon);padding:22px;text-align:center;background:#f4fbfc}
+.zone-depot.survol{background:var(--mer-clair)}
+.galerie figure{margin:0}
+.galerie .vignette{aspect-ratio:4/3;border-radius:12px;background:linear-gradient(135deg,#bfe0e5,#f0e2c4);display:grid;place-items:center;color:var(--marine);font-weight:700}
+.galerie figcaption{font-size:.9rem;color:var(--texte-2);margin-top:6px}
+
+/* Espace bureau */
+.table-admin{min-width:760px}
+.table-admin td,.table-admin th{padding:10px 12px;font-size:.95rem}
+.table-admin input,.table-admin select{padding:.45em .55em;font-size:.92rem;border-width:1.5px}
+.table-admin input[type=time]{min-width:7.5em}
+.table-admin input[type=date]{min-width:9.5em}
+.table-admin tr.annule td{color:var(--texte-2)}
+.table-admin tr.a-verifier{background:#fff8e6}
+.table-admin .actions-ligne{display:flex;gap:6px;flex-wrap:wrap}
+.bouton-petit{padding:.45em .9em;font-size:.9rem}
+.form-evt{background:#fff;border:2px solid var(--mer);border-radius:var(--rayon);padding:22px;margin:0 0 28px}
+.form-evt .grille-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0 16px}
+.confirmation{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#fbe5e5;border-radius:10px;padding:8px 12px;margin-top:6px}
+.etape-num{display:inline-grid;place-items:center;width:1.6em;height:1.6em;border-radius:50%;background:var(--corail);color:#fff;font-size:.8em;margin-right:.3em;vertical-align:.1em}
+.liste-we{display:grid;gap:14px}
+.we{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:16px 20px}
+.we.favorable{border-left:6px solid var(--ok)}
+.we-titre{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
+.we-titre h3{margin:0;font-size:1.08rem}
+.proposition{background:var(--mer-clair);border-radius:var(--rayon);padding:20px 22px;margin-bottom:22px}
+.proposition h3{margin:0 0 .3em}
+.proposition p{margin:0 0 14px}
+.grille-proposition{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0 16px}
+.barre-planning{position:sticky;bottom:0;z-index:40;background:var(--marine);color:#fff;padding:10px 0 calc(10px + env(safe-area-inset-bottom, 0px));box-shadow:0 -4px 14px rgba(0,0,0,.15)}
+.barre-contenu{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.barre-contenu #bp-message{flex:1;min-width:220px}
+.barre-contenu .message{margin:0;padding:6px 12px;font-size:.93rem}
+.actions-jour{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.prevu{display:inline-flex;align-items:center;gap:6px;background:#dbe7f2;color:var(--marine);border-radius:999px;padding:.3em .8em;font-weight:700;font-size:.9rem}
+.message .bouton-petit{margin-left:8px;vertical-align:middle}
+.we-jour{display:grid;grid-template-columns:150px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--bord)}
+.we-jour .pm{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.93rem}
+.we-jour .pm span.ok{color:var(--ok);font-weight:700}
+.we-jour .pm span.ko{color:var(--texte-2)}
+.we-jour .deja{font-size:.9rem;color:var(--marine);font-weight:700}
+@media (max-width:700px){.we-jour{grid-template-columns:1fr}}
+.brouillon-liste{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:8px}
+.brouillon-liste li{background:#fff;border:1px solid var(--bord);border-radius:10px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
+.brouillon-liste .quand-b{min-width:190px;font-weight:700;color:var(--marine)}
+.brouillon-liste .titre-b{flex:1;min-width:160px}
+
+/* Pied de page */
+footer.pied-page{background:var(--marine);color:#d7e3ec;padding-block:48px 28px;margin-top:0}
+footer.pied-page a{color:#fff}
+footer.pied-page h2{color:#fff;font-size:1.05rem;margin-bottom:.8em}
+footer.pied-page ul{list-style:none;margin:0;padding:0}
+footer.pied-page li{margin-bottom:.45em}
+.pied-grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+.pied-bas{border-top:1px solid rgba(255,255,255,.2);margin-top:32px;padding-top:18px;font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 22px}
+.newsletter{display:flex;gap:8px;flex-wrap:wrap}
+.newsletter input{flex:1;min-width:180px;border-color:#fff}
+.newsletter .bouton{background:#fff;color:var(--marine)}
+</style>
+</head>
+<body>
+<a class="evitement" href="#contenu" id="lien-evitement">Aller au contenu</a>
+<div class="bandeau-maquette" role="note">Maquette de travail : le calendrier 2026 est réel et affiché comme si l'on était le 1<sup>er</sup> mars 2026. Les annonces sont des exemples fictifs.</div>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="logo" href="#/">
+      <img src="images/logo-snv.png" alt="" width="52" height="52">
+      <span>Sport Nautique Valéricain<small>Saint-Valery-sur-Somme</small><span class="sr-only">, retour à l'accueil</span></span>
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="nav-principale">Menu</button>
+    <nav class="principale" id="nav-principale" aria-label="Menu principal">
+      <ul>
+        <li><a href="#/club">Le club</a></li>
+        <li><a href="#/ecole">École de voile</a></li>
+        <li><a href="#/agenda">Agenda</a></li>
+        <li><a href="#/regates">Régates</a></li>
+        <li><a href="#/embarquer">Places à bord</a></li>
+        <li><a href="#/bourse">Bourse</a></li>
+        <li><a href="#/galerie">Photos</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li class="nav-mobile"><a href="#/adhesion">Adhésion</a></li>
+      </ul>
+    </nav>
+    <a class="bouton bouton-principal adherer" href="#/adhesion">Adhérer</a>
+  </div>
+</header>
+
+<main id="contenu" tabindex="-1">
+
+<!-- ============ ACCUEIL ============ -->
+<div class="page" data-route="" data-titre="Accueil">
+  <section class="heros">
+    <div class="conteneur">
+      <div>
+        <span class="surtitre">Club de voile en Baie de Somme</span>
+        <h1>Naviguez en Baie de Somme avec le SNV</h1>
+        <p class="chapeau">École de voile labellisée, régates, sorties en J70 et J80 : que vous découvriez la voile ou que vous naviguiez depuis toujours, il y a une place pour vous à bord.</p>
+        <div class="actions">
+          <a class="bouton bouton-principal externe" href="https://snvalericain.axyomes.com/client/1-1.php">Réserver une sortie<span class="sr-only"> (site Axyomes)</span></a>
+          <a class="bouton bouton-secondaire" href="#/ecole">Découvrir l'école de voile</a>
+        </div>
+      </div>
+      <img class="heros-photo" src="images/j80-equipage.jpg" width="1200" height="900" alt="Le J80 Ninja sous voiles en Baie de Somme, six équipiers souriants à bord, l'un d'eux salue de la main.">
+
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-acces">
+    <div class="conteneur">
+      <h2 id="t-acces">Que souhaitez-vous faire ?</h2>
+      <div class="grille g4">
+        <div class="carte carte-acces">
+          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b3550" stroke-width="2"><path d="M12 3v15H5z"/><path d="M14 6v12h6z"/><path d="M3 21h18"/></svg></div>
+          <h3><a class="lien-carte" href="#/ecole">Apprendre à naviguer</a></h3>
+          <p>Sorties de 3 h en J70 ou J80 avec un moniteur diplômé, dès le premier jour.</p>
+        </div>
+        <div class="carte carte-acces">
+          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b3550" stroke-width="2"><path d="M4 21V4h12l-2 4 2 4H4"/></svg></div>
+          <h3><a class="lien-carte" href="#/regates">Participer aux régates</a></h3>
+          <p>Calendrier, avis et instructions de course, résultats de la saison.</p>
+        </div>
+        <div class="carte carte-acces">
+          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b3550" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 20c0-2.6 1.4-4.6 4-4.8"/></svg></div>
+          <h3><a class="lien-carte" href="#/embarquer">Trouver un bateau</a></h3>
+          <p>Des propriétaires proposent leurs places libres pour les régates du club.</p>
+        </div>
+        <div class="carte carte-acces">
+          <div class="icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#0b3550" stroke-width="2"><path d="M3 7h18l-2 13H5z"/><path d="M8 7a4 4 0 0 1 8 0"/></svg></div>
+          <h3><a class="lien-carte" href="#/bourse">Bourse aux équipements</a></h3>
+          <p>Vendez, donnez ou trouvez cirés, gilets, accastillage entre membres.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-agenda-accueil">
+    <div class="conteneur">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+        <h2 id="t-agenda-accueil" style="margin:0">Prochains rendez-vous</h2>
+        <a href="#/agenda">Voir tout l'agenda</a>
+      </div>
+      <ul class="agenda" id="agenda-accueil"></ul>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-places-accueil">
+    <div class="conteneur">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin-bottom:20px">
+        <div>
+          <span class="surtitre">Nouveau</span>
+          <h2 id="t-places-accueil" style="margin:0">Places libres pour les prochaines régates</h2>
+        </div>
+        <a href="#/embarquer">Toutes les places à bord</a>
+      </div>
+      <div class="grille g3" id="places-accueil"></div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-marine" aria-labelledby="t-chiffres">
+    <div class="conteneur">
+      <h2 id="t-chiffres">Le SNV en bref</h2>
+      <div class="grille g3">
+        <div><h3>École Française de Voile</h3><p>Notre école de voile, créée en 2023, est labellisée par la Fédération Française de Voile.</p></div>
+        <div><h3>Marque « Slow tourisme »</h3><p>La FFV a intégré le SNV à sa marque de tourisme nautique responsable.</p></div>
+        <div><h3>Voile et motonautisme</h3><p>Régates, rallyes et sorties pêche : le club fait vivre la baie toute la saison.</p></div>
+      </div>
+      <div class="actions"><a class="bouton bouton-clair" href="#/adhesion">Rejoindre le club</a></div>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-baie">
+    <div class="conteneur baie">
+      <img src="images/phoque.jpg" width="1284" height="1353" loading="lazy" alt="Un phoque sort la tête de l'eau verte de la baie et regarde l'objectif.">
+      <div>
+        <span class="surtitre">Notre plan d'eau</span>
+        <h2 id="t-baie">La Baie de Somme, au rythme des marées</h2>
+        <p>Ici, on navigue avec la marée : les horaires changent à chaque sortie, et le paysage aussi. Bancs de sable, chenaux, Le Crotoy en face… et souvent un phoque curieux qui vient voir passer les bateaux.</p>
+        <p>C'est ce qui rend chaque sortie unique, et c'est pour ça que nos moniteurs et nos skippers connaissent la baie par cœur.</p>
+        <a class="bouton bouton-secondaire" href="#/agenda">Voir les dates de la saison</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-accueil-photos">
+    <div class="conteneur">
+      <div class="titre-avec-filtre">
+        <div><span class="surtitre">En images</span><h2 id="t-accueil-photos">La vie du club</h2></div>
+        <a class="bouton bouton-secondaire" href="#/galerie">Voir toutes les photos</a>
+      </div>
+      <ul class="galerie apercu-photos" id="galerie-accueil"></ul>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-partenaires">
+    <div class="conteneur">
+      <h2 id="t-partenaires">Partenaires et labels</h2>
+      <div class="partenaire-principal">
+        <img src="images/logo-credit-agricole-brie-picardie.png" width="777" height="561" alt="Crédit Agricole Brie Picardie" class="logo-partenaire-principal">
+        <div style="flex:1;min-width:240px">
+          <span class="surtitre">Notre partenaire principal</span>
+          <p style="margin:.2em 0 0;max-width:52ch">Merci au Crédit Agricole Brie Picardie, qui soutient la vie du club, l'école de voile et nos régates en Baie de Somme.</p>
+        </div>
+      </div>
+      <ul class="logos-labels">
+        <li><img src="images/logo-ffvoile.jpg" width="1200" height="499" alt="Fédération Française de Voile" loading="lazy"><span>Club affilié à la FFVoile</span></li>
+        <li><img src="images/logo-ecole-francaise-de-voile.jpg" width="710" height="330" alt="École Française de Voile" loading="lazy"><span>École labellisée</span></li>
+        <li><img src="images/logo-slow-tourisme.png" width="1200" height="1161" alt="Slow Tourisme, marque de la FFVoile" loading="lazy"><span>Marque Slow Tourisme</span></li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ LE CLUB ============ -->
+<div class="page" data-route="club" data-titre="Le club" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Le club</li></ol></nav>
+    <h1>Le club</h1>
+    <p class="chapeau">L'association développe la pratique de la voile et du motonautisme en Baie de Somme, à travers des manifestations sportives et des activités de loisir.</p>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-equipe">
+    <div class="conteneur">
+      <h2 id="t-equipe">L'équipe</h2>
+      <p>Des bénévoles passionnés qui font vivre le club toute l'année. Pour les joindre, passez par la page <a href="#/contact">Contact</a>.</p>
+      <ul class="grille g3" id="equipe" style="list-style:none;padding:0;margin:0"></ul>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-moto">
+    <div class="conteneur grille g2">
+      <div>
+        <h2 id="t-moto">Motonautisme</h2>
+        <p>Rallyes, sorties pêche et balades : les adhérents propriétaires de bateaux à moteur partagent aussi la baie avec le club.</p>
+        <p class="exemple">Contenu à reprendre de la page « Motonautisme ».</p>
+      </div>
+      <div>
+        <h2 id="t-dsi">Dispositif de sécurité (DSI)</h2>
+        <p>Chaque activité du club est encadrée par un dispositif de surveillance et d'intervention. Consultez-le avant de naviguer.</p>
+        <a class="bouton bouton-secondaire" href="#/club">Télécharger le DSI (PDF, 300 Ko)</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-club-photos">
+    <div class="conteneur">
+      <div class="titre-avec-filtre">
+        <h2 id="t-club-photos">En images</h2>
+        <a class="bouton bouton-secondaire" href="#/galerie">Voir toutes les photos</a>
+      </div>
+      <ul class="galerie apercu-photos" id="galerie-club"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PHOTOS ============ -->
+<div class="page" data-route="galerie" data-titre="Photos" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Photos</li></ol></nav>
+    <h1>Photos du club</h1>
+    <p class="chapeau">Régates, école de voile, sorties et paysages de la baie. Cliquez sur une photo pour l'agrandir, puis utilisez les flèches pour passer à la suivante.</p>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-galerie">
+    <div class="conteneur">
+      <div class="titre-avec-filtre">
+        <h2 id="t-galerie">Albums</h2>
+        <div class="champ" style="margin:0;min-width:220px"><label for="filtre-album">Afficher l'album</label><select id="filtre-album"><option value="">Tous les albums</option></select></div>
+      </div>
+      <p id="compte-photos" class="resultat-compte" aria-live="polite"></p>
+      <ul class="galerie" id="galerie"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ÉCOLE ============ -->
+<div class="page" data-route="ecole" data-titre="École de voile" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">École de voile</li></ol></nav>
+    <p style="margin:0 0 .4em;display:flex;align-items:center;flex-wrap:wrap;gap:6px"><img class="label-efv" src="images/logo-ecole-francaise-de-voile.jpg" width="710" height="330" alt="École Française de Voile"><span class="badge">Label de la Fédération Française de Voile</span></p>
+    <h1>École de voile</h1>
+    <p class="chapeau">Des sorties encadrées d'environ 3 h en Baie de Somme, au départ de Saint-Valery-sur-Somme. Vous apprenez à naviguer, prenez la barre et participez aux manœuvres si vous le souhaitez.</p>
+    <div class="actions">
+      <a class="bouton bouton-principal externe" href="https://snvalericain.axyomes.com/client/1-1.php">Réserver une sortie<span class="sr-only"> (site Axyomes)</span></a>
+      <a class="bouton bouton-secondaire" href="#/ecole-agenda" data-ancre="t-agenda-ecole">Voir les dates</a>
+    </div>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-bateaux">
+    <div class="conteneur">
+      <h2 id="t-bateaux">Nos bateaux</h2>
+      <div class="grille g2">
+        <div class="carte carte-photo">
+          <img src="images/j70-equipage.jpg" width="1200" height="900" loading="lazy" alt="Le J70 du club au près, quatre équipiers assis au rappel lèvent les bras.">
+          <div class="corps">
+            <span class="badge">7 mètres</span>
+            <h3 style="margin-top:.5em">J70</h3>
+            <p>Vif et sportif, idéal pour découvrir les sensations de la glisse.</p>
+            <ul class="liste-coche"><li>Jusqu'à 4 équipiers</li><li>Moniteur diplômé à bord</li></ul>
+          </div>
+        </div>
+        <div class="carte carte-photo">
+          <img src="images/j80-equipage.jpg" width="1200" height="900" loading="lazy" alt="Le J80 sous grand-voile et spi, six personnes installées dans le cockpit.">
+          <div class="corps">
+            <span class="badge">8 mètres</span>
+            <h3 style="margin-top:.5em">J80</h3>
+            <p>Plus spacieux et plus confortable, parfait en famille ou entre amis.</p>
+            <ul class="liste-coche"><li>Jusqu'à 5 équipiers</li><li>Moniteur diplômé à bord</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-deroule">
+    <div class="conteneur grille g2">
+      <div>
+        <h2 id="t-deroule">Comment ça se passe ?</h2>
+        <ol class="etapes">
+          <li><strong>Réservez en ligne</strong> sur notre plateforme de réservation Axyomes.</li>
+          <li><strong>Retrouvez-nous au port</strong> de plaisance, ponton du SNV, 15 minutes avant le départ.</li>
+          <li><strong>Naviguez 2 h 30 à 3 h 30</strong>, selon la marée, avec votre moniteur.</li>
+        </ol>
+      </div>
+      <div class="encart">
+        <h2 style="font-size:1.3rem">À prévoir</h2>
+        <ul class="liste-coche">
+          <li>Vêtements chauds et un coupe-vent</li>
+          <li>Chaussures fermées qui peuvent être mouillées</li>
+          <li>Une gourde d'eau</li>
+        </ul>
+        <p style="margin:0">Le gilet de sauvetage est fourni. Les horaires dépendent des marées.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-agenda-ecole">
+    <div class="conteneur">
+      <h2 id="t-agenda-ecole" tabindex="-1">Dates des sorties</h2>
+      <p>Les sorties sont programmées selon les marées, de la fin du printemps à l'automne. Les créneaux disponibles sont à jour en temps réel sur notre plateforme de réservation.</p>
+      <a class="bouton bouton-principal externe" href="https://snvalericain.axyomes.com/client/1-1.php">Voir les créneaux et réserver<span class="sr-only"> (site Axyomes)</span></a>
+      <p style="margin-top:18px">Une question ? Appelez Christophe Lesueur, directeur de l'école de voile, au <a href="tel:+33788849537">07 88 84 95 37</a>.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ RÉGATES ============ -->
+<div class="page" data-route="regates" data-titre="Régates" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Régates</li></ol></nav>
+    <h1>Espace régates</h1>
+    <p class="chapeau">Toute la saison, le SNV organise des régates en Baie de Somme. Ici, tout ce qu'il faut pour courir : inscription, documents de course, résultats et places à bord.</p>
+    <div class="actions">
+      <a class="bouton bouton-principal externe" href="https://snvalericain.axyomes.com/client/regate_1.php">S'inscrire à une régate<span class="sr-only"> (site Axyomes)</span></a>
+      <a class="bouton bouton-secondaire" href="#/embarquer">Chercher une place à bord</a>
+    </div>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-calendrier">
+    <div class="conteneur">
+      <h2 id="t-calendrier">Prochaine régate</h2>
+      <ul class="agenda" id="agenda-regates"></ul>
+      <div class="actions"><a class="bouton bouton-secondaire" href="#/agenda?cat=regate">Voir toutes les régates dans l'agenda</a></div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-docs">
+    <div class="conteneur">
+      <h2 id="t-docs">Documents de course <span id="docs-saison-annee"></span></h2>
+      <p>Avis de course, instructions et résultats de chaque régate de la saison.</p>
+      <ul class="liste-docs" id="docs-saison"></ul>
+      <h3 id="t-docs-pratiques" style="margin-top:36px">Documents pratiques</h3>
+      <ul class="docs-pratiques" id="docs-pratiques"></ul>
+    </div>
+  </section>
+
+  <section class="bloc" aria-labelledby="t-historique">
+    <div class="conteneur">
+      <div class="titre-avec-filtre">
+        <h2 id="t-historique">Historique des résultats</h2>
+        <div class="champ" style="margin:0;min-width:200px"><label for="historique-saison">Saison</label><select id="historique-saison"></select></div>
+      </div>
+      <p id="historique-compte" class="resultat-compte" aria-live="polite"></p>
+      <ul class="liste-docs" id="historique"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ AGENDA ============ -->
+<div class="page" data-route="agenda" data-titre="Agenda du club" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Agenda</li></ol></nav>
+    <h1>Agenda du club</h1>
+    <p class="chapeau">Régates, rallyes, sorties, navigations vers Dieppe ou l'Angleterre et repas du club : toute la saison en un coup d'œil. Les horaires suivent les marées.</p>
+    <div class="actions"><a class="bouton bouton-principal" href="#/agenda" data-ancre="t-abonnement">Ajouter l'agenda à mon téléphone</a></div>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-saison">
+    <div class="conteneur">
+      <h2 id="t-saison" class="sr-only">Saison 2026</h2>
+      <form class="filtres-agenda" id="filtres-agenda" aria-label="Filtrer l'agenda">
+        <fieldset>
+          <legend>Types d'événements</legend>
+          <div class="choix" id="choix-categories"></div>
+        </fieldset>
+        <label class="case"><input type="checkbox" id="voir-passes"> <span>Afficher aussi les événements passés</span></label>
+      </form>
+      <p class="resultat-compte" id="compte-agenda" aria-live="polite"></p>
+      <div id="agenda-complet"></div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-abonnement">
+    <div class="conteneur" style="max-width:860px">
+      <h2 id="t-abonnement">Ajouter l'agenda à mon téléphone ou à mon ordinateur</h2>
+      <p>Abonnez-vous une fois : les nouvelles dates et les changements d'horaires apparaîtront tout seuls dans votre agenda personnel.</p>
+      <div class="adresse-flux">
+        <code id="url-flux">https://www.sportnautiquevalericain.fr/agenda.ics</code>
+        <button class="bouton bouton-secondaire" type="button" id="copier-flux">Copier l'adresse</button>
+        <span id="retour-copie" aria-live="polite"></span>
+      </div>
+      <div class="abonnement">
+        <details>
+          <summary>Google Agenda (et téléphones Android)</summary>
+          <ol>
+            <li>Sur un ordinateur, ouvrez Google Agenda.</li>
+            <li>À gauche, à côté de « Autres agendas », cliquez sur « + » puis « À partir de l'URL ».</li>
+            <li>Collez l'adresse ci-dessus et validez.</li>
+            <li>Sur Android, l'agenda apparaît dans l'application Google Agenda. S'il n'apparaît pas, activez-le dans les paramètres de l'application, rubrique « Sport Nautique Valéricain ».</li>
+          </ol>
+        </details>
+        <details>
+          <summary>iPhone et iPad</summary>
+          <ol>
+            <li>Ouvrez Réglages, puis Calendrier, puis Comptes.</li>
+            <li>Touchez « Ajouter un compte », puis « Autre », puis « Ajouter un calendrier avec abonnement ».</li>
+            <li>Collez l'adresse ci-dessus et touchez « Suivant ».</li>
+          </ol>
+        </details>
+        <details>
+          <summary>Outlook</summary>
+          <ol>
+            <li>Dans le calendrier Outlook, choisissez « Ajouter un calendrier ».</li>
+            <li>Choisissez « S'abonner à partir du web », collez l'adresse ci-dessus et validez.</li>
+          </ol>
+        </details>
+      </div>
+      <p style="margin-top:22px">Vous préférez ajouter seulement certains événements ? Utilisez le bouton « Ajouter à mon agenda » de chaque événement, ou téléchargez la sélection affichée :</p>
+      <button class="bouton bouton-secondaire" type="button" id="telecharger-selection">Télécharger les événements affichés (fichier .ics)</button>
+      <p class="exemple" style="margin-top:10px">Maquette : l'adresse d'abonnement n'existe pas encore. Elle sera créée avec le site final. Le téléchargement .ics fonctionne déjà.</p>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PLACES À BORD ============ -->
+<div class="page" data-route="embarquer" data-titre="Places à bord" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Places à bord</li></ol></nav>
+    <h1>Places à bord pour les régates</h1>
+    <p class="chapeau">Vous êtes propriétaire et il vous manque des équipiers ? Signalez vos places libres. Vous voulez régater sans bateau ? Trouvez un skipper qui vous embarque.</p>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-liste-places">
+    <div class="conteneur">
+      <div class="panneau-onglets" role="tablist" aria-label="Places à bord">
+        <button role="tab" id="onglet-trouver" aria-controls="panneau-trouver" aria-selected="true" type="button">Je cherche une place</button>
+        <button role="tab" id="onglet-proposer" aria-controls="panneau-proposer" aria-selected="false" tabindex="-1" type="button">Je propose des places</button>
+        <button role="tab" id="onglet-dispo" aria-controls="panneau-dispo" aria-selected="false" tabindex="-1" type="button">Équipiers disponibles</button>
+      </div>
+
+      <div role="tabpanel" id="panneau-trouver" aria-labelledby="onglet-trouver">
+        <h2 id="t-liste-places" class="sr-only">Places disponibles</h2>
+        <div class="filtres">
+          <div class="champ">
+            <label for="filtre-regate">Régate</label>
+            <select id="filtre-regate"><option value="">Toutes les régates</option></select>
+          </div>
+          <div class="champ">
+            <label for="filtre-niveau">Niveau demandé</label>
+            <select id="filtre-niveau"><option value="">Tous les niveaux</option><option>Débutant bienvenu</option><option>Quelques sorties</option><option>Équipier confirmé</option></select>
+          </div>
+        </div>
+        <p class="resultat-compte" id="compte-places" aria-live="polite"></p>
+        <div class="grille g3" id="liste-places"></div>
+        <div class="encart" style="margin-top:24px">
+          <p style="margin:0"><strong>Aucune place ne vous convient ?</strong> Indiquez vos disponibilités dans l'onglet « Équipiers disponibles » : les skippers pourront vous contacter.</p>
+        </div>
+      </div>
+
+      <div role="tabpanel" id="panneau-dispo" aria-labelledby="onglet-dispo" hidden>
+        <h2>Équipiers disponibles</h2>
+        <p>Ces équipiers cherchent un bateau. Skippers, contactez-les directement.</p>
+        <div class="filtres">
+          <div class="champ">
+            <label for="filtre-dispo">Disponible pour</label>
+            <select id="filtre-dispo"><option value="">Toutes les régates</option></select>
+          </div>
+        </div>
+        <p class="resultat-compte" id="compte-equipiers" aria-live="polite"></p>
+        <div class="grille g3" id="liste-equipiers"></div>
+
+        <form id="form-dispo" novalidate style="margin-top:40px;max-width:720px">
+          <h2>Je suis disponible</h2>
+          <p>Les champs marqués <span class="obligatoire" aria-hidden="true">*</span><span class="sr-only">d'un astérisque</span> sont obligatoires.</p>
+          <div class="deux-col">
+            <div class="champ">
+              <label for="d-prenom">Votre prénom <span class="obligatoire" aria-hidden="true">*</span></label>
+              <input type="text" id="d-prenom" name="prenom" required autocomplete="given-name">
+            </div>
+            <div class="champ">
+              <label for="d-email">Votre e-mail <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Jamais affiché publiquement</span></label>
+              <input type="email" id="d-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <fieldset id="d-regates">
+            <legend>Régates où vous êtes disponible <span class="obligatoire" aria-hidden="true">*</span></legend>
+            <div class="choix" id="choix-regates"></div>
+          </fieldset>
+          <fieldset>
+            <legend>Votre niveau <span class="obligatoire" aria-hidden="true">*</span></legend>
+            <div class="choix">
+              <label><input type="radio" name="niveau" value="Débutant" required> Débutant</label>
+              <label><input type="radio" name="niveau" value="Quelques sorties"> Quelques sorties</label>
+              <label><input type="radio" name="niveau" value="Équipier confirmé"> Équipier confirmé</label>
+            </div>
+          </fieldset>
+          <div class="champ">
+            <label for="d-message">Quelques mots sur vous<span class="aide">Facultatif : postes que vous connaissez, bateaux sur lesquels vous avez navigué</span></label>
+            <textarea id="d-message" name="message"></textarea>
+          </div>
+          <div class="champ">
+            <label class="case"><input type="checkbox" name="consentement" id="d-consentement" required> <span>J'accepte que mon prénom et mes disponibilités soient affichés sur le site jusqu'à la dernière régate choisie. <a href="#/donnees">En savoir plus sur vos données</a> <span class="obligatoire" aria-hidden="true">*</span></span></label>
+          </div>
+          <button class="bouton bouton-principal" type="submit">Publier mes disponibilités</button>
+          <div id="retour-dispo" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div role="tabpanel" id="panneau-proposer" aria-labelledby="onglet-proposer" hidden>
+        <div class="grille g2" style="align-items:start">
+          <form id="form-places" novalidate>
+            <h2>Signaler des places libres</h2>
+            <p>Les champs marqués <span class="obligatoire" aria-hidden="true">*</span><span class="sr-only">d'un astérisque</span> sont obligatoires.</p>
+            <div class="champ">
+              <label for="p-bateau">Nom du bateau <span class="obligatoire" aria-hidden="true">*</span></label>
+              <input type="text" id="p-bateau" name="bateau" required autocomplete="off">
+            </div>
+            <div class="deux-col">
+              <div class="champ">
+                <label for="p-type">Type de bateau <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Exemple : J80, First 25, Corsaire</span></label>
+                <input type="text" id="p-type" name="type" required>
+              </div>
+              <div class="champ">
+                <label for="p-skipper">Votre prénom <span class="obligatoire" aria-hidden="true">*</span></label>
+                <input type="text" id="p-skipper" name="skipper" required autocomplete="given-name">
+              </div>
+            </div>
+            <div class="deux-col">
+              <div class="champ">
+                <label for="p-regate">Régate <span class="obligatoire" aria-hidden="true">*</span></label>
+                <select id="p-regate" name="regate" required><option value="">Choisir une régate</option></select>
+              </div>
+              <div class="champ">
+                <label for="p-nombre">Nombre de places <span class="obligatoire" aria-hidden="true">*</span></label>
+                <input type="number" id="p-nombre" name="nombre" min="1" max="8" required inputmode="numeric">
+              </div>
+            </div>
+            <fieldset>
+              <legend>Niveau demandé <span class="obligatoire" aria-hidden="true">*</span></legend>
+              <div class="choix">
+                <label><input type="radio" name="niveau" value="Débutant bienvenu" required> Débutant bienvenu</label>
+                <label><input type="radio" name="niveau" value="Quelques sorties"> Quelques sorties</label>
+                <label><input type="radio" name="niveau" value="Équipier confirmé"> Équipier confirmé</label>
+              </div>
+            </fieldset>
+            <div class="champ">
+              <label for="p-message">Message aux équipiers<span class="aide">Facultatif : poste à bord, horaire de rendez-vous, ce qu'il faut apporter</span></label>
+              <textarea id="p-message" name="message"></textarea>
+            </div>
+            <div class="champ">
+              <label for="p-email">Votre adresse e-mail <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Elle n'est jamais affichée. Les équipiers vous écrivent via le site.</span></label>
+              <input type="email" id="p-email" name="email" required autocomplete="email">
+            </div>
+            <div class="champ">
+              <label class="case"><input type="checkbox" name="consentement" id="p-consentement" required> <span>J'accepte que mon prénom et le nom de mon bateau soient affichés sur le site jusqu'à la date de la régate. <a href="#/donnees">En savoir plus sur vos données</a> <span class="obligatoire" aria-hidden="true">*</span></span></label>
+            </div>
+            <button class="bouton bouton-principal" type="submit">Publier mes places</button>
+            <div id="retour-places" aria-live="polite"></div>
+          </form>
+          <div class="encart">
+            <h2 style="font-size:1.3rem">Comment ça marche ?</h2>
+            <ol class="etapes">
+              <li>Vous indiquez la régate et le nombre de places.</li>
+              <li>Un membre du bureau valide l'annonce, en général sous 24 h.</li>
+              <li>Les équipiers intéressés vous écrivent. Votre e-mail reste masqué.</li>
+              <li>L'annonce disparaît automatiquement après la régate.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BOURSE ============ -->
+<div class="page" data-route="bourse" data-titre="Bourse aux équipements" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Bourse aux équipements</li></ol></nav>
+    <h1>Bourse aux équipements</h1>
+    <p class="chapeau">Cirés devenus trop petits, gilet en double, winch qui dort au garage : donnez-leur une seconde vie entre passionnés de la baie.</p>
+    <div class="actions"><a class="bouton bouton-principal" href="#/bourse" data-ancre="t-form-bourse">Déposer une annonce</a></div>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-annonces">
+    <div class="conteneur">
+      <h2 id="t-annonces">Annonces</h2>
+      <div class="filtres">
+        <div class="champ">
+          <label for="filtre-cat">Catégorie</label>
+          <select id="filtre-cat"><option value="">Toutes les catégories</option><option>Vêtements et bottes</option><option>Sécurité</option><option>Accastillage</option><option>Voiles</option><option>Bateaux et annexes</option><option>Divers</option></select>
+        </div>
+        <div class="champ">
+          <label for="filtre-type">Type d'annonce</label>
+          <select id="filtre-type"><option value="">Tous les types</option><option>Vend</option><option>Donne</option><option>Recherche</option></select>
+        </div>
+        <div class="champ">
+          <label for="filtre-texte">Rechercher</label>
+          <input type="text" id="filtre-texte" placeholder="Exemple : gilet, spi">
+        </div>
+      </div>
+      <p class="resultat-compte" id="compte-bourse" aria-live="polite"></p>
+      <div class="grille g3" id="liste-bourse"></div>
+    </div>
+  </section>
+
+  <section class="bloc bloc-sable" aria-labelledby="t-form-bourse">
+    <div class="conteneur grille g2" style="align-items:start">
+      <form id="form-bourse" novalidate>
+        <h2 id="t-form-bourse" tabindex="-1">Déposer une annonce</h2>
+        <p>Les champs marqués <span class="obligatoire" aria-hidden="true">*</span><span class="sr-only">d'un astérisque</span> sont obligatoires.</p>
+        <fieldset>
+          <legend>Type d'annonce <span class="obligatoire" aria-hidden="true">*</span></legend>
+          <div class="choix">
+            <label><input type="radio" name="type" value="Vend" required> Je vends</label>
+            <label><input type="radio" name="type" value="Donne"> Je donne</label>
+            <label><input type="radio" name="type" value="Recherche"> Je recherche</label>
+          </div>
+        </fieldset>
+        <div class="champ">
+          <label for="b-titre">Titre de l'annonce <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Exemple : Ciré Musto taille M</span></label>
+          <input type="text" id="b-titre" name="titre" required maxlength="80">
+        </div>
+        <div class="deux-col">
+          <div class="champ">
+            <label for="b-cat">Catégorie <span class="obligatoire" aria-hidden="true">*</span></label>
+            <select id="b-cat" name="categorie" required><option value="">Choisir</option><option>Vêtements et bottes</option><option>Sécurité</option><option>Accastillage</option><option>Voiles</option><option>Bateaux et annexes</option><option>Divers</option></select>
+          </div>
+          <div class="champ">
+            <label for="b-prix">Prix en euros<span class="aide">Laisser vide pour un don ou une recherche</span></label>
+            <input type="number" id="b-prix" name="prix" min="0" inputmode="numeric">
+          </div>
+        </div>
+        <div class="champ">
+          <label for="b-etat">État</label>
+          <select id="b-etat" name="etat"><option value="">Non précisé</option><option>Neuf</option><option>Très bon état</option><option>Bon état</option><option>À réviser</option></select>
+        </div>
+        <div class="champ">
+          <label for="b-desc">Description <span class="obligatoire" aria-hidden="true">*</span></label>
+          <textarea id="b-desc" name="description" required></textarea>
+        </div>
+        <div class="deux-col">
+          <div class="champ">
+            <label for="b-prenom">Votre prénom <span class="obligatoire" aria-hidden="true">*</span></label>
+            <input type="text" id="b-prenom" name="prenom" required autocomplete="given-name">
+          </div>
+          <div class="champ">
+            <label for="b-email">Votre e-mail <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Jamais affiché publiquement</span></label>
+            <input type="email" id="b-email" name="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="champ">
+          <label class="case"><input type="checkbox" name="consentement" id="b-consentement" required> <span>J'accepte que mon annonce et mon prénom soient affichés sur le site pendant 3 mois. <a href="#/donnees">En savoir plus sur vos données</a> <span class="obligatoire" aria-hidden="true">*</span></span></label>
+        </div>
+        <button class="bouton bouton-principal" type="submit">Envoyer mon annonce</button>
+        <div id="retour-bourse" aria-live="polite"></div>
+      </form>
+      <div class="encart">
+        <h2 style="font-size:1.3rem">Règles de la bourse</h2>
+        <ul class="liste-coche">
+          <li>Matériel nautique uniquement</li>
+          <li>Les annonces sont relues par le bureau avant publication</li>
+          <li>Elles expirent après 3 mois, ou dès que vous les retirez</li>
+          <li>La vente se fait directement entre membres. Le club n'est pas intermédiaire.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ADHÉSION ============ -->
+<div class="page" data-route="adhesion" data-titre="Adhésion et licences" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Adhésion et licences</li></ol></nav>
+    <h1>Adhérer au SNV</h1>
+    <p class="chapeau">L'adhésion vous donne accès aux activités du club, aux régates et à la vie de l'association. La licence de la Fédération Française de Voile vous assure sur l'eau.</p>
+    <div class="actions">
+      <a class="bouton bouton-principal externe" href="https://snvalericain.axyomes.com/client/produit_pack_1.php">Adhérer en ligne<span class="sr-only"> (site Axyomes)</span></a>
+    </div>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-formules">
+    <div class="conteneur">
+      <h2 id="t-formules">Ce qui est inclus</h2>
+      <div class="grille g3">
+        <div class="carte"><h3>Adhésion au club</h3><p>Participation aux régates, rallyes, sorties et assemblée générale.</p></div>
+        <div class="carte"><h3>Licence FFV</h3><p>Assurance et accès aux compétitions fédérales. Proposée en pack avec l'adhésion.</p></div>
+        <div class="carte"><h3>Bourse et places à bord</h3><p>Déposez des annonces et proposez ou trouvez des places pour les régates.</p></div>
+      </div>
+      <p class="exemple" style="margin-top:14px">Tarifs à reprendre des pages « Adhésions » et « Licences ».</p>
+      <div class="encart" style="margin-top:24px">
+        <h2 style="font-size:1.3rem">Besoin d'aide pour adhérer ?</h2>
+        <p style="margin:0">L'adhésion se fait sur notre plateforme Axyomes. En cas de difficulté, écrivez-nous depuis la page <a href="#/contact">Contact</a>.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" data-route="contact" data-titre="Accès et contact" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Accès et contact</li></ol></nav>
+    <h1>Accès et contact</h1>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-coord">
+    <div class="conteneur grille g2" style="align-items:start">
+      <div>
+        <h2 id="t-coord">Nous trouver</h2>
+        <div class="carte" style="margin-bottom:18px">
+          <h3>Club-house et pontons</h3>
+          <address style="font-style:normal">SNV4, Port de plaisance<br>1 avenue du Général Leclerc<br>80230 Saint-Valery-sur-Somme</address>
+        </div>
+        <div class="carte">
+          <h3>Adresse postale</h3>
+          <address style="font-style:normal">16 route d'Abbeville<br>80230 Saint-Valery-sur-Somme</address>
+        </div>
+      </div>
+      <div>
+        <img class="bandeau-photo" src="images/baie-maison.jpg" width="500" height="232" loading="lazy" alt="Une maison au toit rouge entourée d'arbres, au bord de la Baie de Somme, sous un ciel bleu.">
+        <h2>Nous écrire</h2>
+        <ul class="liste-coche">
+          <li>Le club : <a href="mailto:snvalericain@gmail.com">snvalericain@gmail.com</a></li>
+          <li>L'école de voile : <a href="mailto:sportnautiquevalericain@gmail.com">sportnautiquevalericain@gmail.com</a></li>
+          <li>Téléphone de l'école de voile : <a href="tel:+33788849537">07 88 84 95 37</a></li>
+          <li>Facebook : <a href="https://www.facebook.com/sportnautiquevalericain">Sport Nautique Valéricain</a></li>
+          <li>Instagram : <a href="https://www.instagram.com/sport_nautique_valericain">@sport_nautique_valericain</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ DONNÉES / ACCESSIBILITÉ ============ -->
+<div class="page" data-route="donnees" data-titre="Données personnelles" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Données personnelles</li></ol></nav>
+    <h1>Vos données personnelles</h1>
+  </div></div>
+  <section class="bloc"><div class="conteneur" style="max-width:780px">
+    <p>Pour la bourse aux équipements et les places à bord, nous collectons votre prénom, votre adresse e-mail et le contenu de votre annonce.</p>
+    <ul class="liste-coche">
+      <li>Votre e-mail n'est jamais affiché. Il sert uniquement à vous transmettre les messages des membres intéressés.</li>
+      <li>Les annonces sont supprimées automatiquement : 3 mois pour la bourse, le lendemain de la régate pour les places à bord.</li>
+      <li>Vous pouvez demander la suppression de vos données à tout moment par e-mail.</li>
+    </ul>
+    <p class="exemple">Texte à valider par le bureau avant mise en ligne.</p>
+  </div></section>
+</div>
+
+<div class="page" data-route="bureau" data-titre="Espace bureau" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Espace bureau</li></ol></nav>
+    <span class="badge badge-corail">Accès réservé aux administrateurs</span>
+    <h1 style="margin-top:.4em">Espace bureau</h1>
+    <p class="chapeau">Les outils des bénévoles qui font vivre le club. Dans la version finale, cet espace sera protégé par un identifiant.</p>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-moderation">
+    <div class="conteneur">
+      <h2 id="t-moderation">À valider</h2>
+      <div class="grille g3">
+        <div class="carte"><span class="badge badge-corail" id="nb-attente-bourse">0 en attente</span><h3 style="margin-top:.5em">Bourse aux équipements</h3><p>Relire les annonces, les publier ou les refuser.</p><div class="pied"><a class="bouton bouton-secondaire" href="#/bourse">Voir les annonces</a></div></div>
+        <div class="carte"><span class="badge badge-corail" id="nb-attente-places">0 en attente</span><h3 style="margin-top:.5em">Places à bord et équipiers</h3><p>Valider les places proposées par les skippers et les disponibilités des équipiers.</p><div class="pied"><a class="bouton bouton-secondaire" href="#/embarquer">Voir les annonces</a></div></div>
+        <div class="carte carte-acces"><span class="badge badge-vert">Disponible</span><h3 style="margin-top:.5em"><a class="lien-carte" href="#/bureau-documents">Documents de course</a></h3><p>Avis de course, instructions, résultats et archives des saisons passées.</p></div>
+        <div class="carte carte-acces"><span class="badge badge-vert">Disponible</span><h3 style="margin-top:.5em"><a class="lien-carte" href="#/bureau-photos">Photos</a></h3><p>Ajouter des photos à la galerie, avec leur description pour l'accessibilité.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="bloc" aria-labelledby="t-file">
+    <div class="conteneur">
+      <h2 id="t-file">File de validation</h2>
+      <p>Déposez une annonce depuis la bourse ou les places à bord : elle apparaît ici avant d'être visible par tous.</p>
+      <div id="retour-file" aria-live="polite"></div>
+      <div class="grille g3" id="file-attente"></div>
+    </div>
+  </section>
+  <section class="bloc bloc-sable" aria-labelledby="t-outils">
+    <div class="conteneur">
+      <h2 id="t-outils">Outils d'organisation</h2>
+      <div class="grille g2">
+        <div class="carte carte-acces">
+          <span class="badge badge-vert">Disponible</span>
+          <h3 style="margin-top:.5em"><a class="lien-carte" href="#/bureau-planning">Préparer la saison suivante</a></h3>
+          <p>Charger les marées du SHOM, repérer les week-ends favorables, placer les régates et sorties, puis générer le PDF et publier l'agenda.</p>
+        </div>
+        <div class="carte carte-acces">
+          <span class="badge badge-vert">Disponible</span>
+          <h3 style="margin-top:.5em"><a class="lien-carte" href="#/bureau-agenda">Gérer l'agenda de la saison</a></h3>
+          <p>Modifier un horaire, renommer, annuler ou ajouter un événement. Les changements sont visibles immédiatement sur le site.</p>
+        </div>
+        <div class="carte carte-acces">
+          <span class="badge badge-vert">Disponible</span>
+          <h3 style="margin-top:.5em"><a class="lien-carte" href="#/bureau-import">Importer un calendrier PDF</a></h3>
+          <p>Déposer le PDF des manifestations : le site lit les dates et horaires, vous vérifiez, puis vous publiez.</p>
+        </div>
+        <div class="carte">
+          <span class="badge badge-gris">Spécifications à venir</span>
+          <h3 style="margin-top:.5em">Générateur d'avis de course</h3>
+          <p>Créer l'avis de course d'une régate à partir d'un modèle. Le PDF sera publié dans « Documents de course ».</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUREAU : GÉRER L'AGENDA ============ -->
+<div class="page" data-route="bureau-agenda" data-titre="Gérer l'agenda" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li><a href="#/bureau">Espace bureau</a></li><li aria-current="page">Gérer l'agenda</li></ol></nav>
+    <h1>Gérer l'agenda de la saison</h1>
+    <p class="chapeau">Chaque modification est visible tout de suite sur l'accueil, l'agenda et la page Régates, et dans les agendas des personnes abonnées.</p>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-ba-liste">
+    <div class="conteneur">
+      <div class="actions" style="margin:0 0 20px">
+        <button class="bouton bouton-principal" type="button" id="ba-ajouter">Ajouter un événement</button>
+        <button class="bouton bouton-secondaire" type="button" id="ba-pdf">Télécharger le PDF de la saison</button>
+        <button class="bouton bouton-secondaire" type="button" id="ba-annuler-pub" hidden>Annuler la dernière publication</button>
+      </div>
+      <div id="ba-message" aria-live="polite"></div>
+      <div id="ba-formulaire"></div>
+      <h2 id="t-ba-liste">Événements de la saison</h2>
+      <div class="tableau-conteneur"><table class="table-admin" id="ba-table"></table></div>
+      <div class="encart" style="margin-top:28px">
+        <h2 style="font-size:1.15rem">Démonstration</h2>
+        <p>Dans la maquette, vos modifications sont gardées dans ce navigateur. Pour revenir au calendrier 2026 d'origine :</p>
+        <button class="bouton bouton-secondaire" type="button" id="ba-reinit">Réinitialiser la démo</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUREAU : IMPORTER UN PDF ============ -->
+<div class="page" data-route="bureau-import" data-titre="Importer un calendrier PDF" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li><a href="#/bureau">Espace bureau</a></li><li aria-current="page">Importer un calendrier PDF</li></ol></nav>
+    <h1>Importer un calendrier PDF</h1>
+    <p class="chapeau">Déposez le PDF des régates et manifestations. Le site lit les dates et les horaires ; vous vérifiez les lignes signalées, puis vous publiez.</p>
+  </div></div>
+  <section class="bloc">
+    <div class="conteneur">
+      <div class="champ" style="max-width:560px">
+        <label for="bi-fichier">Fichier PDF du calendrier<span class="aide">Même présentation que « manifestations 2026 V4.pdf » : jour, date, heure de début, heure de fin, manifestation.</span></label>
+        <input type="file" id="bi-fichier" accept="application/pdf,.pdf">
+      </div>
+      <div id="bi-statut" aria-live="polite"></div>
+      <div id="bi-resultat"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUREAU : PRÉPARER LA SAISON ============ -->
+<div class="page" data-route="bureau-planning" data-titre="Préparer la saison" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li><a href="#/bureau">Espace bureau</a></li><li aria-current="page">Préparer la saison</li></ol></nav>
+    <h1>Préparer la saison suivante</h1>
+    <p class="chapeau">À partir des prédictions de marée du SHOM, le site repère les week-ends et les ponts où la pleine mer tombe en journée avec assez d'eau. Placez vos régates et sorties, puis générez le PDF et publiez l'agenda.</p>
+  </div></div>
+
+  <section class="bloc" aria-labelledby="t-bp-1">
+    <div class="conteneur">
+      <h2 id="t-bp-1"><span class="etape-num" aria-hidden="true">1</span> Les marées de l'année</h2>
+      <div class="grille g2" style="align-items:end">
+        <div class="champ" style="margin:0">
+          <label for="bp-pbm">Prédictions SHOM (fichier « PBM »)<span class="aide">Fichier texte des pleines et basses mers, bouée d'entrée de la Baie de Somme</span></label>
+          <input type="file" id="bp-pbm" accept=".txt,text/plain">
+        </div>
+        <div class="champ" style="margin:0">
+          <label for="bp-vra">Corrections par port (fichier « VRA »)<span class="aide">Facultatif : sans ce fichier, les corrections 2026 de Saint-Valery sont utilisées</span></label>
+          <input type="file" id="bp-vra" accept=".txt,text/plain">
+        </div>
+      </div>
+      <p style="margin-top:16px">Pas de fichier sous la main ? <button class="bouton bouton-secondaire" type="button" id="bp-exemple">Utiliser l'exemple 2026</button></p>
+      <div id="bp-statut" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <div id="bp-suite" hidden>
+    <section class="bloc bloc-sable" aria-labelledby="t-bp-2">
+      <div class="conteneur">
+        <h2 id="t-bp-2"><span class="etape-num" aria-hidden="true">2</span> Vos critères</h2>
+        <form id="bp-reglages" class="grille g4" novalidate>
+          <div class="champ"><label for="bp-port">Port de référence</label><select id="bp-port" name="port"></select></div>
+          <div class="champ"><label for="bp-critere">Critère d'eau</label>
+            <select id="bp-critere" name="critere"><option value="hauteur">Hauteur de PM (m)</option><option value="coef">Coefficient</option><option value="marnage">Marnage (m)</option></select></div>
+          <div class="champ"><label for="bp-seuil">Valeur minimale</label><input type="number" id="bp-seuil" name="seuil" step="0.05" value="9.3" inputmode="decimal"></div>
+          <div class="champ"><label for="bp-mois">Période</label>
+            <select id="bp-mois" name="periode"><option value="3-11">Mars à novembre</option><option value="4-10">Avril à octobre</option><option value="1-12">Toute l'année</option></select></div>
+          <div class="champ"><label for="bp-avant">Départ (heures avant la PM)</label><input type="number" id="bp-avant" name="avant" min="0" max="6" step="0.5" value="2"></div>
+          <div class="champ"><label for="bp-apres">Fin (heures après la PM)</label><input type="number" id="bp-apres" name="apres" min="0" max="6" step="0.5" value="2"></div>
+          <div class="champ"><label for="bp-plage-debut">Pas de départ avant</label><input type="time" id="bp-plage-debut" name="plageDebut" value="09:00"></div>
+          <div class="champ"><label for="bp-plage-fin">Retour au plus tard à</label><input type="time" id="bp-plage-fin" name="plageFin" value="18:30"></div>
+        </form>
+        <p class="exemple">Repère : en 2026, les régates du club ont eu lieu avec une pleine mer entre 9,24 m et 10,63 m à Saint-Valery (coefficients de 70 à 104).</p>
+      </div>
+    </section>
+
+    <section class="bloc" aria-labelledby="t-bp-3">
+      <div class="conteneur">
+        <h2 id="t-bp-3"><span class="etape-num" aria-hidden="true">3</span> Les week-ends de l'année <span id="bp-annee"></span></h2>
+        <form class="proposition" id="bp-proposer-form" novalidate>
+          <div>
+            <h3>Gagner du temps : proposer les régates automatiquement</h3>
+            <p>Le site répartit les régates sur les week-ends favorables de chaque période, une par week-end, en évitant les dates déjà prévues. Vous ajustez ensuite.</p>
+          </div>
+          <div class="grille-proposition">
+            <div class="champ"><label for="bp-nb-printemps">Régates de printemps<span class="aide">Mars à juin</span></label><input type="number" id="bp-nb-printemps" min="0" max="15" value="6"></div>
+            <div class="champ"><label for="bp-nb-automne">Régates d'automne<span class="aide">Septembre à novembre</span></label><input type="number" id="bp-nb-automne" min="0" max="15" value="5"></div>
+            <div class="champ"><label for="bp-jour-pref">Jour préféré<span class="aide">Si la marée le permet</span></label><select id="bp-jour-pref"><option value="0">Dimanche</option><option value="6">Samedi</option></select></div>
+          </div>
+          <button class="bouton bouton-principal" type="submit">Proposer les régates</button>
+        </form>
+        <div class="filtres" style="align-items:center">
+          <label class="case" style="margin:0"><input type="checkbox" id="bp-favorables" checked> <span>Seulement les week-ends favorables</span></label>
+          <label class="case" style="margin:0"><input type="checkbox" id="bp-longs"> <span>Seulement les ponts et longs week-ends</span></label>
+        </div>
+        <p class="resultat-compte" id="bp-compte" aria-live="polite"></p>
+        <div id="bp-weekends" class="liste-we"></div>
+      </div>
+    </section>
+
+    <section class="bloc bloc-sable" aria-labelledby="t-bp-4">
+      <div class="conteneur">
+        <h2 id="t-bp-4"><span class="etape-num" aria-hidden="true">4</span> Votre calendrier en préparation</h2>
+        <p>Ce brouillon n'est pas visible sur le site tant que vous ne l'avez pas publié.</p>
+        <div id="bp-brouillon"></div>
+        <div class="actions">
+          <button class="bouton bouton-secondaire" type="button" id="bp-ajouter-libre">Ajouter un événement à une autre date</button>
+          <button class="bouton bouton-secondaire" type="button" id="bp-pdf">Générer le PDF</button>
+          <button class="bouton bouton-principal" type="button" id="bp-publier">Publier dans l'agenda du site</button>
+        </div>
+        <div id="bp-form-libre"></div>
+      </div>
+    </section>
+    <div class="barre-planning" role="region" aria-label="Calendrier en préparation">
+      <div class="conteneur barre-contenu">
+        <strong id="bp-resume">Aucun événement en préparation</strong>
+        <div id="bp-message"></div>
+        <a class="bouton bouton-clair bouton-petit" href="#/bureau-planning" data-ancre="t-bp-4">Voir le calendrier</a>
+      </div>
+      <p id="bp-annonce" class="sr-only" aria-live="polite"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ BUREAU : DOCUMENTS DE COURSE ============ -->
+<div class="page" data-route="bureau-documents" data-titre="Documents de course" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li><a href="#/bureau">Espace bureau</a></li><li aria-current="page">Documents de course</li></ol></nav>
+    <h1>Documents de course</h1>
+    <p class="chapeau">Ajoutez l'avis de course, les instructions ou les résultats en un clic sur la régate concernée. Ils apparaissent aussitôt dans l'Espace régates.</p>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-bd-saison">
+    <div class="conteneur">
+      <h2 id="t-bd-saison">Régates de la saison <span id="bd-annee"></span></h2>
+      <div id="bd-message" aria-live="polite"></div>
+      <ul class="liste-docs" id="bd-regates"></ul>
+      <input type="file" id="bd-fichier" accept=".pdf,.doc,.docx,.xls,.xlsx,.odt,.ods,.jpg,.jpeg,.png" hidden>
+    </div>
+  </section>
+  <section class="bloc bloc-sable" aria-labelledby="t-bd-pratiques">
+    <div class="conteneur">
+      <h2 id="t-bd-pratiques">Documents pratiques</h2>
+      <p>Documents utiles toute la saison : règles de course, carte du plan d'eau, consignes de sécurité…</p>
+      <ul class="liste-docs" id="bd-pratiques" style="margin-bottom:20px"></ul>
+      <form id="bd-form-pratique" class="form-evt" novalidate>
+        <h3>Ajouter un document pratique</h3>
+        <div class="deux-col">
+          <div class="champ"><label for="bdp-titre">Titre du document <span class="obligatoire" aria-hidden="true">*</span></label><input type="text" id="bdp-titre" required></div>
+          <div class="champ"><label for="bdp-fichier">Fichier <span class="obligatoire" aria-hidden="true">*</span><span class="aide">PDF de préférence</span></label><input type="file" id="bdp-fichier" required></div>
+        </div>
+        <button class="bouton bouton-principal" type="submit">Ajouter le document</button>
+        <div id="bdp-erreur" aria-live="assertive"></div>
+      </form>
+    </div>
+  </section>
+  <section class="bloc" aria-labelledby="t-bd-archives">
+    <div class="conteneur">
+      <h2 id="t-bd-archives">Archives : résultats des saisons passées</h2>
+      <p>Pour compléter l'historique avec les résultats des années précédentes.</p>
+      <form id="bd-form-archive" class="form-evt" novalidate>
+        <h3>Ajouter des résultats d'une ancienne régate</h3>
+        <div class="grille-form">
+          <div class="champ"><label for="bda-nom">Nom de la régate <span class="obligatoire" aria-hidden="true">*</span></label><input type="text" id="bda-nom" required list="bda-noms"><datalist id="bda-noms"></datalist></div>
+          <div class="champ"><label for="bda-date">Date <span class="obligatoire" aria-hidden="true">*</span></label><input type="date" id="bda-date" required></div>
+          <div class="champ"><label for="bda-type">Document</label><select id="bda-type"><option value="resultats">Résultats</option><option value="avis">Avis de course</option><option value="ic">Instructions de course</option></select></div>
+          <div class="champ"><label for="bda-fichier">Fichier <span class="obligatoire" aria-hidden="true">*</span></label><input type="file" id="bda-fichier" required></div>
+        </div>
+        <button class="bouton bouton-principal" type="submit">Ajouter aux archives</button>
+        <div id="bda-erreur" aria-live="assertive"></div>
+      </form>
+      <div class="titre-avec-filtre" style="margin-top:28px">
+        <h3 style="margin:0">Archives enregistrées</h3>
+        <div class="champ" style="margin:0;min-width:180px"><label for="bd-archives-saison">Saison</label><select id="bd-archives-saison"></select></div>
+      </div>
+      <ul class="liste-docs" id="bd-archives"></ul>
+    </div>
+  </section>
+</div>
+
+<!-- ============ BUREAU : PHOTOS ============ -->
+<div class="page" data-route="bureau-photos" data-titre="Photos" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li><a href="#/bureau">Espace bureau</a></li><li aria-current="page">Photos</li></ol></nav>
+    <h1>Photos de la galerie</h1>
+    <p class="chapeau">Ajoutez des photos en quelques clics. Pour que tout le monde en profite, y compris les personnes aveugles, décrivez ce que montre chaque photo.</p>
+  </div></div>
+  <section class="bloc" aria-labelledby="t-bph-ajout">
+    <div class="conteneur">
+      <h2 id="t-bph-ajout">Ajouter des photos</h2>
+      <div class="zone-depot" id="bph-depot">
+        <p style="margin:0 0 10px"><strong>Glissez vos photos ici</strong>, ou</p>
+        <label class="bouton bouton-principal" for="bph-fichiers" style="display:inline-flex;margin:0;color:#fff">Choisir des photos</label>
+        <input type="file" id="bph-fichiers" accept="image/*" multiple class="sr-only">
+        <p class="aide" style="margin-top:10px">Les photos sont automatiquement réduites pour que le site reste rapide.</p>
+      </div>
+      <form id="bph-form" novalidate hidden style="margin-top:24px">
+        <div class="deux-col" style="max-width:640px">
+          <div class="champ"><label for="bph-album">Album <span class="obligatoire" aria-hidden="true">*</span><span class="aide">Exemple : Régates 2026, École de voile</span></label><input type="text" id="bph-album" list="bph-albums" required><datalist id="bph-albums"></datalist></div>
+        </div>
+        <ul class="photos-admin" id="bph-apercus"></ul>
+        <div class="actions"><button class="bouton bouton-principal" type="submit" id="bph-publier">Publier les photos</button><button class="bouton bouton-secondaire" type="button" id="bph-annuler">Annuler</button></div>
+        <div id="bph-erreur" aria-live="assertive"></div>
+      </form>
+      <div id="bph-message" aria-live="polite"></div>
+    </div>
+  </section>
+  <section class="bloc bloc-sable" aria-labelledby="t-bph-liste">
+    <div class="conteneur">
+      <h2 id="t-bph-liste">Photos publiées</h2>
+      <ul class="photos-admin" id="bph-liste"></ul>
+    </div>
+  </section>
+</div>
+
+<div class="page" data-route="accessibilite" data-titre="Accessibilité" hidden>
+  <div class="entete-page"><div class="conteneur">
+    <nav class="fil" aria-label="Fil d'Ariane"><ol><li><a href="#/">Accueil</a></li><li aria-current="page">Accessibilité</li></ol></nav>
+    <h1>Déclaration d'accessibilité</h1>
+  </div></div>
+  <section class="bloc"><div class="conteneur" style="max-width:780px">
+    <p>Le Sport Nautique Valéricain s'engage à rendre son site accessible, conformément au Référentiel général d'amélioration de l'accessibilité (RGAA 4.1).</p>
+    <p><strong>État de conformité :</strong> à établir après un audit du site final.</p>
+    <p>Si vous n'arrivez pas à accéder à un contenu ou à un service, écrivez-nous depuis la page <a href="#/contact">Contact</a> : nous vous proposerons une alternative.</p>
+  </div></section>
+</div>
+
+<!-- Visionneuse photo commune (accueil, club, page Photos) -->
+<dialog id="visionneuse" aria-labelledby="visionneuse-titre">
+  <div class="visionneuse-entete">
+    <p id="visionneuse-titre" class="visionneuse-compteur"></p>
+    <button type="button" class="bouton bouton-clair bouton-petit" id="visionneuse-fermer">Fermer<span class="sr-only"> la visionneuse</span></button>
+  </div>
+  <figure class="visionneuse-figure"><img id="visionneuse-img" alt=""><figcaption id="visionneuse-legende"></figcaption></figure>
+  <div class="visionneuse-nav">
+    <button type="button" class="bouton bouton-clair" id="visionneuse-prec"><span aria-hidden="true">←</span> Précédente</button>
+    <button type="button" class="bouton bouton-clair" id="visionneuse-suiv">Suivante <span aria-hidden="true">→</span></button>
+  </div>
+</dialog>
+</main>
+
+<footer class="pied-page">
+  <div class="conteneur">
+    <div class="pied-grille">
+      <div>
+        <img src="images/logo-snv.png" alt="" width="72" height="72" style="margin-bottom:10px">
+        <h2>Sport Nautique Valéricain</h2>
+        <p>Port de plaisance<br>80230 Saint-Valery-sur-Somme</p>
+      </div>
+      <div>
+        <h2>Le club</h2>
+        <ul><li><a href="#/club">Présentation et équipe</a></li><li><a href="#/ecole">École de voile</a></li><li><a href="#/agenda">Agenda</a></li><li><a href="#/regates">Régates</a></li><li><a href="#/galerie">Photos</a></li><li><a href="#/adhesion">Adhésion et licences</a></li></ul>
+      </div>
+      <div>
+        <h2>Entre membres</h2>
+        <ul><li><a href="#/embarquer">Places à bord</a></li><li><a href="#/bourse">Bourse aux équipements</a></li><li><a href="#/contact">Contact</a></li></ul>
+      </div>
+      <div>
+        <h2>Lettre d'information</h2>
+        <form class="newsletter" id="form-news" novalidate>
+          <label for="news-email" class="sr-only">Votre adresse e-mail</label>
+          <input type="email" id="news-email" autocomplete="email" placeholder="votre@email.fr">
+          <button class="bouton" type="submit">S'inscrire</button>
+        </form>
+        <div id="retour-news" aria-live="polite" style="margin-top:8px"></div>
+      </div>
+    </div>
+    <div class="pied-bas">
+      <a href="#/accessibilite">Accessibilité : non conforme (audit à venir)</a>
+      <a href="#/donnees">Données personnelles</a>
+      <a href="#/">Mentions légales</a>
+      <a href="#/">Plan du site</a>
+      <a href="#/bureau">Espace bureau</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Données d'exemple (fictives) ---------- */
+/* Date du jour simulée pour la maquette (début de saison 2026) */
+const AUJOURDHUI = "2026-03-01";
+const CATEGORIES = {
+  regate:{nom:"Régates", classe:"cat-regate"},
+  sortie:{nom:"Rallyes et sorties", classe:"cat-sortie"},
+  croisiere:{nom:"Navigations et escales", classe:"cat-croisiere"},
+  club:{nom:"Vie du club", classe:"cat-club"}
+};
+/* Calendrier réel 2026 (d'après « manifestations 2026 V4.pdf ») */
+const EVENEMENTS_2026 = [
+  {date:"2026-03-08", debut:"11:58", fin:"15:58", titre:"Printemps 1", cat:"regate"},
+  {date:"2026-03-21", titre:"Repas de début de saison et remise des prix", cat:"club"},
+  {date:"2026-03-22", debut:"11:37", fin:"15:37", titre:"Printemps 2", cat:"regate"},
+  {date:"2026-04-04", debut:"12:39", fin:"16:39", titre:"Rallye", cat:"sortie"},
+  {date:"2026-04-05", debut:"13:08", fin:"17:08", titre:"Dieppe", cat:"croisiere", note:"Week-end de Pâques"},
+  {date:"2026-04-06", debut:"13:37", fin:"17:37", titre:"Dieppe, lundi de Pâques", cat:"croisiere"},
+  {date:"2026-04-19", debut:"12:31", fin:"16:31", titre:"Printemps 3", cat:"regate"},
+  {date:"2026-05-01", debut:"11:07", fin:"15:07", titre:"Rallye", cat:"sortie"},
+  {date:"2026-05-02", debut:"11:40", fin:"15:40", titre:"Boulogne", cat:"croisiere"},
+  {date:"2026-05-03", debut:"12:12", fin:"16:12", titre:"Printemps 4", cat:"regate", note:"En option"},
+  {date:"2026-05-14", dateFin:"2026-05-17", debut:"08:58", fin:"15:26", titre:"Flottille en Angleterre ou à Honfleur", cat:"croisiere", note:"Pont de l'Ascension"},
+  {date:"2026-05-24", debut:"07:00", fin:"17:00", titre:"Échouage en baie", cat:"sortie", note:"Pentecôte"},
+  {date:"2026-05-30", debut:"10:39", fin:"14:39", titre:"Double mixte, Trophée CABP", cat:"regate"},
+  {date:"2026-05-31", debut:"11:15", fin:"15:15", titre:"Printemps 5", cat:"regate", note:"Challenge départemental"},
+  {date:"2026-06-14", debut:"10:13", fin:"14:13", titre:"Printemps 6", cat:"regate"},
+  {date:"2026-06-21", debut:"05:39", fin:"17:07", titre:"Sortie pêche", cat:"sortie"},
+  {date:"2026-07-13", debut:"10:00", fin:"14:00", titre:"Sortie en baie ou en mer", cat:"sortie"},
+  {date:"2026-07-14", debut:"11:00", fin:"15:00", titre:"Sortie en baie ou en mer", cat:"sortie"},
+  {date:"2026-08-29", dateFin:"2026-08-30", debut:"12:07", fin:"16:40", titre:"Rallye en mer, aller-retour à Dieppe", cat:"croisiere"},
+  {date:"2026-09-12", debut:"12:04", fin:"16:04", titre:"Double mixte (bis), Trophée CABP", cat:"regate"},
+  {date:"2026-09-13", debut:"12:39", fin:"16:39", titre:"Automne 1", cat:"regate"},
+  {date:"2026-09-27", debut:"11:36", fin:"15:36", titre:"Automne 2", cat:"regate"},
+  {date:"2026-10-11", debut:"11:34", fin:"15:34", titre:"Automne 3", cat:"regate", note:"Challenge départemental"},
+  {date:"2026-10-25", debut:"09:23", fin:"13:23", titre:"Automne 4", cat:"regate"},
+  {date:"2026-11-07", titre:"Repas de fin de saison", cat:"club"},
+  {date:"2026-11-08", debut:"12:35", fin:"16:35", titre:"Automne 5", cat:"regate"}
+].map((e,i) => ({...e, id:i+1}));
+
+/* Stockage local de la maquette : dans le site final, ce sera la base de données */
+const CLE_AGENDA = "snv-maquette-agenda-v1";
+function lireStockage(cle){ try { return JSON.parse(localStorage.getItem(cle)); } catch { return null; } }
+function ecrireStockage(cle, valeur){ try { localStorage.setItem(cle, JSON.stringify(valeur)); return true; } catch { return false; } }
+const sauve = lireStockage(CLE_AGENDA);
+let evenements = (sauve && Array.isArray(sauve.evenements)) ? sauve.evenements : EVENEMENTS_2026.map(e => ({...e}));
+let agendaPrecedent = sauve && sauve.precedent || null;
+function trierEvenements(){ evenements.sort((a,b) => (a.date+(a.debut||"")).localeCompare(b.date+(b.debut||""))); }
+function enregistrerAgenda(){ ecrireStockage(CLE_AGENDA, {evenements, precedent: agendaPrecedent}); }
+function prochainId(){ return evenements.reduce((m,e) => Math.max(m, e.id||0), 0) + 1; }
+/* Remplace toute la saison en gardant la version précédente pour pouvoir annuler */
+function publierSaison(nouveaux){
+  agendaPrecedent = evenements.map(e => ({...e}));
+  let id = 1; evenements = nouveaux.map(e => ({...e, id: id++}));
+  trierEvenements(); enregistrerAgenda(); rafraichirAgenda();
+}
+function annulerPublication(){
+  if (!agendaPrecedent) return;
+  evenements = agendaPrecedent; agendaPrecedent = null;
+  enregistrerAgenda(); rafraichirAgenda();
+}
+trierEvenements();
+let regates = [];
+const equipe = [
+  ["Michel Bègue","Président"],["Pierre Mangin","Secrétaire général"],["Christophe Haem","Trésorier"],
+  ["Laurent Lefebvre","Trésorier adjoint"],["Christophe Lesueur","Directeur de l'école de voile"],["Gérard Cavenel","Responsable de la section voile"],
+  ["Philippe Hébert","Responsable de la section motonautisme"],["Alain Lenoble","Chargé du numérique"],["Romane Lenoble","Marketing et communication"],
+  ["Frédéric Nowicki","Communication"],["André Widehem","Président d'honneur"],["Marc Vervelle","Président d'honneur"]
+];
+let places = [
+  {bateau:"Bonne Brise", type:"J80", skipper:"Yves", regate:"Printemps 2", total:5, libres:2, niveau:"Débutant bienvenu", message:"Rendez-vous au ponton une heure avant le départ. Bonne humeur exigée !"},
+  {bateau:"Pied-de-Biche", type:"First 25", skipper:"Claire", regate:"Printemps 2", total:4, libres:1, niveau:"Équipier confirmé", message:"Je cherche un équipier d'avant à l'aise sous spi."},
+  {bateau:"L'Échappée", type:"Corsaire", skipper:"Marc", regate:"Printemps 3", total:3, libres:1, niveau:"Quelques sorties", message:""},
+  {bateau:"Mouette Rieuse", type:"J70", skipper:"Sophie", regate:"Double mixte, Trophée CABP", total:4, libres:3, niveau:"Débutant bienvenu", message:"Idéal pour une première régate."}
+];
+let bourse = [
+  {type:"Vend", titre:"Ciré Musto taille M", categorie:"Vêtements et bottes", prix:60, etat:"Bon état", prenom:"Anne", description:"Veste et salopette, porté deux saisons.", date:"2026-11-02"},
+  {type:"Donne", titre:"Gilet autogonflant 150 N", categorie:"Sécurité", prix:null, etat:"À réviser", prenom:"Paul", description:"Cartouche à remplacer, sangle en bon état.", date:"2026-10-28"},
+  {type:"Vend", titre:"Winch Lewmar 16", categorie:"Accastillage", prix:120, etat:"Très bon état", prenom:"Hervé", description:"Démonté d'un First 22, avec manivelle.", date:"2026-10-20"},
+  {type:"Recherche", titre:"Bottes de voile taille 38", categorie:"Vêtements et bottes", prix:null, etat:"", prenom:"Léa", description:"Pour ma fille qui commence l'école de voile.", date:"2026-11-10"},
+  {type:"Vend", titre:"Spi asymétrique J80", categorie:"Voiles", prix:350, etat:"Bon état", prenom:"Yves", description:"Quelques petites réparations, très bonne forme.", date:"2026-09-30"},
+  {type:"Vend", titre:"Annexe gonflable 2,30 m", categorie:"Bateaux et annexes", prix:200, etat:"Bon état", prenom:"Martine", description:"Avec pompe et rames, aucune fuite.", date:"2026-10-05"}
+];
+
+/* ---------- Utilitaires ---------- */
+const mois = ["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+const moisLong = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const dateLongue = iso => { const d = new Date(iso+"T12:00"); return d.getDate()+" "+moisLong[d.getMonth()]+" "+d.getFullYear(); };
+const $ = s => document.querySelector(s);
+
+/* ---------- Agenda ---------- */
+const heure = h => h.replace(":", " h ");
+const jourSemaine = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+/* Un événement n'a pas toujours ses deux horaires (ex. rallye : départ seulement) */
+const horaireComplet = e => !!(e.debut && e.fin);
+function texteHoraire(e, multi){
+  if (horaireComplet(e)) return multi ? ` · départ ${heure(e.debut)}, retour ${heure(e.fin)}` : ` · ${heure(e.debut)} – ${heure(e.fin)}`;
+  if (e.debut) return e.cat === "club" ? ` · ${heure(e.debut)}` : ` · départ ${heure(e.debut)}`;
+  if (e.fin) return e.cat === "club" ? ` · jusqu'à ${heure(e.fin)}` : ` · retour ${heure(e.fin)}`;
+  return "";
+}
+function quand(e){
+  const d = new Date(e.date+"T12:00");
+  if (e.dateFin){
+    const f = new Date(e.dateFin+"T12:00");
+    return `du ${jourSemaine[d.getDay()]} ${d.getDate()} au ${jourSemaine[f.getDay()]} ${dateLongue(e.dateFin)}` + texteHoraire(e, true);
+  }
+  return `${jourSemaine[d.getDay()]} ${dateLongue(e.date)}` + texteHoraire(e, false);
+}
+const descriptionEvt = e => e.cat === "club"
+  ? [e.note, e.debut && !e.fin ? "À "+e.debut : "", "Sport Nautique Valéricain"].filter(Boolean).join(". ")
+  : [e.note, e.debut && !e.fin ? "Départ "+e.debut : "", !e.debut && e.fin ? "Retour "+e.fin : "", "Sport Nautique Valéricain. Horaires selon la marée."].filter(Boolean).join(". ");
+const compact = s => s.replace(/[-:]/g, "");
+function lienGoogle(e){
+  const lendemain = iso => { const d = new Date(iso+"T12:00"); d.setDate(d.getDate()+1); return d.toISOString().slice(0,10); };
+  const dates = horaireComplet(e) ? `${compact(e.date)}T${compact(e.debut)}00/${compact(e.dateFin||e.date)}T${compact(e.fin)}00` : `${compact(e.date)}/${compact(lendemain(e.dateFin||e.date))}`;
+  const p = new URLSearchParams({action:"TEMPLATE", text:e.titre+" – SNV", dates, ctz:"Europe/Paris", location:"Port de plaisance, Saint-Valery-sur-Somme", details:descriptionEvt(e)});
+  return "https://calendar.google.com/calendar/render?"+p;
+}
+function liAgenda(e){
+  const d = new Date(e.date+"T12:00");
+  const passe = (e.dateFin||e.date) < AUJOURDHUI || e.annule;
+  const cat = CATEGORIES[e.cat] || {nom:"Autre", classe:"badge-gris"};
+  const inscription = e.cat === "regate" && !passe
+    ? `<a class="bouton bouton-secondaire" href="https://snvalericain.axyomes.com/client/regate_1.php">S'inscrire<span class="sr-only"> à ${esc(e.titre)} (site Axyomes)</span></a>` : "";
+  const ajouter = passe ? "" : `<details class="ajouter"><summary>Ajouter à mon agenda<span class="sr-only"> : ${esc(e.titre)}, ${dateLongue(e.date)}</span></summary>
+      <ul><li><a href="${lienGoogle(e)}">Google Agenda<span class="sr-only"> (site Google)</span></a></li>
+      <li><button type="button" data-ics="${e.id}">iPhone, Android, Outlook (fichier .ics)</button></li></ul></details>`;
+  return `<li><div class="date-pastille" aria-hidden="true"><span class="j">${d.getDate()}</span><span class="m">${mois[d.getMonth()]}</span></div>
+    <div class="contenu-evt"><h3>${esc(e.titre)}</h3><p class="meta"><time datetime="${e.date}${horaireComplet(e)?"T"+e.debut:""}">${quand(e)}</time></p>
+    <div class="etiquettes"><span class="badge ${cat.classe}">${cat.nom}</span>${e.note?`<span class="badge badge-gris">${esc(e.note)}</span>`:""}${e.annule?'<span class="badge badge-corail">Annulé</span>':passe?'<span class="badge termine">Terminé</span>':""}</div>
+    ${inscription||ajouter ? `<div class="actions-evt">${inscription}${ajouter}</div>` : ""}</div></li>`;
+}
+/* Met à jour toutes les pages qui affichent des dates (accueil, agenda, régates, formulaires) */
+function rafraichirAgenda(){
+  const aVenir = evenements.filter(e => (e.dateFin||e.date) >= AUJOURDHUI && !e.annule);
+  regates = aVenir.filter(e => e.cat === "regate");
+  $("#agenda-accueil").innerHTML = aVenir.slice(0,2).map(liAgenda).join("") || "<li>Aucun événement à venir.</li>";
+  $("#agenda-regates").innerHTML = regates.slice(0,1).map(liAgenda).join("") || "<li>Aucune régate à venir.</li>";
+  remplirListesRegates();
+  if (typeof afficherAgenda === "function" && $("#choix-categories").children.length) afficherAgenda();
+  if (typeof afficherPlaces === "function") { afficherPlaces(); afficherEquipiers(); }
+  document.dispatchEvent(new CustomEvent("agenda-modifie"));
+}
+
+$("#choix-categories").innerHTML = Object.entries(CATEGORIES).map(([k,c]) =>
+  `<label><input type="checkbox" name="cat" value="${k}" checked> ${c.nom} <span class="sr-only">(${evenements.filter(e=>e.cat===k).length} événements)</span></label>`).join("");
+let selectionAgenda = [];
+function afficherAgenda(){
+  const cats = [...document.querySelectorAll('#choix-categories input:checked')].map(i=>i.value);
+  const passes = $("#voir-passes").checked;
+  selectionAgenda = evenements.filter(e => cats.includes(e.cat) && (passes || (e.dateFin||e.date) >= AUJOURDHUI));
+  let html = "", moisCourant = "";
+  selectionAgenda.forEach(e => {
+    const d = new Date(e.date+"T12:00"), m = moisLong[d.getMonth()]+" "+d.getFullYear();
+    if (m !== moisCourant){ html += (moisCourant ? "</ul>" : "") + `<h3 class="mois-titre">${m.charAt(0).toUpperCase()+m.slice(1)}</h3><ul class="agenda">`; moisCourant = m; }
+    html += liAgenda(e);
+  });
+  $("#agenda-complet").innerHTML = html ? html + "</ul>" : "<p>Aucun événement ne correspond à ces filtres.</p>";
+  $("#compte-agenda").textContent = selectionAgenda.length + (selectionAgenda.length>1 ? " événements affichés" : " événement affiché");
+  $("#telecharger-selection").disabled = !selectionAgenda.length;
+}
+$("#filtres-agenda").addEventListener("change", afficherAgenda);
+$("#filtres-agenda").addEventListener("submit", e => e.preventDefault());
+
+/* Export iCalendar (.ics), compatible Google, Apple, Android, Outlook */
+function texteIcs(s){ return String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n"); }
+function creerIcs(liste, nom){
+  const stamp = new Date().toISOString().replace(/[-:]/g,"").slice(0,15)+"Z";
+  const l = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Sport Nautique Valericain//Agenda//FR","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+    "X-WR-CALNAME:"+texteIcs(nom),"X-WR-TIMEZONE:Europe/Paris",
+    "BEGIN:VTIMEZONE","TZID:Europe/Paris",
+    "BEGIN:DAYLIGHT","TZOFFSETFROM:+0100","TZOFFSETTO:+0200","TZNAME:CEST","DTSTART:19700329T020000","RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU","END:DAYLIGHT",
+    "BEGIN:STANDARD","TZOFFSETFROM:+0200","TZOFFSETTO:+0100","TZNAME:CET","DTSTART:19701025T030000","RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU","END:STANDARD",
+    "END:VTIMEZONE"];
+  liste.forEach(e => {
+    l.push("BEGIN:VEVENT", `UID:snv-${compact(e.date)}-${e.id}@sportnautiquevalericain.fr`, "DTSTAMP:"+stamp);
+    if (horaireComplet(e)){
+      l.push(`DTSTART;TZID=Europe/Paris:${compact(e.date)}T${compact(e.debut)}00`, `DTEND;TZID=Europe/Paris:${compact(e.dateFin||e.date)}T${compact(e.fin)}00`);
+    } else {
+      const f = new Date((e.dateFin||e.date)+"T12:00"); f.setDate(f.getDate()+1);
+      l.push(`DTSTART;VALUE=DATE:${compact(e.date)}`, `DTEND;VALUE=DATE:${compact(f.toISOString().slice(0,10))}`);
+    }
+    l.push("SUMMARY:"+texteIcs(e.titre+" – SNV"), "CATEGORIES:"+texteIcs(CATEGORIES[e.cat].nom),
+      "DESCRIPTION:"+texteIcs(descriptionEvt(e)),
+      "LOCATION:"+texteIcs("Port de plaisance, 80230 Saint-Valery-sur-Somme"), "END:VEVENT");
+  });
+  l.push("END:VCALENDAR");
+  /* Pliage des lignes longues (limite de 75 octets de la norme iCalendar) */
+  const plier = ligne => { const morceaux = []; let reste = [...ligne]; while (reste.length > 60){ morceaux.push(reste.splice(0,60).join("")); } morceaux.push(reste.join("")); return morceaux.join("\r\n "); };
+  return l.map(plier).join("\r\n");
+}
+function telecharger(contenu, fichier){
+  const url = URL.createObjectURL(new Blob([contenu], {type:"text/calendar;charset=utf-8"}));
+  const a = document.createElement("a"); a.href = url; a.download = fichier; document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-ics]");
+  if (!b) return;
+  const ev = evenements.find(x => String(x.id) === b.dataset.ics);
+  telecharger(creerIcs([ev], "SNV – "+ev.titre), `snv-${ev.date}.ics`);
+});
+$("#telecharger-selection").addEventListener("click", () => telecharger(creerIcs(selectionAgenda, "Sport Nautique Valéricain"), "agenda-snv-2026.ics"));
+$("#copier-flux").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText($("#url-flux").textContent); $("#retour-copie").textContent = "Adresse copiée."; }
+  catch { $("#retour-copie").textContent = "Copie impossible : sélectionnez l'adresse et copiez-la."; }
+});
+
+/* ---------- Équipe ---------- */
+$("#equipe").innerHTML = equipe.map(([nom, role]) => {
+  const initiales = nom.split(" ").map(m => m[0]).join("").slice(0,2);
+  return `<li class="carte membre"><span class="avatar" aria-hidden="true">${initiales}</span><div><h3>${esc(nom)}</h3><p>${esc(role)}</p></div></li>`;
+}).join("");
+
+/* ---------- Places à bord ---------- */
+function remplirListesRegates(){
+  const opts = regates.map(r => `<option>${esc(r.titre)}</option>`).join("");
+  $("#filtre-regate").innerHTML = '<option value="">Toutes les régates</option>' + opts;
+  $("#p-regate").innerHTML = '<option value="">Choisir une régate</option>' + opts;
+  $("#filtre-dispo").innerHTML = '<option value="">Toutes les régates</option>' + opts;
+  $("#choix-regates").innerHTML = regates.map((r,i) => `<label><input type="checkbox" name="regates" value="${esc(r.titre)}" id="d-r${i}"> ${esc(r.titre)} (${dateLongue(r.date)})</label>`).join("");
+}
+
+function cartePlace(p, i){
+  const r = regates.find(x => x.titre === p.regate);
+  const sieges = Array.from({length:p.total}, (_,k) => `<span class="siege${k < p.total - p.libres ? " pris" : ""}"></span>`).join("");
+  return `<article class="carte annonce">
+    <div class="entete-annonce"><span class="badge badge-vert">${p.libres} place${p.libres>1?"s":""} libre${p.libres>1?"s":""}</span>${p.attente?'<span class="badge badge-corail">En attente de validation</span>':''}</div>
+    <h3>${esc(p.regate)}</h3>
+    <p class="exemple" style="margin:-.3em 0 .6em">${r ? dateLongue(r.date) : ""}</p>
+    <div class="places" role="img" aria-label="${p.total - p.libres} places occupées sur ${p.total}">${sieges}</div>
+    <dl><dt>Bateau</dt><dd>${esc(p.bateau)} (${esc(p.type)})</dd><dt>Skipper</dt><dd>${esc(p.skipper)}</dd><dt>Niveau</dt><dd>${esc(p.niveau)}</dd></dl>
+    ${p.message ? `<p>${esc(p.message)}</p>` : ""}
+    <div class="pied"><button class="bouton bouton-secondaire contacter" type="button" data-i="${i}">Contacter ${esc(p.skipper)}<span class="sr-only">, skipper de ${esc(p.bateau)}</span></button>
+    <div class="retour-contact" aria-live="polite"></div></div>
+  </article>`;
+}
+function afficherPlaces(){
+  const fr = $("#filtre-regate").value, fn = $("#filtre-niveau").value;
+  const liste = places.map((p,i)=>[p,i]).filter(([p]) => !p.attente && !p.refuse && (!fr || p.regate===fr) && (!fn || p.niveau===fn));
+  $("#liste-places").innerHTML = liste.map(([p,i]) => cartePlace(p,i)).join("") || '<p>Aucune place ne correspond à ces critères pour l\'instant.</p>';
+  $("#compte-places").textContent = liste.length + (liste.length>1 ? " bateaux proposent" : " bateau propose") + " des places.";
+  $("#places-accueil").innerHTML = places.filter(p=>!p.attente && !p.refuse).slice(0,3).map((p,i)=>cartePlace(p,i)).join("");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".contacter");
+  if (!b) return;
+  b.nextElementSibling.innerHTML = '<p class="message message-info">Dans la version finale, un formulaire s\'ouvre ici pour écrire au skipper, sans afficher son e-mail.</p>';
+});
+$("#filtre-regate").addEventListener("change", afficherPlaces);
+$("#filtre-niveau").addEventListener("change", afficherPlaces);
+
+/* ---------- Équipiers disponibles ---------- */
+let equipiers = [
+  {prenom:"Julien", niveau:"Quelques sorties", regates:["Printemps 2","Printemps 3"], message:"À l'aise au piano, envie de progresser."},
+  {prenom:"Nadia", niveau:"Équipier confirmé", regates:["Double mixte, Trophée CABP","Printemps 5"], message:"10 ans de régate en J80, à l'avant ou au réglage."},
+  {prenom:"Thomas", niveau:"Débutant", regates:["Printemps 1","Printemps 2","Printemps 3"], message:"Deux sorties à l'école de voile, très motivé !"}
+];
+function afficherEquipiers(){
+  const f = $("#filtre-dispo").value;
+  const liste = equipiers.filter(q => !q.attente && !q.refuse && (!f || q.regates.includes(f)));
+  $("#liste-equipiers").innerHTML = liste.map(q => `<article class="carte annonce">
+    <div class="entete-annonce"><span class="badge">${esc(q.niveau)}</span>${q.attente?'<span class="badge badge-corail">En attente de validation</span>':''}</div>
+    <h3>${esc(q.prenom)}</h3>
+    <dl><dt>Disponible</dt><dd>${q.regates.map(esc).join(", ")}</dd></dl>
+    ${q.message?`<p>${esc(q.message)}</p>`:""}
+    <div class="pied"><button class="bouton bouton-secondaire contacter-b" type="button">Proposer une place à ${esc(q.prenom)}</button><div aria-live="polite"></div></div>
+  </article>`).join("") || "<p>Aucun équipier disponible pour cette régate pour l'instant.</p>";
+  $("#compte-equipiers").textContent = liste.length + (liste.length>1 ? " équipiers disponibles" : " équipier disponible");
+}
+$("#filtre-dispo").addEventListener("change", afficherEquipiers);
+function compterAttente(){
+  $("#nb-attente-bourse").textContent = bourse.filter(a=>a.attente).length + " en attente";
+  $("#nb-attente-places").textContent = (places.filter(a=>a.attente).length + equipiers.filter(a=>a.attente).length) + " en attente";
+  const file = [
+    ...bourse.map((a,i)=>({src:"bourse",i,genre:"Bourse aux équipements",titre:a.titre,detail:a.prenom+" · "+a.categorie,a})),
+    ...places.map((a,i)=>({src:"places",i,genre:"Places à bord",titre:a.bateau+" ("+a.type+")",detail:a.libres+" place(s) · "+a.regate,a})),
+    ...equipiers.map((a,i)=>({src:"equipiers",i,genre:"Équipier disponible",titre:a.prenom,detail:a.regates.join(", "),a}))
+  ].filter(x=>x.a.attente);
+  $("#file-attente").innerHTML = file.map(x => `<article class="carte"><span class="badge badge-gris">${esc(x.genre)}</span>
+    <h3 style="margin-top:.5em">${esc(x.titre)}</h3><p>${esc(x.detail)}</p>
+    <div class="pied actions" style="margin-top:0"><button class="bouton bouton-principal moderer" type="button" data-src="${x.src}" data-i="${x.i}" data-action="publier">Publier<span class="sr-only"> ${esc(x.titre)}</span></button>
+    <button class="bouton bouton-secondaire moderer" type="button" data-src="${x.src}" data-i="${x.i}" data-action="refuser">Refuser<span class="sr-only"> ${esc(x.titre)}</span></button></div></article>`).join("")
+    || "<p>Aucune annonce en attente.</p>";
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".moderer");
+  if (!b) return;
+  const tab = {bourse, places, equipiers}[b.dataset.src];
+  const item = tab[b.dataset.i];
+  if (b.dataset.action === "publier") item.attente = false; else item.refuse = true, item.attente = false;
+  $("#retour-file").innerHTML = `<p class="message message-ok">Annonce ${b.dataset.action === "publier" ? "publiée" : "refusée"}.</p>`;
+  afficherPlaces(); afficherBourse(); afficherEquipiers(); compterAttente();
+  $("#t-file").tabIndex = -1; $("#t-file").focus();
+});
+
+/* Onglets accessibles */
+const onglets = [...document.querySelectorAll('[role="tab"]')];
+function activerOnglet(o, focus){
+  onglets.forEach(x => { const sel = x===o; x.setAttribute("aria-selected", sel); x.tabIndex = sel?0:-1; document.getElementById(x.getAttribute("aria-controls")).hidden = !sel; });
+  if (focus) o.focus();
+}
+onglets.forEach((o,i) => {
+  o.addEventListener("click", () => activerOnglet(o));
+  o.addEventListener("keydown", e => {
+    let n = null;
+    if (e.key==="ArrowRight") n = onglets[(i+1)%onglets.length];
+    if (e.key==="ArrowLeft") n = onglets[(i-1+onglets.length)%onglets.length];
+    if (e.key==="Home") n = onglets[0];
+    if (e.key==="End") n = onglets[onglets.length-1];
+    if (n){ e.preventDefault(); activerOnglet(n, true); }
+  });
+});
+
+/* ---------- Bourse ---------- */
+function carteBourse(a){
+  const badge = a.type==="Vend" ? "badge" : a.type==="Donne" ? "badge badge-vert" : "badge badge-corail";
+  const prix = a.type==="Vend" && a.prix!=null ? `${a.prix} €` : a.type==="Donne" ? "Gratuit" : "";
+  return `<article class="carte annonce">
+    <div class="entete-annonce"><span class="${badge}">${esc(a.type==="Vend"?"À vendre":a.type==="Donne"?"À donner":"Recherché")}</span>${a.attente?'<span class="badge badge-corail">En attente de validation</span>':''}</div>
+    <h3>${esc(a.titre)}</h3>
+    ${prix ? `<p class="prix">${prix}</p>` : ""}
+    <p>${esc(a.description)}</p>
+    <dl><dt>Catégorie</dt><dd>${esc(a.categorie)}</dd>${a.etat?`<dt>État</dt><dd>${esc(a.etat)}</dd>`:""}<dt>Déposée par</dt><dd>${esc(a.prenom)}, le ${dateLongue(a.date)}</dd></dl>
+    <div class="pied"><button class="bouton bouton-secondaire contacter-b" type="button">Contacter ${esc(a.prenom)}<span class="sr-only"> pour l'annonce ${esc(a.titre)}</span></button><div aria-live="polite"></div></div>
+  </article>`;
+}
+function afficherBourse(){
+  const c = $("#filtre-cat").value, t = $("#filtre-type").value, q = $("#filtre-texte").value.trim().toLowerCase();
+  const liste = bourse.filter(a => !a.attente && !a.refuse && (!c||a.categorie===c) && (!t||a.type===t) && (!q || (a.titre+" "+a.description).toLowerCase().includes(q)));
+  $("#liste-bourse").innerHTML = liste.map(carteBourse).join("") || "<p>Aucune annonce ne correspond à votre recherche.</p>";
+  $("#compte-bourse").textContent = liste.length + (liste.length>1 ? " annonces" : " annonce");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".contacter-b");
+  if (b) b.nextElementSibling.innerHTML = '<p class="message message-info">Dans la version finale, un formulaire s\'ouvre ici pour écrire à l\'auteur de l\'annonce.</p>';
+});
+["#filtre-cat","#filtre-type"].forEach(s => $(s).addEventListener("change", afficherBourse));
+$("#filtre-texte").addEventListener("input", afficherBourse);
+
+/* ---------- Validation de formulaires accessible ---------- */
+function valider(form){
+  form.querySelectorAll(".erreur-champ").forEach(n => n.remove());
+  form.querySelectorAll('[aria-invalid], [aria-describedby^="err-"]').forEach(n => { n.removeAttribute("aria-invalid"); n.removeAttribute("aria-describedby"); });
+  const erreurs = [];
+  const vus = new Set();
+  form.querySelectorAll("[required]").forEach(ch => {
+    let invalide = false, msg = "";
+    if (ch.type === "radio"){
+      if (vus.has(ch.name)) return; vus.add(ch.name);
+      invalide = !form.querySelector(`[name="${ch.name}"]:checked`);
+      msg = "Choisissez une option.";
+      if (invalide){ const fs = ch.closest("fieldset"); fs.querySelectorAll("input").forEach(x=>x.setAttribute("aria-describedby","err-"+ch.name+"-"+form.id)); const id = "err-"+ch.name+"-"+form.id; fs.insertAdjacentHTML("beforeend", `<p class="erreur-champ" id="${id}">${msg}</p>`); erreurs.push(fs.querySelector("input")); }
+      return;
+    }
+    if (ch.type === "checkbox"){ invalide = !ch.checked; msg = "Votre accord est nécessaire pour publier l'annonce."; }
+    else if (!ch.value.trim()){ invalide = true; msg = "Ce champ est obligatoire."; }
+    else if (ch.type === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ch.value)){ invalide = true; msg = "Saisissez une adresse e-mail valide, par exemple nom@exemple.fr."; }
+    else if (ch.type === "number" && (Number(ch.value) < Number(ch.min||0) || (ch.max && Number(ch.value) > Number(ch.max)))){ invalide = true; msg = `Saisissez un nombre entre ${ch.min} et ${ch.max}.`; }
+    if (invalide){
+      const id = "err-"+ch.id;
+      ch.setAttribute("aria-invalid","true"); ch.setAttribute("aria-describedby", id);
+      (ch.type==="checkbox" ? ch.closest(".champ") : ch.parentElement).insertAdjacentHTML("beforeend", `<p class="erreur-champ" id="${id}">${msg}</p>`);
+      erreurs.push(ch);
+    }
+  });
+  if (form.id === "form-dispo" && !form.querySelector('[name="regates"]:checked')){
+    const fs = $("#d-regates"); fs.insertAdjacentHTML("beforeend", '<p class="erreur-champ" id="err-regates">Cochez au moins une régate.</p>');
+    fs.querySelectorAll("input").forEach(x=>x.setAttribute("aria-describedby","err-regates"));
+    erreurs.push(fs.querySelector("input"));
+  }
+  erreurs.sort((a,b) => a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1);
+  return erreurs;
+}
+function soumettre(form, retour, surSucces){
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const erreurs = valider(form);
+    const zone = $(retour);
+    if (erreurs.length){
+      zone.innerHTML = `<p class="message message-erreur">${erreurs.length} champ${erreurs.length>1?"s sont":" est"} à corriger.</p>`;
+      erreurs[0].focus();
+      return;
+    }
+    const fd = new FormData(form);
+    const d = Object.fromEntries(fd); d.regates = fd.getAll("regates");
+    surSucces(d); compterAttente();
+    form.reset();
+    zone.innerHTML = '<p class="message message-ok">Merci ! Votre annonce a bien été envoyée. Elle sera visible après validation par le bureau. <a href="#/bureau">Simulation : la valider dans l\'Espace bureau</a></p>';
+  });
+}
+soumettre($("#form-places"), "#retour-places", d => {
+  const n = Math.max(1, Number(d.nombre));
+  places.unshift({bateau:d.bateau, type:d.type, skipper:d.skipper, regate:d.regate, total:n+1, libres:n, niveau:d.niveau, message:d.message, attente:true});
+  afficherPlaces();
+});
+soumettre($("#form-bourse"), "#retour-bourse", d => {
+  bourse.unshift({type:d.type, titre:d.titre, categorie:d.categorie, prix:d.prix===""?null:Number(d.prix), etat:d.etat, prenom:d.prenom, description:d.description, date:new Date().toISOString().slice(0,10), attente:true});
+  afficherBourse();
+});
+soumettre($("#form-dispo"), "#retour-dispo", d => {
+  equipiers.unshift({prenom:d.prenom, niveau:d.niveau, regates:d.regates, message:d.message, attente:true});
+  afficherEquipiers();
+});
+$("#form-news").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = $("#news-email").value;
+  $("#retour-news").textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? "Merci, vous êtes inscrit·e." : "Saisissez une adresse e-mail valide.";
+});
+
+/* ---------- Navigation entre pages ---------- */
+const pages = [...document.querySelectorAll(".page")];
+const navBouton = $(".menu-bouton"), nav = $("#nav-principale");
+navBouton.addEventListener("click", () => {
+  const ouvert = navBouton.getAttribute("aria-expanded") === "true";
+  navBouton.setAttribute("aria-expanded", !ouvert); nav.classList.toggle("ouvert", !ouvert);
+});
+$("#lien-evitement").addEventListener("click", e => { e.preventDefault(); const h1 = document.querySelector(".page:not([hidden]) h1"); h1.tabIndex = -1; h1.focus(); });
+
+function router(premier){
+  const route = (location.hash.match(/^#\/([\w-]*)/) || [,""])[1];
+  const base = route === "ecole-agenda" ? "ecole" : route;
+  const page = pages.find(p => p.dataset.route === base) || pages[0];
+  pages.forEach(p => p.hidden = p !== page);
+  document.title = page.dataset.titre + " – Sport Nautique Valéricain";
+  document.querySelectorAll("nav.principale a").forEach(a => {
+    if (a.getAttribute("href") === "#/"+page.dataset.route) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current");
+  });
+  navBouton.setAttribute("aria-expanded","false"); nav.classList.remove("ouvert");
+  if (page.dataset.route === "agenda"){
+    /* #/agenda?cat=regate pré-filtre l'agenda ; #/agenda seul affiche tout */
+    const cat = new URLSearchParams(location.hash.split("?")[1] || "").get("cat");
+    document.querySelectorAll('#choix-categories input').forEach(i => i.checked = !cat || i.value === cat);
+    afficherAgenda();
+  }
+  if (premier) return;
+  window.scrollTo(0,0);
+  const h1 = page.querySelector("h1"); h1.tabIndex = -1; h1.focus({preventScroll:true});
+}
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-ancre]");
+  if (!a) return;
+  e.preventDefault();
+  const cible = document.getElementById(a.dataset.ancre);
+  const page = cible.closest(".page");
+  if (page.hidden){ location.hash = "#/"+page.dataset.route; }
+  setTimeout(() => { cible.tabIndex = -1; cible.scrollIntoView(); cible.focus({preventScroll:true}); }, 30);
+});
+window.addEventListener("hashchange", () => { if (location.hash.startsWith("#/")) router(false); });
+rafraichirAgenda(); afficherBourse(); compterAttente(); router(true);
+</script>
+<script src="marees.js"></script>
+<script src="import-pdf.js"></script>
+<script src="bureau.js"></script>
+<script src="medias.js"></script>
+</body>
 </html>
